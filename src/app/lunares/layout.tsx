@@ -1,10 +1,10 @@
 // app/layout.tsx
 import type { Metadata } from "next";
 import { Playfair_Display, Poppins } from "next/font/google";
-import 'swiper/css';
-import "swiper/css/effect-fade";
-import "./globals.css"; 
-import 'aos/dist/aos.css'
+import { Footer } from "@/components/Footer";
+import "@/app/globals.css";
+import { HeaderLunares } from "@/app/lunares/components/HeaderLunares";
+import { ContactForm } from "@/app/lunares/components/ContactForm";
 const playfair = Playfair_Display({
   variable: "--font-in-playfair",
   subsets: ["latin"],
@@ -24,20 +24,19 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default function LunaresLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className="h-full">
-      <body
-        className={`${poppins.variable} ${playfair.variable} antialiased flex flex-col min-h-screen`}
-      >
-        <main className="flex-grow">
-          {children}
-        </main>
-      </body>
-    </html>
+    <div className={`${poppins.variable} ${playfair.variable} flex flex-col min-h-screen`}>
+      <HeaderLunares />
+      <ContactForm />
+      <main className="flex-1">
+        {children}
+      </main>
+      <Footer />
+    </div>
   );
 }
