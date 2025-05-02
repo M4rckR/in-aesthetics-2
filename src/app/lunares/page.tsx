@@ -5,6 +5,7 @@ import { Testimonials } from "./components/Testimonials";
 import { CtaTreatmentWsp } from "./components/CtaTreatmentWsp";
 import { Questions } from "./components/Questions";
 import { AOSInit } from "@/components/aosInit/aosInit";
+import { ButtonWsp } from "./components/ButtonWsp";
 
 export default function LunaresPage() {
   return (
@@ -16,6 +17,7 @@ export default function LunaresPage() {
       <Testimonials />
       <Questions />
       <CtaTreatmentWsp />
+      <ButtonWsp />
     </div>
   );
 }
