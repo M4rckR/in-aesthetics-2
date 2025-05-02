@@ -5,6 +5,9 @@ import 'swiper/css';
 import "swiper/css/effect-fade";
 import "./globals.css"; 
 import 'aos/dist/aos.css'
+import { Footer } from "@/components/Footer";
+import { AOSInit } from "@/components/aosInit/aosInit";
+
 const playfair = Playfair_Display({
   variable: "--font-in-playfair",
   subsets: ["latin"],
@@ -31,12 +34,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" className="h-full">
+      <AOSInit />
       <body
         className={`${poppins.variable} ${playfair.variable} antialiased flex flex-col min-h-screen`}
       >
         <main className="flex-grow">
           {children}
         </main>
+
+        <Footer />
       </body>
     </html>
   );

@@ -66,13 +66,16 @@
     --font-in-playfair: var(--font-in-playfair);
     --font-in-poppins: var(--font-in-poppins);
   
-    /* <Colores */
+    /* <Colores Lunares*/
     --color-in-pink: #FFECE3;
     --color-in-title-base: #2C2C2C;
     --color-in-brown: #762B06;
     --color-in-brown-light: #AF673E;
     --color-in-blue-base: #004569;
     --color-in-orange-base: #FFB531;
+
+    /* <Colores Moldea*/
+    --color-mo-brown-base: #AC4800;
   }
 
   

@@ -4,13 +4,16 @@ import { Benefits } from "./components/Benefits";
 import { Testimonials } from "./components/Testimonials";
 import { CtaTreatmentWsp } from "./components/CtaTreatmentWsp";
 import { Questions } from "./components/Questions";
-import { AOSInit } from "@/components/aosInit/aosInit";
 import { ButtonWsp } from "./components/ButtonWsp";
+import { HeaderLunares } from "./components/HeaderLunares";
+import { ContactForm } from "./components/ContactForm";
+
 
 export default function LunaresPage() {
   return (
-    <div>
-      <AOSInit />
+    <>
+      <ContactForm />
+      <HeaderLunares />
       <HeroOfferts />
       <HeroLaserTreatment />
       <Benefits />
@@ -18,6 +21,6 @@ export default function LunaresPage() {
       <Questions />
       <CtaTreatmentWsp />
       <ButtonWsp />
-    </div>
+    </>
   );
 }
