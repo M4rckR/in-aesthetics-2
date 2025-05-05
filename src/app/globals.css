@@ -252,3 +252,41 @@
       height: 8px;
     }
   }
+
+  .swiper {
+    padding: 48px 0;
+  }
+
+  /* Estilos para el carrusel de testimonios */
+  .testimonial-swiper-moldea {
+    position: relative;
+    padding-bottom: 50px;
+  }
+
+  .testimonial-swiper-moldea .swiper-pagination {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 10;
+  }
+
+  .testimonial-swiper-moldea .swiper-pagination-bullet {
+    width: 24px;
+    height: 10px;
+    border-radius: 8px;
+    background: #FFECE3;
+    opacity: 0.5;
+    margin: 0 5px;
+    transition: all 0.3s ease;
+  }
+
+  .testimonial-swiper-moldea .swiper-pagination-bullet-active {
+    background: #762B06;
+    opacity: 1;
+    width: 24px;
+    height: 12px;
+  }
+
