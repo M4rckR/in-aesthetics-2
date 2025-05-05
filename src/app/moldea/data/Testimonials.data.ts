@@ -7,7 +7,7 @@ export const TestimonialsData: Testimonial[] = [
     age: 52,
     image: "/images/testimonials/testimonial-1.png",
     fallback: "An",
-    testimonial: "Me realicé eliminación de verrugas en In-Aesthetics y quedé encantada. No sentí dolor y los resultados en mi piel son impecables.",
+    testimonial: "Me realicé eliminación de verrugas en In-Aesthetics. No sentí dolor y los resultados en mi piel son impecables.",
   },
   {
     id: "2",
@@ -15,7 +15,7 @@ export const TestimonialsData: Testimonial[] = [
     age: 46,
     image: "/images/testimonials/testimonial-2.png",
     fallback: "Lu",
-    testimonial: "Al principio tenía miedo, pero fue más sencillo de lo esperado. En In-Aesthetics mi piel luce renovada y mi problema desapareció completamente.",
+    testimonial: "Al principio tenía miedo, pero fue más sencillo de lo esperado. En In-Aesthetics mi piel luce renovada y mi problema desapareció.",
   },
   {
     id: "3",
