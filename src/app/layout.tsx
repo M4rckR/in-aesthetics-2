@@ -7,6 +7,7 @@ import "./globals.css";
 import 'aos/dist/aos.css'
 import { Footer } from "@/components/Footer";
 import { AOSInit } from "@/components/aosInit/aosInit";
+import { Toaster } from "sonner";
 
 const playfair = Playfair_Display({
   variable: "--font-in-playfair",
@@ -37,7 +38,8 @@ export default function RootLayout({
       <AOSInit />
       <body
         className={`${poppins.variable} ${playfair.variable} antialiased flex flex-col min-h-screen`}
-      >
+        >
+        <Toaster/>
         <main className="flex-grow">
           {children}
         </main>

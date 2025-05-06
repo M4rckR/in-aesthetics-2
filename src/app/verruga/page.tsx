@@ -1,7 +1,13 @@
+import { Header } from "./components/Header";
+import { HeroContact } from "./components/HeroContact";
+
 export default function Verruga() {
   return (
     <div>
-      <h1>Verruga</h1>
+      <div className="bg-in-pink pb-12">
+        <Header />
+        <HeroContact />
+      </div>
     </div>
   );
 }
