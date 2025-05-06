@@ -5,7 +5,7 @@ export const Header = () => {
   return (
     <header>
         <div className="container max-w-7xl mx-auto p-4">
-            <div className="flex flex-col md:flex-row items-center">
+            <div className="flex flex-col md:flex-row md:justify-between items-center">
                 <Image
                     src="/logos/marca.png"
                     alt="Logo"

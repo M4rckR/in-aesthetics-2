@@ -17,8 +17,8 @@ export const ClientSchema2 = z.object({
         .email("Correo inválido")
         .toLowerCase(),
     telefono: z.string()
-        .min(9, "Teléfono demasiado corto")
-        .max(9, "Teléfono demasiado largo")
+        .min(9, "Teléfono muy corto")
+        .max(9, "Teléfono muy largo")
         .regex(/^\d+$/, "Teléfono inválido"),
     mensaje: z.string()
         .min(5, "Mensaje demasiado corto")
