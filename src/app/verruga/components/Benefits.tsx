@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export const Benefits = () => {
   return (
-    <div className="container mx-auto max-w-7xl px-4">
+    <div className="container mx-auto max-w-7xl px-4 relative z-20">
       <h2 className=" md:hidden text-mo-brown-base text-center pb-6 text-3xl w-full md:w-1/2">
         Beneficios y características
       </h2>

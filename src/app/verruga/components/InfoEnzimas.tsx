@@ -7,7 +7,7 @@ export const InfoEnzimas = () => {
         <h2 className="text-2xl text-center md:text-left md:text-4xl lg:text-6xl text-mo-brown-base mb-4 md:mb-12">
           Las enzimas Pb serum
         </h2>
-        <div className="flex flex-col md:flex-row md:gap-4 lg:gap-12 space-y-12">
+        <div className="flex flex-col md:flex-row md:gap-4 lg:gap-12 space-y-12 md:space-y-0">
             <Image 
                 src="/images/reduccion/encimas-pb-serum.png"
                 alt="Enzimas Pb serum"

@@ -6,13 +6,16 @@ export const Header = () => {
     <header>
         <div className="container max-w-7xl mx-auto p-4">
             <div className="flex flex-col md:flex-row md:justify-between items-center">
-                <Image
-                    src="/logos/marca.png"
-                    alt="Logo"
-                    width={200}
-                    height={200}
-                    className="w-52 object-contain"
-                />
+                <div className="relative w-[200px] h-[75px]">
+                    <Image
+                        src="/logos/marca.png"
+                        alt="Logo"
+                        fill
+                        priority
+                        sizes="200px"
+                        className="object-contain"
+                    />
+                </div>
                 <div className="flex items-center gap-4">
                     <Link className="text-mo-brown-base" href="/">Beneficios</Link>
                     <Link className="text-mo-brown-base" href="/">Preguntas frecuentes</Link>

@@ -12,13 +12,16 @@ export const HeroContact = () => {
         Moldea tu cuerpo sin cirugía con nuestro tratamiento de enzimas  Pb Serum
         </h1>
         <div className="flex flex-col items-center md:flex-row gap-4">
+          <div className="relative w-full max-w-[460px] aspect-square mx-auto">
             <Image 
                 src="/images/reduccion/doctor-hero-contact.png" 
                 alt="Hero Contact" 
-                width={300} 
-                height={300} 
-                className="w-1/2 mx-auto object-contain min-w-[300px]"
+                priority
+                fill
+                className="object-contain"
             />
+          </div>
+
             <div className="w-full md:w-1/2">
                 <h3 className="text-mo-brown-base text-xl md:text-2xl text-center md:text-left font-bold mb-4">Reserva tu evaluación gratuita</h3>
                 <ContactForm />
