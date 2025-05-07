@@ -24,6 +24,7 @@ export const ClientSchema2 = z.object({
         .min(5, "Mensaje demasiado corto")
         .max(500, "Mensaje demasiado largo")
         .optional(),
+    honeypot: z.string().max(0).optional(),
 })
 
 

@@ -8,6 +8,7 @@ import { useForm } from "react-hook-form"
 import { Button } from "@/components/ui/button"
 import { Textarea } from "@/components/ui/textarea"
 import { toast } from "sonner"
+import axios from "axios"
 
 export const ContactForm = () => {
 
@@ -18,13 +19,19 @@ export const ContactForm = () => {
       correo: "",
       mensaje: "",
       telefono: "",
+      honeypot: "",
     },
   })
 
-  function onSubmit(data: Client2) {
-    console.log(data)
-    toast.success("Mensaje enviado correctamente")
-    form.reset()
+  async function onSubmit(data: Client2) {
+    try {
+      await axios.post("/api/send", data)
+      toast.success("Mensaje enviado correctamente")
+      form.reset()
+    } catch (error) {
+      console.log(error)
+      toast.error("Error al enviar el mensaje")
+    }
   }
 
   return (
@@ -97,6 +104,25 @@ export const ContactForm = () => {
                   placeholder="Mensaje"
                   rows={4}
                   className="resize-none border-mo-brown-base placeholder:text-mo-brown-base    "
+                />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+
+        <FormField
+          control={form.control}
+          name="honeypot"
+          render={({ field }) => (
+            <FormItem className="hidden">
+              <FormControl>
+                <Input
+                  {...field}
+                  type="text"
+                  autoComplete="off"
+                  tabIndex={-1}
+                  style={{ display: 'none' }}
                 />
               </FormControl>
               <FormMessage />
