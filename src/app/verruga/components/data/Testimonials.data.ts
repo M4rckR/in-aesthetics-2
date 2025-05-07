@@ -1,4 +1,5 @@
-import { Testimonial } from "../types/Testimonial.type";
+import { Testimonial } from "@/app/moldea/types/Testimonial.type";
+
 
 export const TestimonialsData: Testimonial[] = [
   {

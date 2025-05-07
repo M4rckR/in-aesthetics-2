@@ -94,13 +94,14 @@ export const ContactForm = () => {
             }, 400);
         };
 
-        const inputs = formRef.current?.querySelectorAll('input');
+        const formNode = formRef.current;
+        const inputs = formNode?.querySelectorAll('input');
         inputs?.forEach(input => {
             input.addEventListener('focus', handleFocus as EventListener);
         });
 
         return () => {
-            const inputs = formRef.current?.querySelectorAll('input');
+            const inputs = formNode?.querySelectorAll('input');
             inputs?.forEach(input => {
                 input.removeEventListener('focus', handleFocus as EventListener);
             });
