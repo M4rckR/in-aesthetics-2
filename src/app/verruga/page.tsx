@@ -5,7 +5,7 @@ import { InfoEnzimas } from "./components/InfoEnzimas";
 import { Testimonials } from "./components/testimonials/Testimonials";
 import { Reviews } from "./components/Reviews";
 import { Questions } from "./components/Questions";
-
+import { CtaWhatsApp } from "./components/CtaWhatsApp";
 export default function Verruga() {
   return (
     <div>
@@ -18,6 +18,7 @@ export default function Verruga() {
       <Testimonials />
       <Reviews />
       <Questions />
+      <CtaWhatsApp />
     </div>
   );
 }

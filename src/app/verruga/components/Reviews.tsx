@@ -6,7 +6,7 @@ export const Reviews = () => {
     <div className="bg-in-pink pb-16 md:pb-32">
       <section className="container mx-auto max-w-7xl px-4 pt-4 ">
         <h2 className="text-3xl md:text-5xl text-center text-mo-brown-base mb-12">
-          Reviews
+        Reseñas y Calificaciones
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-in-blue-base justify-items-center">
           <div className="flex flex-col justify-between border border-[#CDF1EF] bg-white p-6 rounded-3xl w-full">
