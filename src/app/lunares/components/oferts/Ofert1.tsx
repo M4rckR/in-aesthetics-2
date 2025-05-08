@@ -16,6 +16,7 @@ export const Ofert1 = () => {
             </div>
         </div>
         <Image
+            priority
             alt="chica sin lunares"
             src="/images/hero_ofert_1.png"
             width={530}

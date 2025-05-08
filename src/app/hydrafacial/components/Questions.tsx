@@ -8,7 +8,7 @@ import Image from "next/image";
 
 export const Questions = () => {
   return (
-    <section className="container mx-auto max-w-7xl px-4 pt-4 mb-16 md:mb-32">
+    <section id="preguntas-frecuentes" className="container mx-auto max-w-7xl px-4 pt-4 mb-16 md:mb-32">
       <div className="flex flex-col md:flex-row">
         <div className="mb-6 md:w-8/12">
           <h2 className="text-3xl font-in-playfair md:text-4xl lg:text-5xl text-center md:text-left text-in-title-base mb-12">

@@ -34,7 +34,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className="h-full">
+    <html lang="es" className="h-full scroll-smooth">
       <AOSInit />
       <body
         className={`${poppins.variable} ${playfair.variable} antialiased flex flex-col min-h-screen`}

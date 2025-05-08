@@ -67,13 +67,13 @@ export const Benefits = () => {
 
         <section className="hidden md:flex md:flex-row">
           {/* Beneficio Superior Izquierdo */}
-          <div data-aos="fade-up-right" data-aos-delay="100" className="md:absolute top-0 left-6 lg:left-28 lg:top-6 flex flex-col items-center w-56 ">
+          <div data-aos="fade-up-right" data-aos-delay="100" className="md:absolute top-0 left-6 lg:left-28 lg:top-6 flex flex-col items-center w-3/12">
             <Image
               src="/images/beneficio1.png"  
               alt="Beneficios y Características"
-              width={200}
-              height={200}
-              className="object-cover w-40 lg:w-full hover:scale-105 transition-all duration-300 "
+              width={300}
+              height={300}
+              className="object-cover w-56 lg:w-full hover:scale-105 transition-all duration-300"
             />
             <p className="text-center w-full text-in-brown font-medium mt-1">
               Sin cicatrices ni dolor
@@ -81,12 +81,12 @@ export const Benefits = () => {
           </div>
 
           {/* Beneficio Superior Derecho */}
-          <div data-aos="fade-up-left" data-aos-delay="100" className="md:absolute top-0 right-4 lg:right-28 flex flex-col items-center w-72 ">
+          <div data-aos="fade-up-left" data-aos-delay="100" className="md:absolute top-0 right-4 lg:right-28 flex flex-col items-center w-96">
             <Image
               src="/images/beneficio2.png"
               alt="Beneficios y Características"
-              width={200}
-              height={200}
+              width={300}
+              height={300}
               className="object-cover w-56 lg:w-full hover:scale-105 transition-all duration-300"
             />
             <p className="text-center w-full text-in-brown font-medium mt-1">
@@ -95,12 +95,12 @@ export const Benefits = () => {
           </div>
 
           {/* Beneficio Inferior */}
-          <div data-aos="fade-up-right" data-aos-delay="100"  className="md:absolute bottom-16 lg:bottom-8 left-1/12  lg:left-64 flex flex-col items-center w-72">
+          <div data-aos="fade-up-right" data-aos-delay="100"  className="md:absolute bottom-16 lg:bottom-8 left-1/12  lg:left-64 flex flex-col items-center w-80">
             <Image
               src="/images/beneficio3.png"
               alt="Beneficios y Características"
-              width={200}
-              height={200}
+              width={300}
+              height={300}
               className="object-cover w-56 lg:w-full hover:scale-105 transition-all duration-300"
             />
             <p className="text-center w-full text-in-brown font-medium mt-1">
@@ -109,12 +109,12 @@ export const Benefits = () => {
           </div>
 
           {/* Beneficio Inferior derecho*/}
-          <div data-aos="fade-up-left" data-aos-delay="100" className="md:absolute right-0 bottom-0 lg:right-44 flex flex-col items-center w-60">
+          <div data-aos="fade-up-left" data-aos-delay="100" className="md:absolute right-0 bottom-0 lg:right-14 flex flex-col items-center w-3/12">
             <Image
               src="/images/beneficio4.png"
               alt="Beneficios y Características"
-              width={200}
-              height={200}
+              width={300}
+              height={300}
               className="object-cover w-56 lg:w-full hover:scale-105 transition-all duration-300"
             />
             <p className="text-center w-full text-in-brown font-medium mt-1">

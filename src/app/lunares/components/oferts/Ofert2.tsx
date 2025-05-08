@@ -22,12 +22,13 @@ export const Ofert2 = () => {
         
         {/* Imagen desktop */}
         <Image
+            priority
             alt="Transformación corporal"
             src="/images/hero_ofert_2.png"
             width={820}
             height={400}
             className="hidden md:block absolute -right-20  top-1/2 -translate-y-1/2 -z-10 md:w-[500px] lg:w-[740px]"
-            priority
+            
         />
         
         {/* Imagen móvil - ocupa todo el espacio */}

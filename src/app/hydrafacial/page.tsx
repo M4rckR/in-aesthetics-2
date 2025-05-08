@@ -6,6 +6,7 @@ import { Testimonials } from "./components/testimonials/Testimonials";
 import { Questions } from "./components/Questions";
 import { CtaTreatmentWsp } from "./components/CtaTreatmentWsp";
 import { Benefits } from "./components/benefits/Benefits";
+import { ButtonWsp } from "./components/ButtonWsp";
 export default function Moldeador() {
   return (
     <div>
@@ -17,6 +18,7 @@ export default function Moldeador() {
       <Reviews />
       <Questions />
       <CtaTreatmentWsp />
+      <ButtonWsp />
     </div>
   );
 }

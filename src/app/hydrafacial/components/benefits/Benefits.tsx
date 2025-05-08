@@ -2,7 +2,7 @@ import { BenefitsCarousel } from "./BenefitsCarousel";
 
 export const Benefits = () => {
   return (
-    <section className="container mx-auto max-w-7xl px-4 pt-4 mb-16 md:mb-32">
+    <section id="beneficios" className="container mx-auto max-w-7xl px-4 pt-4 mb-16 md:mb-32">
         <div className="flex flex-col items-center md:flex-row gap-8">
             <div className="flex flex-col items-center md:items-start gap-4 md:w-4/12">
                 <h2 className="text-3xl font-in-playfair md:text-4xl lg:text-5xl text-in-title-base text-center md:text-left">Beneficios y características</h2>

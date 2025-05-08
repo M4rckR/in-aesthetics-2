@@ -4,8 +4,8 @@ import { useInhaesteticsData } from "@/store/InhaesteticsData"
 export const Ofert3 = () => {
   const { openDialog } = useInhaesteticsData();
   return (
-    <article className="relative w-full h-[360px] md:h-[400px] lg:h-[600px] flex justify-start items-end overflow-hidden">
-        <div className="max-w-[1200] container mx-auto px-4 flex justify-center md:block">
+    <article  className="relative w-full h-[360px] md:h-[400px] lg:h-[600px] flex justify-start items-end overflow-hidden">
+        <div  className="max-w-[1200] container mx-auto px-4 flex justify-center md:block">
             <div className="w-full md:max-w-[620px] h-full flex flex-col items-start justify-center lg:py-46 space-y-0 md:space-y-6 pb-10 ">
                 <h1 className="text-white self-center md:self-start font-in-playfair md:text-left text-3xl md:text-5xl md:text-in-brown font-medium mb-4 ">Silueta Perfecta</h1>
                 <div className="md:text-in-brown-light md:text-lg space-y-0  text-sm text-center md:text-left text-white self-center md:self-start mb-4">
@@ -16,6 +16,7 @@ export const Ofert3 = () => {
             </div>
         </div>
         <Image
+            priority
             alt="chica sin lunares"
             src="/images/hero_ofert_3.png"
             width={780}
