@@ -11,12 +11,10 @@ import { PromoBanner } from "./components/PromoBanner";
 export default function Verruga() {
   return (
     <div>
-      <div className="bg-in-pink">
-        <Header />
-        <PromoBanner /> 
-        <HeroContact />
-        <InfoEnzimas />
-      </div>
+      <Header />
+      <PromoBanner /> 
+      <HeroContact />
+      <InfoEnzimas />
       <Benefits />
       <Testimonials />
       <Reviews />
