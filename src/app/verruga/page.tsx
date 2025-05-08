@@ -6,11 +6,14 @@ import { Testimonials } from "./components/testimonials/Testimonials";
 import { Reviews } from "./components/Reviews";
 import { Questions } from "./components/Questions";
 import { CtaWhatsApp } from "./components/CtaWhatsApp";
+import { PromoBanner } from "./components/PromoBanner";
+
 export default function Verruga() {
   return (
     <div>
       <div className="bg-in-pink">
         <Header />
+        <PromoBanner /> 
         <HeroContact />
         <InfoEnzimas />
       </div>

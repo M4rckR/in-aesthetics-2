@@ -16,7 +16,7 @@ export const Header = () => {
                         className="object-contain"
                     />
                 </div>
-                <div className="flex items-center gap-4">
+                <div className="hidden md:flex items-center gap-4">
                     <Link className="text-mo-brown-base" href="/">Beneficios</Link>
                     <Link className="text-mo-brown-base" href="/">Preguntas frecuentes</Link>
                 </div>
