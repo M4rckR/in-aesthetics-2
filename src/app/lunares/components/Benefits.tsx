@@ -18,10 +18,10 @@ export const Benefits = () => {
             </div>
             
           </div>
-        <div className="absolute top-5/12 left-1/2 -translate-x-1/2 md:-translate-y-4/12 w-full max-w-[1200px] mx-auto px-1 md:hidden">
+        <div className="absolute top-4/12 left-1/2 -translate-x-1/2 md:-translate-y-4/12 w-full max-w-[1200px] mx-auto px-1 md:hidden">
           <Swiper
           modules={[Autoplay]}
-          spaceBetween={30}
+          spaceBetween={20}
           slidesPerView={'auto'}
           centeredSlides={true}
           loop={true}
@@ -31,29 +31,61 @@ export const Benefits = () => {
             disableOnInteraction: false,
             pauseOnMouseEnter: true,
           }}
-          className=""
+          className="my-8"
         >
-          <SwiperSlide className="!w-[280px]">
-            <div className="px-2">
-              <Image src="/images/beneficio2.png" alt="Beneficios y Características" width={200} height={200} className="object-cover w-full max-w-[300px] mx-auto rounded-lg" />
+          <SwiperSlide className="!w-[250px]">
+            <div className="flex flex-col items-center h-full">
+              <div className="w-[220px] h-[220px] overflow-hidden rounded-lg">
+                <Image 
+                  src="/images/lunares/sin-cicatrices.png" 
+                  alt="Sin cicatrices ni dolor" 
+                  width={220} 
+                  height={220} 
+                  className="object-cover w-full h-full" 
+                />
+              </div>
               <p className="text-center w-full text-[#C5641A] font-medium mt-3">Sin cicatrices ni dolor</p>
             </div>
           </SwiperSlide>
-          <SwiperSlide className="!w-[280px]">
-            <div className="px-2">
-              <Image src="/images/beneficio2.png" alt="Beneficios y Características" width={200} height={200} className="object-cover w-full max-w-[300px] mx-auto rounded-lg" />
+          <SwiperSlide className="!w-[250px]">
+            <div className="flex flex-col items-center h-full">
+              <div className="w-[220px] h-[220px] overflow-hidden rounded-lg">
+                <Image 
+                  src="/images/lunares/eliminacion-definitiva.png" 
+                  alt="Eliminación definitiva" 
+                  width={220} 
+                  height={220} 
+                  className="object-cover w-full h-full" 
+                />
+              </div>
               <p className="text-center w-full text-[#C5641A] font-medium mt-3">Eliminación definitiva</p>
             </div>
           </SwiperSlide>
-          <SwiperSlide className="!w-[280px]">
-            <div className="px-2">
-              <Image src="/images/beneficio2.png" alt="Beneficios y Características" width={200} height={200} className="object-cover w-full max-w-[300px] mx-auto rounded-lg" />
+          <SwiperSlide className="!w-[250px]">
+            <div className="flex flex-col items-center h-full">
+              <div className="w-[220px] h-[220px] overflow-hidden rounded-lg">
+                <Image 
+                  src="/images/lunares/procedimiento-preciso.png" 
+                  alt="Procedimiento seguro y preciso" 
+                  width={220} 
+                  height={220} 
+                  className="object-cover w-full h-full" 
+                />
+              </div>
               <p className="text-center w-full text-[#C5641A] font-medium mt-3">Procedimiento seguro y preciso</p>
             </div>
           </SwiperSlide>
-          <SwiperSlide className="!w-[280px]">
-            <div className="px-2">
-              <Image src="/images/beneficio2.png" alt="Beneficios y Características" width={200} height={200} className="object-cover w-full max-w-[300px] mx-auto rounded-lg" />
+          <SwiperSlide className="!w-[250px]">
+            <div className="flex flex-col items-center h-full">
+              <div className="w-[220px] h-[220px] overflow-hidden rounded-lg">
+                <Image 
+                  src="/images/lunares/resultados-inmediatos.png" 
+                  alt="Resultados inmediatos" 
+                  width={220} 
+                  height={220} 
+                  className="object-cover w-full h-full" 
+                />
+              </div>
               <p className="text-center w-full text-[#C5641A] font-medium mt-3">Resultados inmediatos</p>
             </div>
           </SwiperSlide>
@@ -68,7 +100,7 @@ export const Benefits = () => {
           {/* Beneficio Superior Izquierdo */}
           <div data-aos="fade-up-right" data-aos-delay="100" className="md:absolute top-0 left-6 lg:left-12 lg:top-6 flex flex-col items-center w-3/12">
             <Image
-              src="/images/beneficio1.png"  
+              src="/images/lunares/sin-cicatrices.png"  
               alt="Beneficios y Características"
               width={300}
               height={300}
@@ -80,13 +112,13 @@ export const Benefits = () => {
           </div>
 
           {/* Beneficio Superior Derecho */}
-          <div data-aos="fade-up-left" data-aos-delay="100" className="md:absolute top-0 right-4 lg:right-12 flex flex-col items-center w-96">
+          <div data-aos="fade-up-left" data-aos-delay="100" className="md:absolute top-0 right-4 lg:right-12 flex flex-col items-center md:w-4/12 lg:w-96">
             <Image
-              src="/images/beneficio2.png"
+              src="/images/lunares/eliminacion-definitiva.png" 
               alt="Beneficios y Características"
               width={300}
               height={300}
-              className="object-cover w-56 lg:w-full hover:scale-105 transition-all duration-300"
+              className="object-cover w-56 md:w-full hover:scale-105 transition-all duration-300"
             />
             <p className="text-center w-full text-in-brown font-medium mt-1">
               Eliminación definitiva
@@ -96,11 +128,11 @@ export const Benefits = () => {
           {/* Beneficio Inferior */}
           <div data-aos="fade-up-right" data-aos-delay="100"  className="md:absolute bottom-16 lg:bottom-8 left-1/12  lg:left-52 flex flex-col items-center w-80">
             <Image
-              src="/images/beneficio3.png"
+              src="/images/lunares/procedimiento-preciso.png"
               alt="Beneficios y Características"
               width={300}
               height={300}
-              className="object-cover w-56 lg:w-full hover:scale-105 transition-all duration-300"
+              className="object-cover w-56 md:w-full hover:scale-105 transition-all duration-300"
             />
             <p className="text-center w-full text-in-brown font-medium mt-1">
               Procedimiento seguro y preciso
@@ -108,9 +140,9 @@ export const Benefits = () => {
           </div>
 
           {/* Beneficio Inferior derecho*/}
-          <div data-aos="fade-up-left" data-aos-delay="100" className="md:absolute right-0 bottom-0 lg:right-28 flex flex-col items-center w-3/12">
+          <div data-aos="fade-up-left" data-aos-delay="100" className="md:absolute right-0 bottom-8 md:right-28 flex flex-col items-center w-3/12">
             <Image
-              src="/images/beneficio4.png"
+              src="/images/lunares/resultados-inmediatos.png"
               alt="Beneficios y Características"
               width={300}
               height={300}

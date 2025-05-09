@@ -43,16 +43,14 @@ export const Testimonials = () => {
                         className="w-12 h-12 rounded-full bg-gray-200"
                       />
                       <div>
-                        <div className="flex gap-2">
+                        <div className="flex flex-col">
                           <p className="md:font-semibold">{testimonial.name}</p>
                           <div className="flex gap-1 text-in-cyan-text ">
                             <FaCheckCircle className="mt-1 w-3"/>
                             <p className="text-xs font-medium mt-1">Usuario Verificado</p>
                           </div>
                         </div>
-                        <p className="text-sm text-gray-500">
-                          {testimonial.age}
-                        </p>
+
                       </div>
                     </div>
                   </div>
@@ -70,16 +68,13 @@ export const Testimonials = () => {
                         className="w-12 h-12 rounded-full bg-gray-200"
                       />
                       <div>
-                        <div className="flex gap-2">
+                        <div className="flex flex-col">
                           <p className="md:font-semibold">{testimonial.name2}</p>
                           <div className="flex gap-1 text-in-cyan-text ">
                             <FaCheckCircle className="mt-1 w-3"/>
                             <p className="text-xs font-medium mt-1">Usuario Verificado</p>
                           </div>
                         </div>
-                        <p className="text-sm text-gray-500">
-                          {testimonial.age2}
-                        </p>
                       </div>
                     </div>
                   </div>

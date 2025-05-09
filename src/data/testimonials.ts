@@ -1,20 +1,16 @@
 export const testimonials = [
     {
         id: 1,
-        text: "Me sometí a la terapia de ondas de choque en Insalud. Fue indolora, profesional y noté mejoría desde la segunda sesión. ¡Recomiendo este tratamiento sin dudar!",
-        name: "Carlos M",
-        age: "45 años",
-        text2: "Gracias a las ondas de choque de Insalud recuperé mi confianza y vitalidad. El equipo fue muy atento y los resultados superaron mis expectativas. ¡Una experiencia transformadora!",
-        name2: "Andrés R",
-        age2: "38 años"
+        text: "Fui por una sesión de Exion y tuve resultados inmediatos. Muy amable el personal que me atendió. Lo recomiendo",
+        name: "Kathia Ching",
+        text2: "Me encantó la atención brindada, lo recomiendo, superó mis expectativas. Volvería a ir sin duda.",
+        name2: "Claudia Lisbeth",
     },
     {
         id: 3,
-        text: "Me hice el chequeo prostático en Insalud. La atención fue rápida, cercana y salí con total tranquilidad. ¡Un servicio de primera calidad!",
-        name: "Diego T",
-        age: "52 años",
-        text2: "Me realicé la cauterización de VPH en Insalud. El procedimiento fue discreto, cómodo y mi recuperación fue muy rápida. ¡Estoy muy agradecida con todo el equipo!",
-        name2: "Vanessa G",
-        age2: "29 años"
+        text: "Me encanto mucho la atención, por la paciencia y el profesionalismo de todos los que pertenecen al centro. El siguiente mes vuelvo para poder realizarme otro procedimiento :)",
+        name: "Wesli Benavides",
+        text2: "Buena experiencia, Lo que más me impresionó fue la atención personalizada que recibí. El profesional que realizó mi HydraFacial se tomó el tiempo para entender mis preocupaciones específicas y adaptar el tratamiento para satisfacer mis necesidades individuales",
+        name2: "Rodrigo Camacho",
     },
 ]
