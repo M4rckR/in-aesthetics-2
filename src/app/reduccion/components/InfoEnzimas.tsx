@@ -4,11 +4,11 @@ export const InfoEnzimas = () => {
   return (
     <section className="bg-white rounded-tl-4xl rounded-tr-4xl py-12 md:spy-24">
       <div className="container max-w-7xl mx-auto px-4 lg:px-32 space-y-12">
-        <h2 className="text-2xl text-center md:text-left md:text-4xl lg:text-6xl text-mo-brown-base mb-4 md:mb-12">
+        <h2 className="text-3xl text-center md:text-left md:text-4xl lg:text-6xl text-mo-brown-base mb-4 md:mb-12">
           Las enzimas Pb serum
         </h2>
         <div className="flex flex-col md:flex-row md:gap-4 lg:gap-12 space-y-12 md:space-y-0">
-            <div className="w-full md:w-1/2 bg-in-pink rounded-3xl relative h-[300px] md:h-[400px]">
+            <div className="hidden md:block w-full md:w-1/2 bg-in-pink rounded-3xl relative h-[300px] md:h-[400px]">
               <Image 
                 src="/images/reduccion/encimas-pb-serum.png"
                 alt="Enzimas Pb serum"

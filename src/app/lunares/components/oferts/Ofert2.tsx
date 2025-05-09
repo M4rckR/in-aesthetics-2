@@ -4,7 +4,7 @@ import { useInhaesteticsData } from "@/store/InhaesteticsData"
 export const Ofert2 = () => {
   const { openDialog } = useInhaesteticsData();
   return (
-    <article className="relative h-[360px] md:h-[400px] lg:h-[600px] flex overflow-hidden">
+    <article className="relative h-[300px] md:h-[400px] lg:h-[600px] flex overflow-hidden">
         <div className="max-w-[1200] container mx-auto px-4 flex justify-center md:block">
             <div className="w-full md:max-w-[620px] h-full flex flex-col items-start justify-end lg:py-46 space-y-0 md:space-y-6 pb-10">
                 <h1 className="text-white self-center md:self-start font-in-playfair md:text-left text-3xl md:text-5xl md:text-in-brown font-medium mb-4 ">Transformación 360°</h1>

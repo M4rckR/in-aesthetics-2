@@ -4,7 +4,7 @@ import { useInhaesteticsData } from "@/store/InhaesteticsData"
 export const Ofert1 = () => {
   const { openDialog } = useInhaesteticsData();
   return (
-    <article className="relative w-full h-[360px] md:h-[400px] lg:h-[600px] flex justify-start items-end overflow-hidden">
+    <article className="relative w-full h-[300px] md:h-[400px] lg:h-[600px] flex justify-start items-end overflow-hidden">
         <div className="max-w-[1200] container mx-auto px-4 h-full">
             <div className="md:max-w-[650px] lg:max-w-[820px]  flex flex-col items-start justify-center py-4 md:py-48 h-full">
                 <h2 className="font-in-playfair text-2xl sm:text-3xl lg:text-5xl text-in-title-base w-4/6 sm:w-4/6 md:w-5/6 pb-4 md:pb-8 leading-7 sm:leading-none lg:leading-none">Despídete de{' '}

@@ -7,7 +7,8 @@ export const PromoBanner = () => {
             muted 
             loop
             className="h-64 bg-bottom w-full object-cover border-none rounded-2xl mb-6"></video>
-            <h1 className="absolute top-1/2 -translate-y-1/2 text-in-title-base px-12 text-xl w-full md:w-1/2 text-center md:text-left">Moldea tu cuerpo sin cirugía con nuestro tratamiento de <span className="font-semibold text-mo-brown-base text-2xl">enzimas  Pb Serum</span> </h1>
+            <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-black/40 to-transparent rounded-2xl"></div>
+            <h1 className="absolute top-1/2 -translate-y-1/2 text-in-title-base px-4 w-5/6 md:px-12 text-xl md:w-1/2 text-left text-white drop-shadow-md">Moldea tu cuerpo sin cirugía con nuestro tratamiento de <span className="font-semibold text-in-orange-base text-3xl md:text-2xl px-1 rounded">enzimas Pb Serum</span> </h1>
         </section>
     </div>
   )

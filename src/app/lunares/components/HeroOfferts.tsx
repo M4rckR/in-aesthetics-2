@@ -30,7 +30,7 @@ export const HeroOfferts = () => {
             nextEl: '.hero-next',
           }}
           autoplay={{
-            delay: 350000,
+            delay: 3500,
             disableOnInteraction: false,
             pauseOnMouseEnter: false
           }}
