@@ -16,15 +16,15 @@ export const BenefitsCarousel = () => {
     },
     {
       id: 2,
-      title: "Hidratación intensiva",
-      description: "Restaura la humedad natural de la piel.",
-      image: "/images/benefits/beneficio-1.png"
+      title: "Exfoliación suave",
+      description: "Renueva la piel sin irritación.",
+      image: "/images/benefits/beneficio-2.png"
     },
     {
       id: 3,
-      title: "Rejuvenecimiento",
-      description: "Estimula la producción de colágeno.",
-      image: "/images/benefits/beneficio-1.png"
+      title: "Hidratacion Intensa",
+      description: "Suero con antioxidantes y ácido hialurónico.",
+      image: "/images/benefits/beneficio-3.png"
     },
     {
       id: 4,
@@ -56,14 +56,14 @@ export const BenefitsCarousel = () => {
       >
         {benefits.map((benefit) => (
           <SwiperSlide key={benefit.id}>
-            <div className="flex flex-col">
+            <div className="flex flex-col"  >
               <div>
                 <Image
                   src={benefit.image}
                   alt={benefit.title}
                   width={200}
                   height={200}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover rounded-xl"
                 />  
               </div>
               <h3 className="text-in-brown font-medium text-lg text-center md:text-left pt-2 md:pt-0">{benefit.title}</h3>

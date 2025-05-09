@@ -51,7 +51,7 @@ export const TestimonialCarousel = () => {
               </Avatar>
               <div>
                 <p className="font-semibold m-0">{item.name}</p>
-                <p className="text-sm md:text-base">{item.age} años</p>
+                <p className="text-sm text-gray-500">Usuario Verificado</p>
               </div>
             </div>
             <div className="flex items-start gap-3 pt-4 flex-grow overflow-auto">
