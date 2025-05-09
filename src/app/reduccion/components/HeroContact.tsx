@@ -4,7 +4,7 @@ import { ContactForm } from "./ContactForm"
 export const HeroContact = () => {
 
   return (
-    <section className="container mx-auto max-w-7xl px-4 pt-4 mb-16 lg:px-36">
+    <section data-aos="fade-up" data-aos-delay="0" className="container mx-auto max-w-7xl px-4 pt-4 mb-16 lg:px-36">
         <div className="flex flex-col items-center md:flex-row gap-4">
           <div className="hidden md:block relative w-full max-w-[460px] aspect-square mx-auto">
             <Image 

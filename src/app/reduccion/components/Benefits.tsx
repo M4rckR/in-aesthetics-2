@@ -6,7 +6,7 @@ export const Benefits = () => {
       <h2 className=" md:hidden text-mo-brown-base text-center pb-6 text-3xl w-full md:w-1/2">
         Beneficios y características
       </h2>
-      <section className="bg-mo-brown-base p-6 md:p-10 lg:p-16 rounded-4xl space-y-6">
+      <section data-aos="zoom-in"  data-aos-delay="0" className="bg-mo-brown-base p-6 md:p-10 lg:p-16 rounded-4xl space-y-6">
         <div className="flex gap-4 items-center">
           <h2 className="hidden md:block text-[#F5E7D3] text-4xl lg:text-5xl w-full md:w-1/2">
             Beneficios y características

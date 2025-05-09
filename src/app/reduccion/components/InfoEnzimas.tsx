@@ -8,7 +8,7 @@ export const InfoEnzimas = () => {
           Las enzimas Pb serum
         </h2>
         <div className="flex flex-col md:flex-row md:gap-4 lg:gap-12 space-y-12 md:space-y-0">
-            <div className="hidden md:block w-full md:w-1/2 bg-in-pink rounded-3xl relative h-[300px] md:h-[400px]">
+            <div data-aos="fade-right" data-aos-delay="0" className="hidden shadow-lg md:block w-full md:w-1/2 bg-in-pink rounded-3xl relative h-[300px] md:h-[400px]">
               <Image 
                 src="/images/reduccion/encimas-pb-serum.png"
                 alt="Enzimas Pb serum"
@@ -17,7 +17,7 @@ export const InfoEnzimas = () => {
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div> 
-            <div className="max-w-[600px] md:w-1/2 mx-auto md:mx-0">
+            <div data-aos="fade-up" data-aos-delay="0" className="max-w-[600px] md:w-1/2 mx-auto md:mx-0">
                 <Image 
                     src="/images/reduccion/encimas-pb-serum-2.png"
                     alt="Enzimas Pb serum"

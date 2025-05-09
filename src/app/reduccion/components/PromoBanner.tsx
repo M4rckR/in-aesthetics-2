@@ -1,7 +1,7 @@
 export const PromoBanner = () => {
   return (
     <div className="max-w-7xl mx-auto px-4">
-        <section className="relative">
+        <section data-aos="zoom-in"  data-aos-delay="0" className="relative">
             <video src="/video/promo-banner.mp4" 
             autoPlay 
             muted 
