@@ -3,7 +3,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 export const Reviews = () => {
   return (
-    <div className="bg-in-pink pb-16 md:pb-32 md:px-48">
+    <div className="bg-in-pink pb-16 md:pb-32 xl:px-36">
       <section className="container mx-auto max-w-7xl px-4 pt-4 ">
         <h2 className="text-3xl md:text-5xl text-center text-mo-brown-base mb-12">
         Reseñas y Calificaciones

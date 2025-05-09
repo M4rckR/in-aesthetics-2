@@ -6,10 +6,11 @@ export const CtaWhatsApp = () => {
             <section data-aos="zoom-in" data-aos-delay="0" className="bg-mo-brown-base py-6 px-6 md:py-8  md:grid md:grid-cols-12 lg:py-12 lg:px-16 rounded-[34px] relative">
                     <div className="absolute hidden md:block bottom-0 left-1/2 -translate-x-1/2 md:left-32">
                         <Image 
-                        src="/images/moldea/doctor-sonrisa.png" 
+                        src="/images/moldea/chica-sonrisa.png" 
                         alt="WhatsApp" 
                         width={200} 
                         height={200} 
+                        unoptimized
                         />
                     </div>
                 <div className="md:col-start-3 md:col-span-full">
@@ -29,11 +30,12 @@ export const CtaWhatsApp = () => {
                 
             </section>
                 <Image 
-                src="/images/moldea/doctor-sonrisa.png" 
+                src="/images/moldea/chica-sonrisa.png" 
                 alt="WhatsApp" 
                 width={200} 
                 height={200} 
                 className="w-full h-full object-cover max-w-[300px] mx-auto md:hidden"
+                
                 />
         </div>
   )
