@@ -14,10 +14,11 @@ export const CtaTreatmentWsp = () => {
                 </a>
             </div>
             <Image 
-                src={'/images/imageTreatment.png'} 
+                src={'/images/moldea/imageTreatment.png'} 
                 alt='cta-treatment-wsp' 
                 width={100} 
-                height={100} 
+                height={100}
+                unoptimized={true}
                 className='object-cover w-full md:w-1/2 max-w-[500px]'
             />
             {/* <div>

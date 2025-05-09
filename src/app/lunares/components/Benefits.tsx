@@ -6,10 +6,9 @@ import { Autoplay } from 'swiper/modules';
 
 export const Benefits = () => {
   return (
-    <section className="h-[400px] md:h-screen relative  my-16 px-4">
+    <section className="h-[400px] md:h-screen relative my-16 px-4">
       <div className="container mx-auto max-w-[1200px] h-full relative ">
         {/* Círculo central con título */}
-
         <div className="h-full">  
           <div className="absolute md:top-1/2 left-1/2 -translate-x-1/2 md:-translate-y-1/2">
             <div className="bg-in-pink py-44 md:w-[200px] w-[150px] rounded-full relative">
@@ -67,7 +66,7 @@ export const Benefits = () => {
 
         <section className="hidden md:flex md:flex-row">
           {/* Beneficio Superior Izquierdo */}
-          <div data-aos="fade-up-right" data-aos-delay="100" className="md:absolute top-0 left-6 lg:left-28 lg:top-6 flex flex-col items-center w-3/12">
+          <div data-aos="fade-up-right" data-aos-delay="100" className="md:absolute top-0 left-6 lg:left-12 lg:top-6 flex flex-col items-center w-3/12">
             <Image
               src="/images/beneficio1.png"  
               alt="Beneficios y Características"
@@ -81,7 +80,7 @@ export const Benefits = () => {
           </div>
 
           {/* Beneficio Superior Derecho */}
-          <div data-aos="fade-up-left" data-aos-delay="100" className="md:absolute top-0 right-4 lg:right-28 flex flex-col items-center w-96">
+          <div data-aos="fade-up-left" data-aos-delay="100" className="md:absolute top-0 right-4 lg:right-12 flex flex-col items-center w-96">
             <Image
               src="/images/beneficio2.png"
               alt="Beneficios y Características"
@@ -95,7 +94,7 @@ export const Benefits = () => {
           </div>
 
           {/* Beneficio Inferior */}
-          <div data-aos="fade-up-right" data-aos-delay="100"  className="md:absolute bottom-16 lg:bottom-8 left-1/12  lg:left-64 flex flex-col items-center w-80">
+          <div data-aos="fade-up-right" data-aos-delay="100"  className="md:absolute bottom-16 lg:bottom-8 left-1/12  lg:left-52 flex flex-col items-center w-80">
             <Image
               src="/images/beneficio3.png"
               alt="Beneficios y Características"
@@ -109,7 +108,7 @@ export const Benefits = () => {
           </div>
 
           {/* Beneficio Inferior derecho*/}
-          <div data-aos="fade-up-left" data-aos-delay="100" className="md:absolute right-0 bottom-0 lg:right-14 flex flex-col items-center w-3/12">
+          <div data-aos="fade-up-left" data-aos-delay="100" className="md:absolute right-0 bottom-0 lg:right-28 flex flex-col items-center w-3/12">
             <Image
               src="/images/beneficio4.png"
               alt="Beneficios y Características"
