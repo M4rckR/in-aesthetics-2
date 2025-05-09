@@ -1,11 +1,17 @@
+'use client'
 import Image from 'next/image'
 import React from 'react'
 import { Socialbar } from './Socialbar'
+import { usePathname } from 'next/navigation'
+
 
 export const Footer = () => {
+
+ const pathname = usePathname()
+
   return (
     <footer 
-        className='bg-in-pink py-14 rounded-tl-[48px] rounded-tr-[48px] md:rounded-tl-[58px] md:rounded-tr-[58px] mt-auto'
+        className={`${pathname === '/reduccion' ? 'md:pt-40' : ''} py-14  mt-auto bg-in-pink rounded-tl-[48px] rounded-tr-[48px] md:rounded-tl-[58px] md:rounded-tr-[58px]`}
         >
         <div className='container max-w-[1200px] mx-auto px-4 space-y-8'>
             <div className='flex flex-col md:flex-row gap-8'>

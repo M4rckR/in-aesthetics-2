@@ -7,7 +7,7 @@ import { Reviews } from "./components/Reviews";
 import { Questions } from "./components/Questions";
 import { CtaWhatsApp } from "./components/CtaWhatsApp";
 import { PromoBanner } from "./components/PromoBanner";
-
+import { ButtonWsp } from "./components/ButtonWsp"; 
 export default function Verruga() {
   return (
     <div>
@@ -20,6 +20,7 @@ export default function Verruga() {
       <Reviews />
       <Questions />
       <CtaWhatsApp />
+      <ButtonWsp />
     </div>
   );
 }
