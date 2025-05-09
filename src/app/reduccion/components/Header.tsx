@@ -17,8 +17,8 @@ export const Header = () => {
                     />
                 </div>
                 <div className="hidden md:flex items-center gap-4">
-                    <Link className="text-mo-brown-base" href="/">Beneficios</Link>
-                    <Link className="text-mo-brown-base" href="/">Preguntas frecuentes</Link>
+                    <Link className="text-mo-brown-base" href="#beneficios">Beneficios</Link>
+                    <Link className="text-mo-brown-base" href="#preguntas-frecuentes">Preguntas frecuentes</Link>
                 </div>
             </div>
         </div>
