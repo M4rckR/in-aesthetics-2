@@ -4,7 +4,7 @@ import React from 'react'
 
 export const CtaTreatmentWsp = () => {
   return (
-    <div className='container max-w-[1200px] mx-auto my-16 lg:my-32'>
+    <div data-aos="fade-up" data-aos-delay="0" className='container max-w-[1200px] mx-auto my-16 lg:my-32'>
         <div className='flex flex-col justify-center mx-auto md:flex-row bg-in-pink max-w-[500px] md:max-w-none rounded-tl-[48px] rounded-tr-[48px] md:rounded-tl-[140px] md:rounded-bl-[140px] gap-0 md:gap-4 items-center w-10/12 rounded-lg md:rounded-2xl'>
             <div className='w-full md:w-1/2 md:pl-16 lg:pl-22 xl:pl-32 space-y-3 md:space-y-4 flex flex-col items-center md:items-start pt-16 pb-10 md:py-0'>
                 <h3 className='font-in-playfair text-in-title-base text-2xl px-10 sm:px-8 lg:text-5xl text-center md:text-left md:px-0'>¡Elimina esas imperfecciones hoy mismo!</h3>

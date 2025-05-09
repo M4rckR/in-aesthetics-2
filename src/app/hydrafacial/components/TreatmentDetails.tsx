@@ -2,7 +2,7 @@ import Image from "next/image"
 
 export const TreatmentDetails = () => {
   return (
-    <section className="container mx-auto max-w-7xl pl-4 pr-4 md:pr-0 lg:pr-4 md:px-24 mb-16 md:my-32 lg:mt-48 ">
+    <section data-aos="fade-up" data-aos-delay="100"  className="container mx-auto max-w-7xl pl-4 pr-4 md:pr-0 lg:pr-4 md:px-24 mb-16 md:my-32 lg:mt-48 ">
       <div className="md:hidden text-center pb-8">
           <p className="text-in-title-base text-lg">Nuestro tratamiento</p>
           <h2 className="text-in-title-base font-in-playfair text-5xl pb-4">Hydrafacial</h2>
@@ -18,6 +18,8 @@ export const TreatmentDetails = () => {
           </p>
         </div>
         <Image 
+                data-aos="fade-left"
+                data-aos-delay="150"
                 src="/images/treatment-co2.png" 
                 alt="Láser CO2 Deka" 
                 width={100} height={100} 

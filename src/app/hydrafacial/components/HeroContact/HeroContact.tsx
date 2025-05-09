@@ -3,7 +3,7 @@ import { HeroForm } from "./HeroForm"
 
 export const HeroContact = () => {
   return (
-    <section className="container mx-auto max-w-7xl px-4 mb-16">
+    <section data-aos="fade-up" data-aos-delay="0" className="container mx-auto max-w-7xl px-4 mb-16">
         <div className="flex flex-col gap-8 md:flex-row justify-between">
             <div className="relative md:w-1/2">
                 <Image 
