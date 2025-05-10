@@ -26,7 +26,6 @@ export const Reviews = () => {
           
           <div className="flex items-center gap-2">
             <Avatar className="w-16 h-16">
-              <AvatarImage src="/svg/avatar.svg" />
               <AvatarFallback>Lg</AvatarFallback>
             </Avatar>
             <div>
@@ -51,7 +50,6 @@ export const Reviews = () => {
           
           <div className="flex items-center gap-2">
             <Avatar className="w-16 h-16">
-              <AvatarImage src="/svg/avatar.svg" />
               <AvatarFallback>Ag</AvatarFallback>
             </Avatar>
             <div>

@@ -24,7 +24,7 @@ export const Reviews = () => {
           
           <div className="flex items-center gap-2">
             <Avatar className="w-16 h-16">
-              <AvatarImage src="/svg/avatar.svg" />
+              
               <AvatarFallback>Lg</AvatarFallback>
             </Avatar>
             <div>
@@ -35,7 +35,7 @@ export const Reviews = () => {
         </div>
         <div className="flex flex-col justify-between border border-in-[#FFECE3] p-6 rounded-3xl w-full">
           <div className="space-y-2 pb-16">
-            <Image
+          <Image
               src="/svg/stars.svg"
               alt="Review 1"
               width={24}
@@ -48,8 +48,8 @@ export const Reviews = () => {
           </div>
           
           <div className="flex items-center gap-2">
+            
             <Avatar className="w-16 h-16">
-              <AvatarImage src="/svg/avatar.svg" />
               <AvatarFallback>Ag</AvatarFallback>
             </Avatar>
             <div>
