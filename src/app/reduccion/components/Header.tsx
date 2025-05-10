@@ -9,10 +9,10 @@ export const Header = () => {
                 <div className="relative w-[200px] h-[75px]">
                     <Image
                         src="/logos/marca.png"
-                        alt="Logo"
-                        fill
+                        alt="Logo de Inaesthetics"
                         priority
-                        sizes="200px"
+                        width={200}
+                        height={75}
                         className="object-contain"
                     />
                 </div>
