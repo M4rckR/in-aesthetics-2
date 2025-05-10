@@ -18,139 +18,84 @@ import { useInhaesteticsData } from "@/store/InhaesteticsData"
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden"
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
-import { z }from "zod"
 import { useEffect, useRef, useState } from "react"
-import { FaRegCalendarAlt } from "react-icons/fa"
-import { IoTimeOutline } from "react-icons/io5"
-import { AddClients } from "@/services/AddClients"
+import { Client } from "@/types"
+import { ClientSchema } from "@/schemas"
+import { Textarea } from "@/components/ui/textarea"
+import axios, { AxiosError } from "axios"
+import { toast } from "sonner"
 
-
-const formSchema = z.object({
-  nombres: z.string().min(3, { message: "El nombre es requerido" }),
-  correo: z.string().email({ message: "Ingrese un correo válido" }),
-  telefono: z.string().min(8, { message: "Ingrese un número de teléfono válido" }),
-  fecha: z.string().min(1, { message: "Seleccione una fecha" }),
-  hora: z.string().min(1, { message: "Seleccione una hora" }),
-})
-
-type FormValues = z.infer<typeof formSchema>
 
 export const ContactForm = () => {
+    const [isLoading, setIsLoading] = useState(false);
     const { isOpen, closeDialog } = useInhaesteticsData();
     const formRef = useRef<HTMLFormElement>(null);
     const dialogRef = useRef<HTMLDivElement>(null);
-    const [isSubmitting, setIsSubmitting] = useState(false);
-    const [submitStatus, setSubmitStatus] = useState<{
-        success: boolean;
-        message: string;
-    } | null>(null);
     
-    const form = useForm<FormValues>({
-        resolver: zodResolver(formSchema),
+    const form = useForm<Client>({
+        resolver: zodResolver(ClientSchema),
         defaultValues: {
-            nombres: "",
+            nombre: "",
             correo: "",
             telefono: "",
-            fecha: "",
-            hora: "",
+            mensaje: "",
+            honeypot: "",
         },
     });
     
-    // Reference to watch date value
-    const watchDate = form.watch("fecha");
-    
-    // Handle keyboard visibility to ensure fields remain visible
-    useEffect(() => {
-        if (!isOpen) return;
 
-        const handleFocus = (e: FocusEvent) => {
-            // Add a small delay to allow the keyboard to appear
-            setTimeout(() => {
-                if (dialogRef.current && e.target instanceof HTMLElement) {
-                    // Get the position of the focused element
-                    const targetRect = e.target.getBoundingClientRect();
-                    
-                    // Calculate if the element is near the bottom of the viewport
-                    const viewportHeight = window.innerHeight;
-                    const elementBottom = targetRect.bottom;
-                    
-                    // If the element is in the bottom half of the screen, scroll to it
-                    if (elementBottom > viewportHeight * 0.5) {
-                        // Get the input's container for better positioning
-                        const formItem = e.target.closest('.form-item');
-                        if (formItem) {
-                            formItem.scrollIntoView({ 
-                                behavior: 'smooth', 
-                                block: 'center'
-                            });
-                        } else {
-                            e.target.scrollIntoView({ 
-                                behavior: 'smooth', 
-                                block: 'center'
-                            });
-                        }
-                    }
-                }
-            }, 400);
-        };
-
-        const formNode = formRef.current;
-        const inputs = formNode?.querySelectorAll('input');
-        inputs?.forEach(input => {
-            input.addEventListener('focus', handleFocus as EventListener);
-        });
-
-        return () => {
-            const inputs = formNode?.querySelectorAll('input');
-            inputs?.forEach(input => {
-                input.removeEventListener('focus', handleFocus as EventListener);
-            });
-        };
-    }, [isOpen]);
-
-    // Reset form and state when dialog closes
+    // Reset form when dialog closes
     useEffect(() => {
         if (!isOpen) {
-            setSubmitStatus(null);
             form.reset();
         }
     }, [isOpen, form]);
 
-    const onSubmit = async (data: FormValues) => {
+    const onSubmit = async (data: Client) => {
+        setIsLoading(true);
         try {
-            setIsSubmitting(true);
-            setSubmitStatus(null);
+            await axios.post("/api/send", data);
             
-            // Map form values to match the Client schema structure
-            const clientData = {
-                nombres: data.nombres,
-                correo: data.correo,
-                telefono: data.telefono,
-                fecha: data.fecha,
-                hora: data.hora
-            };
+            // Show success notification with Sonner
+            toast.success("¡Mensaje enviado con éxito!");
             
-            await AddClients(clientData);
-            
-            // Show success message
-            setSubmitStatus({
-                success: true,
-                message: "¡Cita reservada con éxito! Te contactaremos pronto."
-            });
+            // Reset form
+            form.reset();
             
             // Close dialog after showing success message
             setTimeout(() => {
                 closeDialog();
-            }, 3000);
+            }, 1500);
             
         } catch (error) {
             console.error("Error al enviar formulario:", error);
-            setSubmitStatus({
-                success: false,
-                message: "No se pudo reservar la cita. Por favor, intenta nuevamente."
-            });
+            
+            // Manejo específico de errores
+            if (axios.isAxiosError(error)) {
+                const axiosError = error as AxiosError;
+                
+                if (axiosError.response) {
+                    // Error de respuesta del servidor
+                    if (axiosError.response.status === 500) {
+                        toast.error("Error de conexión. Inténtalo más tarde.");
+                    } else if (axiosError.response.status === 400) {
+                        toast.error("Datos inválidos. Verifica la información.");
+                    } else {
+                        toast.error("Error al enviar. Inténtalo nuevamente.");
+                    }
+                } else if (axiosError.request) {
+                    // No se recibió respuesta del servidor
+                    toast.error("Sin conexión al servidor.");
+                } else {
+                    // Error al configurar la solicitud
+                    toast.error("Error inesperado. Inténtalo más tarde.");
+                }
+            } else {
+                // Error genérico 
+                toast.error("No se pudo enviar el mensaje.");
+            }
         } finally {
-            setIsSubmitting(false);
+            setIsLoading(false);
         }
     };
 
@@ -162,26 +107,15 @@ export const ContactForm = () => {
           >
             <DialogHeader className="mb-2">
               <VisuallyHidden>
-                <DialogTitle>¡Reserva tu cita!</DialogTitle>
+                <DialogTitle>¡Contáctanos!</DialogTitle>
               </VisuallyHidden>
             </DialogHeader>
-            
-            {/* Show status message if available */}
-            {submitStatus && (
-              <div className={`mb-4 p-3 rounded text-center ${
-                submitStatus.success 
-                  ? "bg-green-100 text-green-800 border border-green-200" 
-                  : "bg-red-100 text-red-800 border border-red-200"
-              }`}>
-                {submitStatus.message}
-              </div>
-            )}
             
             <Form {...form}>
               <form ref={formRef} onSubmit={form.handleSubmit(onSubmit)} className="grid gap-4 md:gap-4 py-4">
                 <FormField
                   control={form.control}
-                  name="nombres"
+                  name="nombre"
                   render={({ field }) => (
                     <FormItem className="form-item">
                       <FormControl>
@@ -237,95 +171,49 @@ export const ContactForm = () => {
                     )}
                   />
                 </div>
-                {/* Stack fields vertically on mobile */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-4">
-                  <FormField
-                    control={form.control}
-                    name="fecha"
-                    render={({ field }) => (
-                      <FormItem className="form-item">
-                        <FormControl>
-                          <div className="relative">
-                            <div className="md:hidden absolute right-3 top-1/2 transform -translate-y-1/2 text-in-blue-base">
-                              <FaRegCalendarAlt size={20} className="text-in-orange-base" />
-                            </div>
-                            <Input 
-                              type="date"
-                              min={new Date().toISOString().split('T')[0]}
-                              className="border-in-blue-base py-6 pl-3 placeholder:text-base" 
-                              {...field} 
-                              onChange={(e) => {
-                                const selectedDate = e.target.value;
-                                const today = new Date().toISOString().split('T')[0];
-                                
-                                // Prevent selecting dates before today
-                                if (selectedDate < today) {
-                                  field.onChange(today);
-                                  return;
-                                }
-                                
-                                field.onChange(selectedDate);
-                              }}
-                            />
-                            <span className="md:hidden absolute text-base text-in-title-base/80 left-3 top-1/2 transform -translate-y-1/2 pointer-events-none">
-                              {!field.value && "Fecha"}
-                            </span>
-                          </div>
-                        </FormControl>
-                        <FormMessage className="text-red-500 text-xs mt-1" />
-                      </FormItem>
-                    )}
-                  />
-                  <FormField
-                    control={form.control}
-                    name="hora"
-                    render={({ field }) => (
-                      <FormItem className="form-item">
-                        <FormControl>
-                          <div className="relative">
-                            <div className="md:hidden absolute right-6 top-1/2 transform -translate-y-1/2 text-in-blue-base">
-                              <IoTimeOutline size={20} className="text-in-orange-base" />
-                            </div>
-                            <Input 
-                              type="time"
-                              className="border-in-blue-base py-6 pl-3 placeholder:text-base"
-                              min={watchDate === new Date().toISOString().split('T')[0] ? 
-                                new Date().toLocaleTimeString('en-US', { hour12: false, hour: '2-digit', minute: '2-digit' }) : 
-                                undefined}
-                              {...field}
-                              onChange={(e) => {
-                                const selectedTime = e.target.value;
-                                const today = new Date().toISOString().split('T')[0];
-                                
-                                // If date is today, validate that time is not in the past
-                                if (watchDate === today) {
-                                  const currentTime = new Date().toLocaleTimeString('en-US', { hour12: false, hour: '2-digit', minute: '2-digit' });
-                                  if (selectedTime < currentTime) {
-                                    // Reset to current time if selected time is in the past
-                                    field.onChange(currentTime);
-                                    return;
-                                  }
-                                }
-                                
-                                field.onChange(selectedTime);
-                              }}
-                            />
-                            <span className="md:hidden absolute text-base text-in-title-base/80 left-3 top-1/2 transform -translate-y-1/2 pointer-events-none">
-                              {!field.value && "Horario"}
-                            </span>
-                          </div>
-                        </FormControl>
-                        <FormMessage className="text-red-500 text-xs mt-1" />
-                      </FormItem>
-                    )}
-                  />
-                </div>
+                
+                <FormField
+                  control={form.control}
+                  name="mensaje"
+                  render={({ field }) => (
+                    <FormItem className="form-item w-full">
+                      <FormControl>
+                        <Textarea
+                          placeholder="Mensaje"
+                          className="border-in-blue-base py-6 placeholder:text-base w-full min-h-[120px] resize-none"
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage className="text-red-500 text-xs mt-1" />
+                    </FormItem>
+                  )}
+                />
+                
+                <FormField
+                  control={form.control}
+                  name="honeypot"
+                  render={({ field }) => (
+                    <FormItem className="hidden">
+                      <FormControl>
+                        <Input
+                          {...field}
+                          type="text"
+                          autoComplete="off"
+                          tabIndex={-1}
+                          style={{ display: 'none' }}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                
                 <button 
                   type="submit" 
-                  disabled={isSubmitting}
+                  disabled={isLoading}
                   className="bg-in-brown transition-all duration-300 hover:bg-in-brown/80 text-white py-3 px-12 block text-center rounded-4xl w-full cursor-pointer mt-4 disabled:opacity-70 disabled:cursor-not-allowed"
                 >
-                  {isSubmitting ? "Enviando..." : "¡Reserva tu cita ahora!"}
+                  {isLoading ? "Enviando..." : "Enviar mensaje"}
                 </button>
               </form>
             </Form>

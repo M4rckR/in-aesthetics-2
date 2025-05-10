@@ -1,14 +1,5 @@
 import { z } from "zod";
-
 export const ClientSchema = z.object({
-    nombres : z.string(),
-    correo: z.string(),
-    telefono: z.string(),
-    fecha: z.string(),
-    hora: z.string()
-})
-
-export const ClientSchema2 = z.object({
     nombre: z.string()
         .min(2, "Nombre inválido")
         .max(50, "Nombre demasiado largo")

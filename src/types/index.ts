@@ -1,5 +1,5 @@
 
-import { ClientSchema, ClientSchema2 } from "@/schemas";
+import { ClientSchema } from "@/schemas";
 import { z } from "zod";
 
 export type RedSocial = {
@@ -9,4 +9,3 @@ export type RedSocial = {
 }
 
 export type Client = z.infer<typeof ClientSchema>   
-export type Client2 = z.infer<typeof ClientSchema2>

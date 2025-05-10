@@ -1,4 +1,4 @@
-import { ClientSchema2 } from '@/schemas'
+import { ClientSchema } from '@/schemas'
 import { NextRequest, NextResponse } from 'next/server'
 import nodemailer from 'nodemailer'
 
@@ -16,7 +16,7 @@ export async function POST(req: NextRequest) {
             return NextResponse.json({ error: 'Invalid JSON in request body' }, { status: 400 })
         }
 
-        const parsed = ClientSchema2.safeParse(body)
+        const parsed = ClientSchema.safeParse(body)
 
         if (!parsed.success) {
             return NextResponse.json({ 

@@ -9,8 +9,7 @@ export const Questions = () => {
 
   const handleValueChange = (value: string) => {
     setOpenItem(value);
-    console.log("Pregunta abierta:", value);
-  };
+      };
 
   return (
     <section className="container mx-auto max-w-[1200px] px-4 my-16 lg:my-32">

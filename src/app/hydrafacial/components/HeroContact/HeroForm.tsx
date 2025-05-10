@@ -1,21 +1,21 @@
 'use client'
 import { Form, FormControl, FormField, FormItem, FormMessage } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
-import { ClientSchema2 } from "@/schemas"
-import { Client2 } from "@/types"
+import { ClientSchema } from "@/schemas"
+import { Client } from "@/types"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { Button } from "@/components/ui/button"
 import { Textarea } from "@/components/ui/textarea"
-import axios from "axios"
+import axios, { AxiosError } from "axios"
 import { toast } from "sonner"
 import { useState } from "react"
 
 export const HeroForm = () => {
 
   const [isLoading, setIsLoading] = useState(false)
-  const form = useForm<Client2>({
-    resolver: zodResolver(ClientSchema2),
+  const form = useForm<Client>({
+    resolver: zodResolver(ClientSchema),
     defaultValues: {
       nombre: "",
       correo: "",
@@ -24,14 +24,37 @@ export const HeroForm = () => {
     }
   })
 
-  async function onSubmit(data: Client2) {
+  async function onSubmit(data: Client) {
       setIsLoading(true)
       try {
         await axios.post("/api/send", data)
         toast.success("Mensaje enviado correctamente")
         form.reset()
       } catch (error) {
-        console.log(error)  
+        // Manejo específico de errores
+        if (axios.isAxiosError(error)) {
+          const axiosError = error as AxiosError;
+          
+          if (axiosError.response) {
+            // Error de respuesta del servidor
+            if (axiosError.response.status === 500) {
+              toast.error("Problemas con el servidor de correo. Intenta más tarde o contáctanos por WhatsApp.");
+            } else if (axiosError.response.status === 400) {
+              toast.error("Datos inválidos. Verifica la información ingresada.");
+            } else {
+              toast.error("Error al enviar el mensaje. Intenta nuevamente.");
+            }
+          } else if (axiosError.request) {
+            // No se recibió respuesta del servidor
+            toast.error("No se pudo conectar con el servidor. Verifica tu conexión.");
+          } else {
+            // Error al configurar la solicitud
+            toast.error("Ocurrió un error inesperado. Intenta más tarde.");
+          }
+        } else {
+          // Error genérico 
+          toast.error("Error al enviar el mensaje")
+        }
       } finally {
         setIsLoading(false)
       }
