@@ -74,7 +74,7 @@ export const Reviews = () => {
 
           <div className="flex items-center gap-2">
             <Avatar className="w-16 h-16">
-              <AvatarImage src="/avatars/reviews/user-3.jpg" />
+              <AvatarImage alt="Marcos Romero" src="/avatars/reviews/user-3.jpg" />
               <AvatarFallback>Mr</AvatarFallback>
             </Avatar>
             <div>
