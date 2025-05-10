@@ -7,8 +7,13 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { Button } from "@/components/ui/button"
 import { Textarea } from "@/components/ui/textarea"
+import axios from "axios"
+import { toast } from "sonner"
+import { useState } from "react"
 
 export const HeroForm = () => {
+
+  const [isLoading, setIsLoading] = useState(false)
   const form = useForm<Client2>({
     resolver: zodResolver(ClientSchema2),
     defaultValues: {
@@ -19,9 +24,17 @@ export const HeroForm = () => {
     }
   })
 
-  function onSubmit(data: Client2) {
-    console.log(data)
-    // Aquí iría la lógica para enviar los datos
+  async function onSubmit(data: Client2) {
+      setIsLoading(true)
+      try {
+        await axios.post("/api/send", data)
+        toast.success("Mensaje enviado correctamente")
+        form.reset()
+      } catch (error) {
+        console.log(error)  
+      } finally {
+        setIsLoading(false)
+      }
   }
 
   return (
@@ -85,7 +98,9 @@ export const HeroForm = () => {
             )}
           />
           
-          <Button type="submit" className="w-full text-white text-base bg-in-brown py-6 rounded-4xl cursor-pointer">¡Agenda tu consulta ahora!</Button>
+          <Button type="submit" className={`w-full text-white text-base bg-in-brown py-6 rounded-4xl cursor-pointer ${isLoading ? "opacity-50 cursor-not-allowed" : ""}`}>
+            {isLoading ? "Enviando..." : "¡Agenda tu consulta ahora!"}
+          </Button>
           <p className="text-sm text-in-brown">Al llenar el formulario, Ud. acepta los {' '}<a className="underline" href="#">Términos y Condiciones / Política de Privacidad</a>  </p>
         </form>
       </Form>
