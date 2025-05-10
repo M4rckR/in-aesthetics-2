@@ -9,8 +9,11 @@ import { Button } from "@/components/ui/button"
 import { Textarea } from "@/components/ui/textarea"
 import { toast } from "sonner"
 import axios from "axios"
+import { useState } from "react"
 
 export const ContactForm = () => {
+
+  const [isLoading, setIsLoading] = useState(false)
 
   const form = useForm<Client2>({
     resolver: zodResolver(ClientSchema2),
@@ -24,6 +27,7 @@ export const ContactForm = () => {
   })
 
   async function onSubmit(data: Client2) {
+    setIsLoading(true)
     try {
       await axios.post("/api/send", data)
       toast.success("Mensaje enviado correctamente")
@@ -31,6 +35,8 @@ export const ContactForm = () => {
     } catch (error) {
       console.log(error)
       toast.error("Error al enviar el mensaje")
+    } finally {
+      setIsLoading(false)
     }
   }
 
@@ -130,8 +136,8 @@ export const ContactForm = () => {
           )}
         />
         
-        <Button type="submit" onClick={form.handleSubmit(onSubmit)} className="w-full cursor-pointer bg-transparent text-mo-brown-base border-mo-brown-base border py-6 rounded-full hover:bg-mo-brown-base text-base hover:text-white transition-all duration-300">
-        ¡Agenda tu consulta ahora!
+        <Button type="submit" onClick={form.handleSubmit(onSubmit)} className={`w-full cursor-pointer bg-transparent text-mo-brown-base border-mo-brown-base border py-6 rounded-full hover:bg-mo-brown-base text-base hover:text-white transition-all duration-300 ${isLoading ? "opacity-50 cursor-not-allowed" : ""}`}>
+        {isLoading ? "Enviando..." : "¡Agenda tu consulta ahora!"}
         </Button>
         <p className="text-sm text-mo-brown-base">Al llenar el formulario, Ud. acepta los Términos y Condiciones / Política de Privacidad</p>
       </div>
