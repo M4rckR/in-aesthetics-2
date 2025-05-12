@@ -217,7 +217,9 @@ export const ContactForm = () => {
                 </button>
               </form>
             </Form>
-            <p className="text-in-blue-base text-sm">Al llenar el formulario, Ud. acepta los Términos y Condiciones / Política de Privacidad</p>
+            <p className="text-sm text-mo-brown-base">Al llenar el formulario, Ud. acepta los <span>
+          <a href="/pdf/tratamiento-de-datos-personales.pdf" target="_blank" className="underline">Términos y Condiciones / Política de Privacidad.</a>
+          </span> </p>
           </DialogContent>
         </Dialog>
       )

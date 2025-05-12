@@ -161,7 +161,9 @@ export const ContactForm = () => {
         <Button type="submit" onClick={form.handleSubmit(onSubmit)} className={`w-full cursor-pointer bg-transparent text-mo-brown-base border-mo-brown-base border py-6 rounded-full hover:bg-mo-brown-base text-base hover:text-white transition-all duration-300 ${isLoading ? "opacity-50 cursor-not-allowed" : ""}`}>
         {isLoading ? "Enviando..." : "¡Agenda tu consulta ahora!"}
         </Button>
-        <p className="text-sm text-mo-brown-base">Al llenar el formulario, Ud. acepta los Términos y Condiciones / Política de Privacidad</p>
+        <p className="text-sm text-mo-brown-base">Al llenar el formulario, Ud. acepta los <span>
+          <a href="/pdf/tratamiento-de-datos-personales.pdf" target="_blank" className="underline">Términos y Condiciones / Política de Privacidad.</a>
+          </span> </p>
       </div>
     </Form>
   ) 

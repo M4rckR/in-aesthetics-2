@@ -1,4 +1,3 @@
-// app/layout.tsx
 import type { Metadata } from "next";
 import { Playfair_Display, Poppins } from "next/font/google";
 import 'swiper/css';
@@ -22,10 +21,14 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://app.inaesthetics.pe'),
   title: "Inaesthetics | Estética Natural y Bienestar en Lima",
   description: "Tratamientos estéticos seguros y naturales en Inaesthetics. Técnicas no invasivas con equipo médico especializado. Belleza y bienestar en un solo lugar.",
   icons: {
     icon: '/favicon.ico',
+  },
+  alternates: {
+    canonical: 'https://inaesthetics.pe',
   },
 };
 

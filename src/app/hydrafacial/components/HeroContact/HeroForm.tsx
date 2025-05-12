@@ -124,7 +124,9 @@ export const HeroForm = () => {
           <Button type="submit" className={`w-full text-white text-base bg-in-brown py-6 rounded-4xl cursor-pointer ${isLoading ? "opacity-50 cursor-not-allowed" : ""}`}>
             {isLoading ? "Enviando..." : "¡Agenda tu consulta ahora!"}
           </Button>
-          <p className="text-sm text-in-brown">Al llenar el formulario, Ud. acepta los {' '}<a className="underline" href="#">Términos y Condiciones / Política de Privacidad</a>  </p>
+          <p className="text-sm text-mo-brown-base">Al llenar el formulario, Ud. acepta los <span>
+          <a href="/pdf/tratamiento-de-datos-personales.pdf" target="_blank" className="underline">Términos y Condiciones / Política de Privacidad.</a>
+          </span> </p>
         </form>
       </Form>
     </div>
