@@ -8,6 +8,7 @@ import { Footer } from "@/components/Footer";
 import { AOSInit } from "@/components/aosInit/aosInit";
 import { Toaster } from "sonner";
 import { GoogleTagManager } from '@next/third-parties/google';
+import { GoogleAnalytics } from '@next/third-parties/google';
 
 const playfair = Playfair_Display({
   variable: "--font-in-playfair",
@@ -60,6 +61,7 @@ export default function RootLayout({
         </main>
 
         <Footer />
+        <GoogleAnalytics gaId="G-6YF0S48H61" />
       </body>
     </html>
   );
