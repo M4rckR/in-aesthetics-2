@@ -44,6 +44,16 @@ export default function RootLayout({
       <body
         className={`${poppins.variable} ${playfair.variable} antialiased flex flex-col min-h-screen`}
       >
+        {/* <!-- Google Tag Manager (noscript) --> */}
+        <noscript>
+          <iframe 
+            src="https://www.googletagmanager.com/ns.html?id=GTM-P5VN8HXJ"
+            height="0" 
+            width="0" 
+            style={{display: 'none', visibility: 'hidden'}}
+          />
+        </noscript>
+        {/* <!-- End Google Tag Manager (noscript) --> */}
         <Toaster/>
         <main className="flex-grow">
           {children}
