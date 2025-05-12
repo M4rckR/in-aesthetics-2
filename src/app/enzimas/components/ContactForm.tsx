@@ -64,7 +64,7 @@ export const ContactForm = () => {
 
   return (
     <Form {...form}>
-      <form id="contact-form-enzimas" onSubmit={form.handleSubmit(onSubmit)} className="w-full">
+      <form id="contact-form-enzimas" onSubmit={form.handleSubmit(onSubmit)} className="contact-form-enzimas w-full">
         <div className="w-full space-y-4">
           <FormField
             control={form.control}
