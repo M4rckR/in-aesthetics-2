@@ -64,7 +64,7 @@ export const HeroForm = () => {
     <div className="p-0 md:p-6 bg-white">
       <h2 className="font-bold mb-6 text-left text-in-brown text-lg md:text-2xl">Reserva tu evaluación gratuita</h2>
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+        <form id="contact-form-hydrafacial" onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
           <FormField
             control={form.control}    
             name="nombre"

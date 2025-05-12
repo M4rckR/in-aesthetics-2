@@ -112,7 +112,7 @@ export const ContactForm = () => {
             </DialogHeader>
             
             <Form {...form}>
-              <form ref={formRef} onSubmit={form.handleSubmit(onSubmit)} className="grid gap-4 md:gap-4 py-4">
+              <form id="contact-form-lunares" ref={formRef} onSubmit={form.handleSubmit(onSubmit)} className="grid gap-4 md:gap-4 py-4">
                 <FormField
                   control={form.control}
                   name="nombre"

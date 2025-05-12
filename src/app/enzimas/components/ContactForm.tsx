@@ -64,107 +64,109 @@ export const ContactForm = () => {
 
   return (
     <Form {...form}>
-      <div className="w-full space-y-4">
-        <FormField
-          control={form.control}
-          name="nombre"
-          render={({ field }) => (
-            <FormItem>
-              <FormControl>
-                <Input 
-                className="w-full py-6 border-mo-brown-base placeholder:text-mo-brown-base"
-                  {...field}
-                  placeholder="Nombres y Apellidos"
-                />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-
-        <div className="flex flex-col md:flex-row gap-4">
-            <FormField
+      <form id="contact-form-enzimas" onSubmit={form.handleSubmit(onSubmit)} className="w-full">
+        <div className="w-full space-y-4">
+          <FormField
             control={form.control}
-            name="correo"
+            name="nombre"
             render={({ field }) => (
-                <FormItem className="w-full">
+              <FormItem>
                 <FormControl>
-                    <Input
-                    className="w-full py-6 border-mo-brown-base placeholder:text-mo-brown-base" 
+                  <Input 
+                  className="w-full py-6 border-mo-brown-base placeholder:text-mo-brown-base"
                     {...field}
-                    type="email"
-                    placeholder="Correo electrónico"
-                    />
-                </FormControl>
-                    <FormMessage />
-                </FormItem>
-            )}
-            />
-            
-            <FormField
-            control={form.control}
-            name="telefono"
-            render={({ field }) => (
-                <FormItem className="w-full">
-                <FormControl>
-                    <Input
-                    className="w-full py-6 border-mo-brown-base placeholder:text-mo-brown-base"
-                    {...field}
-                    placeholder="Teléfono"
-                    />
+                    placeholder="Nombres y Apellidos"
+                  />
                 </FormControl>
                 <FormMessage />
-                </FormItem>
+              </FormItem>
             )}
-            />
+          />
+
+          <div className="flex flex-col md:flex-row gap-4">
+              <FormField
+              control={form.control}
+              name="correo"
+              render={({ field }) => (
+                  <FormItem className="w-full">
+                  <FormControl>
+                      <Input
+                      className="w-full py-6 border-mo-brown-base placeholder:text-mo-brown-base" 
+                      {...field}
+                      type="email"
+                      placeholder="Correo electrónico"
+                      />
+                  </FormControl>
+                      <FormMessage />
+                  </FormItem>
+              )}
+              />
+              
+              <FormField
+              control={form.control}
+              name="telefono"
+              render={({ field }) => (
+                  <FormItem className="w-full">
+                  <FormControl>
+                      <Input
+                      className="w-full py-6 border-mo-brown-base placeholder:text-mo-brown-base"
+                      {...field}
+                      placeholder="Teléfono"
+                      />
+                  </FormControl>
+                  <FormMessage />
+                  </FormItem>
+              )}
+              />
+          </div>
+          
+
+          
+          <FormField
+            control={form.control}
+            name="mensaje"
+            render={({ field }) => (
+              <FormItem>
+                <FormControl>
+                  <Textarea
+                    {...field}
+                    placeholder="Mensaje"
+                    rows={4}
+                    className="resize-none border-mo-brown-base placeholder:text-mo-brown-base    "
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+
+          <FormField
+            control={form.control}
+            name="honeypot"
+            render={({ field }) => (
+              <FormItem className="hidden">
+                <FormControl>
+                  <Input
+                    {...field}
+                    type="text"
+                    autoComplete="off"
+                    tabIndex={-1}
+                    style={{ display: 'none' }}
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          
+          <Button type="submit" className={`w-full cursor-pointer bg-transparent text-mo-brown-base border-mo-brown-base border py-6 rounded-full hover:bg-mo-brown-base text-base hover:text-white transition-all duration-300 ${isLoading ? "opacity-50 cursor-not-allowed" : ""}`}>
+          {isLoading ? "Enviando..." : "¡Agenda tu consulta ahora!"}
+          </Button>
+          <p className="text-sm text-mo-brown-base">Al llenar el formulario, Ud. acepta los <span>
+            <a href="/pdf/tratamiento-de-datos-personales.pdf" target="_blank" className="underline">Términos y Condiciones / Política de Privacidad.</a>
+            </span> </p>
         </div>
-        
-
-        
-        <FormField
-          control={form.control}
-          name="mensaje"
-          render={({ field }) => (
-            <FormItem>
-              <FormControl>
-                <Textarea
-                  {...field}
-                  placeholder="Mensaje"
-                  rows={4}
-                  className="resize-none border-mo-brown-base placeholder:text-mo-brown-base    "
-                />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-
-        <FormField
-          control={form.control}
-          name="honeypot"
-          render={({ field }) => (
-            <FormItem className="hidden">
-              <FormControl>
-                <Input
-                  {...field}
-                  type="text"
-                  autoComplete="off"
-                  tabIndex={-1}
-                  style={{ display: 'none' }}
-                />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        
-        <Button type="submit" onClick={form.handleSubmit(onSubmit)} className={`w-full cursor-pointer bg-transparent text-mo-brown-base border-mo-brown-base border py-6 rounded-full hover:bg-mo-brown-base text-base hover:text-white transition-all duration-300 ${isLoading ? "opacity-50 cursor-not-allowed" : ""}`}>
-        {isLoading ? "Enviando..." : "¡Agenda tu consulta ahora!"}
-        </Button>
-        <p className="text-sm text-mo-brown-base">Al llenar el formulario, Ud. acepta los <span>
-          <a href="/pdf/tratamiento-de-datos-personales.pdf" target="_blank" className="underline">Términos y Condiciones / Política de Privacidad.</a>
-          </span> </p>
-      </div>
+      </form>
     </Form>
   ) 
 }
