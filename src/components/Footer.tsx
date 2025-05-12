@@ -11,7 +11,7 @@ export const Footer = () => {
 
   return (
     <footer 
-        className={`${pathname === '/reduccion' ? 'md:pt-40' : ''} py-14  mt-auto bg-in-pink rounded-tl-[48px] rounded-tr-[48px] md:rounded-tl-[58px] md:rounded-tr-[58px]`}
+        className={`${pathname === '/enzimas' ? 'md:pt-40' : ''} py-14  mt-auto bg-in-pink rounded-tl-[48px] rounded-tr-[48px] md:rounded-tl-[58px] md:rounded-tr-[58px]`}
         >
         <div className='container max-w-[1200px] mx-auto px-4 space-y-8'>
             <div className='flex flex-col md:flex-row gap-8'>
