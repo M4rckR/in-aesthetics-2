@@ -38,7 +38,7 @@ export const metadata:Metadata = {
     siteName: 'Inaesthetics',
     images: [
       {
-        url: '/images/reduccion/encimas-pb-serum-2.png',
+        url: '/images/reduccion/encimas-pb-serum.png',
         width: 1200,
         height: 630,
         alt: 'Tratamiento de reducción de celulitis con enzimas Pb Serum en Inaesthetics',
@@ -54,7 +54,7 @@ export const metadata:Metadata = {
     title: 'Inaesthetics | Moldea tu cuerpo sin cirugía',
     description: 'Elimina grasa localizada de forma rápida y efectiva con enzimas Pb Serum. Resultados visibles desde la primera sesión.',
     site: '@InaestheticsPE',
-    images: ['/images/reduccion/encimas-pb-serum-2.png'],
+    images: ['/images/reduccion/encimas-pb-serum.png'],
   },
 
   // Favicon y color
