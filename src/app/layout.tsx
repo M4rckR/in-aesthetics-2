@@ -39,7 +39,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className="h-full scroll-smooth">
+    <html lang="es" suppressHydrationWarning  className="h-full scroll-smooth">
       <GoogleTagManager gtmId="GTM-P5VN8HXJ" />
       <AOSInit />
       <body

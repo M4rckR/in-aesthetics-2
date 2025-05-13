@@ -293,3 +293,65 @@
     height: 12px;
   }
 
+  /* Animaciones para el modal - solo entrada */
+  .ReactModal__Overlay {
+    opacity: 0;
+    transition: opacity 400ms ease-in-out;
+  }
+
+  .ReactModal__Overlay--after-open {
+    opacity: 1;
+  }
+
+  .ReactModal__Content {
+    transform: scale(0.8);
+    opacity: 0;
+    transition: transform 400ms ease-in-out, opacity 400ms ease-in-out;
+  }
+
+  .ReactModal__Content--after-open {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  /* Quitamos las clases before-close para que no haya animación de salida */
+
+  /* Estilos personalizados para el scrollbar del modal - Más visible */
+  .custom-scrollbar {
+    scrollbar-width: thin;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    display: block;
+    width: 10px; /* Más ancho */
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.7); /* Más opaco */
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: white; /* Completamente blanco al hacer hover */
+  }
+
+  /* Estilos adicionales para el modal */
+  .promo-modal-content {
+    max-height: 90vh;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .promo-modal-overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+  }
+
