@@ -5,7 +5,7 @@ import { FaChevronRight } from "react-icons/fa6";
 import { Autoplay, Navigation } from 'swiper/modules';
 import { Ofert1 } from './oferts/Ofert1';
 import { Ofert2 } from './oferts/Ofert2';
-import { Ofert3 } from './oferts/Ofert3';
+// import { Ofert3 } from './oferts/Ofert3';
 
 
 
@@ -38,7 +38,7 @@ export const HeroOfferts = () => {
           speed={2000}  
           className="w-full"
           >
-          {[Ofert1, Ofert2, Ofert3].map((Comp, i) => (
+          {[Ofert1, Ofert2].map((Comp, i) => (
           <SwiperSlide key={i} className="w-full">
             <div className="">
               <Comp />

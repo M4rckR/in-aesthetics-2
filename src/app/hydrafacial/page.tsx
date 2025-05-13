@@ -6,8 +6,8 @@ import { Testimonials } from "./components/testimonials/Testimonials";
 import { Questions } from "./components/Questions";
 import { CtaTreatmentWsp } from "./components/CtaTreatmentWsp";
 import { Benefits } from "./components/benefits/Benefits";
-import { ButtonWsp } from "./components/ButtonWsp";
 import { Metadata } from "next";
+import { ButtonWsp } from "@/components/ButtonWsp";
 
 export const metadata: Metadata = {
   title: 'Inaesthetics | Hydrafacial - Limpieza facial profunda y rejuvenecimiento',
@@ -67,7 +67,7 @@ export default function Hydrafacial() {
       <Reviews />
       <Questions />
       <CtaTreatmentWsp />
-      <ButtonWsp />
+      <ButtonWsp id="wsp-hydrafacial" message="Hola 👋 Vi su página sobre el tratamiento hydrafacial para limpieza profunda y estoy interesado. ¿Me pueden dar más información?"/>
     </div>
   );
 }

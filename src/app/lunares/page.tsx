@@ -4,7 +4,7 @@ import { Benefits } from "./components/Benefits";
 import { Testimonials } from "./components/Testimonials";
 import { CtaTreatmentWsp } from "./components/CtaTreatmentWsp";
 import { Questions } from "./components/Questions";
-import { ButtonWsp } from "./components/ButtonWsp";
+import { ButtonWsp } from "@/components/ButtonWsp";
 import { HeaderLunares } from "./components/HeaderLunares";
 import { ContactForm } from "./components/ContactForm";
 import { Metadata } from "next";
@@ -68,7 +68,7 @@ export default function LunaresPage() {
       <Testimonials />
       <Questions />
       <CtaTreatmentWsp />
-      <ButtonWsp />
+      <ButtonWsp id="wsp-lunares" message="Hola 👋 Vi su página sobre el tratamiento con láser para eliminar verrugas y lunares y estoy interesado. ¿Me pueden dar más información?"/>
     </>
   );
 }

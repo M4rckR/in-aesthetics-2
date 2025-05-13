@@ -15,7 +15,7 @@ export const CtaWhatsApp = () => {
                     </div>
                 <div className="md:col-start-3 md:col-span-full">
                     <div className="flex flex-col lg:flex-row items-center md:items-end lg:items-center justify-end lg:gap-16 space-y-4 lg:space-y-0">
-                        <p className="text-xl md:text-2xl lg:text-3xl text-center md:text-left md:pl-16 text-white font-bold lg:w-2/3 lg:pl-4">¡Elimina esas imperfecciones hoy mismo!</p>
+                        <p className="text-xl md:text-2xl lg:text-3xl text-center md:text-left md:pl-16 text-white font-light lg:w-2/3 lg:pl-4">Despídete de la <span className="font-bold" >grasa</span>  localizada con un procedimiento no <span className="font-bold" >invasivo</span>.</p>
                         <a className="flex items-center justify-center gap-4 bg-in-pink py-2 px-4 lg:p-3 rounded-4xl lg:w-1/3" href="#">
                             <Image 
                             src="/icons/button_wsp_style_2.svg" 

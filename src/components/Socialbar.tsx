@@ -15,7 +15,7 @@ export const Socialbar = ({size,gap}:SocialbarProps) => {
         style={{display: "flex", gap: `${gap}px`}}
     >
         {socials.map((red) => (
-            <a key={red.alt} href={red.href} target="_blank" rel="noopener noreferrer">
+            <a className="text-mo-brown-base" key={red.alt} href={red.href} target="_blank" rel="noopener noreferrer">
                 <Image
                     priority    
                     src={red.src}

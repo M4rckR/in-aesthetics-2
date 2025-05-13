@@ -42,7 +42,7 @@ export const TestimonialCarousel = () => {
           className="text-in-blue-base border border-[#FFECE3] shadow h-[300px] sm:h-[320px] md:h-[300px]"
         >
           <div className="flex flex-col h-full p-6 md:p-8">
-            <div className="flex items-center gap-4 pb-4 border-b border-[#FFECE3]">
+            <div className="flex items-center gap-4 pb-4 border-b border-[#FFECE3] rounded-3xl">
               <Avatar className="w-14 h-14 md:w-16 md:h-16">
                 <AvatarFallback>
                   <p>{item.fallback}</p>

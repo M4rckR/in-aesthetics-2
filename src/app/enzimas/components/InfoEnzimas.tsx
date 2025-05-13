@@ -8,12 +8,14 @@ export const InfoEnzimas = () => {
           Las enzimas Pb serum
         </h2>
         <div className="flex flex-col md:flex-row md:gap-4 lg:gap-12 space-y-12 md:space-y-0">
-            <div data-aos="fade-right" data-aos-delay="0" className="hidden shadow-lg md:block w-full md:w-1/2 bg-in-pink rounded-3xl relative h-[300px] md:h-[400px]">
+            <div  className="hidden  md:block w-full md:w-1/2   relative h-[300px] md:h-[400px]">
               <Image 
+                data-aos="fade-right" data-aos-delay="0"
+                
                 src="/images/reduccion/encimas-pb-serum.png"
                 alt="Enzimas Pb serum"
                 fill
-                className="absolute object-cover lg:-translate-x-16"
+                className="absolute object-cover rounded-3xl shadow-lg"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div> 
@@ -26,7 +28,7 @@ export const InfoEnzimas = () => {
                     
                     className=" w-full object-cover shadow-lg mb-4 rounded-3xl "
                 />
-                <p className="text-mo-brown-base">Disuelven la grasa localizada de forma rápida y efectiva. Este tratamiento no invasivo es ideal para zonas como abdomen, brazos, piernas y papada, brindando resultados visibles desde la primera sesión.</p>
+                <p className="text-mo-brown-base">Disuelven la <strong>grasa localizada</strong> de forma rápida y efectiva. Este tratamiento no invasivo es ideal para zonas como abdomen, brazos, piernas y papada, brindando resultados visibles desde la primera sesión.</p>
             </div>
         </div>
       </div>

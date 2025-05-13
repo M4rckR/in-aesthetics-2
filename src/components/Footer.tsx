@@ -23,20 +23,20 @@ export const Footer = () => {
                     height={48}
                     /> 
                     <h3 
-                        className='text-center md:text-left font-in-playfair text-2xl md:text-3xl lg:text-4xl md:max-w-[440px] text-in-title-base'
+                        className='text-center md:text-left text-2xl md:text-3xl text-mo-brown-base md:max-w-[440px]'
                     >Recupera la belleza de tu piel con un procedimiento rápido y seguro.</h3>
                 </div>
                 <div className='space-y-2 md:pt-16 text-center md:text-left text-in-brown'>
-                    <p>Av. Sánchez Carrión 615- Oficina 1002, Jesús María Lima, Perú</p>
-                    <p>974 309 260</p>
+                    <p className='text-mo-brown-base'>Av. Sánchez Carrión 615- Oficina 1002, Jesús María Lima, Perú</p>
+                    <p className='text-mo-brown-base'>974 309 260</p>
                     <div className='flex justify-center md:justify-start'>
                         <Socialbar gap={24} size={28}/>
                     </div>
                 </div>
             </div>
             <div className='md:flex text-center gap-10 text-sm text-in-brown'>
-                <p>Copyright © Inaesthetics 2025</p>
-                <p>Created by Insalud</p>
+                <p className='text-mo-brown-base'>Copyright © Inaesthetics 2025</p>
+                <p className='text-mo-brown-base'>Created by Insalud</p>
             </div>
         </div>
     </footer>

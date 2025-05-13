@@ -130,7 +130,7 @@ export const ContactForm = () => {
                 <FormControl>
                   <Textarea
                     {...field}
-                    placeholder="Mensaje"
+                    placeholder="Zona a tratar"
                     rows={4}
                     className="resize-none border-mo-brown-base placeholder:text-mo-brown-base    "
                   />

@@ -25,7 +25,7 @@ export const Questions = () => {
                   </AccordionTrigger>
                   <AccordionContent>
                     <p className="text-mo-brown-base">
-                    Sí, es ideal incluso para pieles sensibles.
+                    Sí, nuestro tratamiento con Láser CO2 es mínimamente invasivo y aprobado por dermatólogos.
                     </p>
                   </AccordionContent>
                 </AccordionItem>
@@ -37,19 +37,19 @@ export const Questions = () => {
                   </AccordionTrigger>
                   <AccordionContent>
                     <p className="text-mo-brown-base">
-                    Solo 30 minutos.
+                    Aproximadamente 30 minutos.
                     </p>
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="item-3">
                   <AccordionTrigger className="hover:no-underline cursor-pointer">
                     <h3 className="text-mo-brown-base text-base md:text-lg font-semibold hover:no-underline">
-                    ¿Cada cuánto debo hacerlo?
+                    ¿Cuándo veré resultados?
                     </h3>
                   </AccordionTrigger>
                   <AccordionContent>
                     <p className="text-mo-brown-base">
-                    Se recomienda una sesión al mes para mejores resultados.
+                    Desde la primera sesión notarás reducción en la zona tratada.
                     </p>
                   </AccordionContent>
                 </AccordionItem>
