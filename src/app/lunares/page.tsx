@@ -65,7 +65,7 @@ export default function LunaresPage() {
          title="¡Oferta Especial en Eliminación de Lunares!"
          actionUrl="https://wa.me/+51974309260?text=InAesthetics%20-%20Lunares%0AHola%20%F0%9F%91%8B%20Vi%20su%20p%C3%A1gina%20sobre%20el%20tratamiento%20con%20l%C3%A1ser%20para%20eliminar%20verrugas%20y%20lunares%20y%20estoy%20interesado.%20%C2%BFMe%20pueden%20dar%20m%C3%A1s%20informaci%C3%B3n%3F"
          showAfter={3000}
-         showOnce={false}
+         showOnce={true}
          storageKey="lunares-promo-shown"
          width="550px"
       />
