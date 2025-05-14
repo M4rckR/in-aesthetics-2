@@ -9,18 +9,12 @@ import { AOSInit } from "@/components/aosInit/aosInit";
 import { Toaster } from "sonner";
 import { GoogleTagManager } from '@next/third-parties/google';
 import { GoogleAnalytics } from '@next/third-parties/google';
-import { injectContentsquareScript } from '@contentsquare/tag-sdk';
+import { ContentSquareInit } from "@/components/analytics/ContentSquareInit";
 
 
 const playfair = Playfair_Display({
   variable: "--font-in-playfair",
   subsets: ["latin"],
-});
-
-injectContentsquareScript({
-  siteId: "6403688",
-  async: true, // Optional: Set to false to wait for script execution until after document parsing.
-  defer: false // Optional: Set to true to defer script execution after document parsing.
 });
 
 const poppins = Poppins({
@@ -50,6 +44,7 @@ export default function RootLayout({
     <html lang="es" suppressHydrationWarning  className="h-full scroll-smooth">
       <GoogleTagManager gtmId="GTM-P5VN8HXJ" />
       <AOSInit />
+      <ContentSquareInit />
       <body
         className={`${poppins.variable} ${playfair.variable} antialiased flex flex-col min-h-screen`}
       >
