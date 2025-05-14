@@ -9,7 +9,7 @@ Sitio web corporativo para Inaesthetics, una clínica especializada en tratamien
 - **Framework:** Next.js 15 (App Router)
 - **Lenguaje:** TypeScript
 - **Estilizado:** Tailwind CSS 4
-- **Componentes UI:** Radix UI
+- **Componentes UI:** shadcn/ui (basado en Radix UI)
 - **Formularios:** React Hook Form + Zod
 - **Animaciones:** AOS (Animate On Scroll)
 - **Carruseles:** Swiper
@@ -27,6 +27,8 @@ src/
 │   ├── lunares/         # Eliminación de lunares con láser CO2
 │   └── api/             # API routes
 ├── components/          # Componentes compartidos
+│   ├── ui/              # Componentes de shadcn/ui
+│   └── ...              # Otros componentes personalizados
 ├── data/                # Datos estáticos
 ├── lib/                 # Utilidades y funciones auxiliares
 ├── schemas/             # Esquemas de validación (Zod)
@@ -37,6 +39,7 @@ src/
 ## 🚀 Características Principales
 
 - **Páginas de Tratamientos Específicos:** Secciones dedicadas para enzimas, hydrafacial, eliminación de lunares, etc.
+- **Interfaz de Usuario Moderna:** Diseño elegante y profesional con componentes de shadcn/ui
 - **SEO Optimizado:** Metadatos completos para cada página, con Open Graph, Twitter Cards, etc.
 - **Responsive Design:** Diseño adaptable a diferentes dispositivos
 - **Modales Promocionales:** Sistema de popups con ofertas especiales
@@ -82,6 +85,7 @@ src/
 
 ## 🧩 Componentes Principales
 
+- **UI Components (shadcn/ui):** Sistema de componentes consistente y personalizable
 - **PromoModal:** Popups promocionales configurables
 - **ContactForm:** Formulario de contacto con validación
 - **ButtonWsp:** Botón flotante de WhatsApp personalizable
