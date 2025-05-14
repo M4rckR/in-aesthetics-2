@@ -145,7 +145,6 @@ export function PromoModal({
               width={500}
               height={300}
               style={{ width: '100%', height: 'auto', display: 'block', margin: 0, padding: 0 }}
-              unoptimized
             />
           </div>
         )}
