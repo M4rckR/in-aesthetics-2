@@ -58,6 +58,7 @@ export function PromoModal({
   height = 'auto',
 }: PromoModalProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const [visible, setVisible] = useState(false);
   
   // Inicializar Modal solo una vez en el cliente
   useEffect(() => {
@@ -69,6 +70,7 @@ export function PromoModal({
     // Si isOpen es controlado externamente
     if (externalIsOpen !== undefined) {
       setIsOpen(externalIsOpen);
+      setVisible(externalIsOpen);
       return;
     }
 
@@ -78,9 +80,13 @@ export function PromoModal({
       if (hasBeenShown) return;
     }
 
-    // Mostrar después de un tiempo
+    // Cargamos el modal inmediatamente (para PageSpeed) pero invisible
+    setIsOpen(true);
+    setVisible(false);
+
+    // Mostramos visualmente después del tiempo configurado
     const timer = setTimeout(() => {
-      setIsOpen(true);
+      setVisible(true);
       // Marcar como mostrado si showOnce es true
       if (showOnce) {
         localStorage.setItem(storageKey, 'true');
@@ -91,7 +97,11 @@ export function PromoModal({
   }, [externalIsOpen, showAfter, showOnce, storageKey]);
 
   const handleClose = () => {
-    setIsOpen(false);
+    setVisible(false);
+    // Pequeño delay antes de cerrar el modal completamente
+    setTimeout(() => {
+      setIsOpen(false);
+    }, 300);
   };
 
   const handleAction = () => {
@@ -108,8 +118,29 @@ export function PromoModal({
       ...customStyles.content,
       width,
       height,
+      opacity: visible ? 1 : 0,
+      transition: 'opacity 0.3s ease-in-out',
     },
+    overlay: {
+      ...customStyles.overlay,
+      opacity: visible ? 1 : 0,
+      transition: 'opacity 0.3s ease-in-out',
+    }
   };
+
+  // Si no es visible, deshabilitamos los eventos del mouse pero mantenemos el modal cargado
+  useEffect(() => {
+    if (isOpen) {
+      const overlay = document.querySelector('.ReactModal__Overlay');
+      if (overlay) {
+        if (visible) {
+          overlay.setAttribute('style', overlay.getAttribute('style') + '; pointer-events: all;');
+        } else {
+          overlay.setAttribute('style', overlay.getAttribute('style') + '; pointer-events: none;');
+        }
+      }
+    }
+  }, [isOpen, visible]);
 
   return (
     <Modal

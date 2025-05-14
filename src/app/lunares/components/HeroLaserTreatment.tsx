@@ -6,12 +6,14 @@ import { useInhaesteticsData } from "@/store/InhaesteticsData"
 export const HeroLaserTreatment = () => {
   const { openDialog } = useInhaesteticsData();
   return (
-    <div className="relative min-h-[480] md:min-h-screen">
+    <div className="relative min-h-[480px] md:min-h-screen">
       <Image
         priority
         alt="Tratamiento laser co2"
         src="/images/hero_image.png"
         fill
+        sizes="100vw"
+        quality={75}
         className="object-cover"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-[#571E03] to-transparent opacity-80" />
