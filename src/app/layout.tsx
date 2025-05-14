@@ -9,10 +9,18 @@ import { AOSInit } from "@/components/aosInit/aosInit";
 import { Toaster } from "sonner";
 import { GoogleTagManager } from '@next/third-parties/google';
 import { GoogleAnalytics } from '@next/third-parties/google';
+import { injectContentsquareScript } from '@contentsquare/tag-sdk';
+
 
 const playfair = Playfair_Display({
   variable: "--font-in-playfair",
   subsets: ["latin"],
+});
+
+injectContentsquareScript({
+  siteId: "6403688",
+  async: true, // Optional: Set to false to wait for script execution until after document parsing.
+  defer: false // Optional: Set to true to defer script execution after document parsing.
 });
 
 const poppins = Poppins({
