@@ -143,6 +143,7 @@ export function PromoModal({
               src={imageUrl}
               alt={title || 'Promotional image'}
               width={500}
+              priority
               height={300}
               style={{ width: '100%', height: 'auto', display: 'block', margin: 0, padding: 0 }}
             />
