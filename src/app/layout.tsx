@@ -9,7 +9,6 @@ import { AOSInit } from "@/components/aosInit/aosInit";
 import { Toaster } from "sonner";
 import { GoogleTagManager } from '@next/third-parties/google';
 import { GoogleAnalytics } from '@next/third-parties/google';
-import { ContentSquareInit } from "@/components/analytics/ContentSquareInit";
 
 
 const playfair = Playfair_Display({
@@ -44,7 +43,6 @@ export default function RootLayout({
     <html lang="es" suppressHydrationWarning  className="h-full scroll-smooth">
       <GoogleTagManager gtmId="GTM-P5VN8HXJ" />
       <AOSInit />
-      <ContentSquareInit />
       <body
         className={`${poppins.variable} ${playfair.variable} antialiased flex flex-col min-h-screen`}
       >
