@@ -12,21 +12,46 @@ export function AOSInit() {
       easing: 'ease-in-out'
     });
 
-    // Fix para el problema de aria-hidden en el body
-    const removeAriaHidden = () => {
+    // Función para limpiar todos los atributos AOS del body
+    const cleanBodyAttributes = () => {
+      // Eliminar aria-hidden
       if (document.body.hasAttribute('aria-hidden')) {
         document.body.removeAttribute('aria-hidden');
       }
+      
+      // Eliminar todos los atributos data-aos-* del body
+      const bodyAttributes = [...document.body.attributes];
+      bodyAttributes.forEach(attr => {
+        if (attr.name.startsWith('data-aos')) {
+          document.body.removeAttribute(attr.name);
+        }
+      });
     };
 
-    // Ejecutar inmediatamente y también después de cualquier actualización de AOS
-    removeAriaHidden();
-    document.addEventListener('aos:in', removeAriaHidden);
-    document.addEventListener('aos:out', removeAriaHidden);
+    // Ejecutar limpieza inmediatamente
+    cleanBodyAttributes();
+    
+    // Configurar un MutationObserver para monitorear cambios en el body
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.type === 'attributes' && 
+            (mutation.attributeName?.startsWith('data-aos') || 
+             mutation.attributeName === 'aria-hidden')) {
+          cleanBodyAttributes();
+        }
+      });
+    });
+    
+    // Iniciar la observación del body
+    observer.observe(document.body, { 
+      attributes: true,
+      attributeFilter: ['aria-hidden', 'data-aos', 'data-aos-easing', 
+                        'data-aos-duration', 'data-aos-delay']
+    });
 
+    // Limpiar observer al desmontar
     return () => {
-      document.removeEventListener('aos:in', removeAriaHidden);
-      document.removeEventListener('aos:out', removeAriaHidden);
+      observer.disconnect();
     };
   }, []);
 
