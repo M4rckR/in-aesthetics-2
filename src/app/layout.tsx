@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Playfair_Display, Poppins } from "next/font/google";
 import 'swiper/css';
 import "swiper/css/effect-fade";
-import "./globals.css"; 
+import "@/styles/index.css"; 
 import 'aos/dist/aos.css'
 import { Footer } from "@/components/Footer";
 import { AOSInit } from "@/components/aosInit/aosInit";

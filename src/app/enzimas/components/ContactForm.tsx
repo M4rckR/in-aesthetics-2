@@ -1,66 +1,27 @@
 'use client'
 import { Form, FormControl, FormField, FormItem, FormMessage } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
-import { ClientSchema } from "@/schemas"
-import { Client } from "@/types"
-import { zodResolver } from "@hookform/resolvers/zod"
-import { useForm } from "react-hook-form"
 import { Button } from "@/components/ui/button"
 import { Textarea } from "@/components/ui/textarea"
-import { toast } from "sonner"
-import axios, { AxiosError } from "axios"
-import { useState } from "react"
+import { useContactForm } from "@/hooks/useContactForm"
 
+/**
+ * Componente de formulario de contacto para la página de Enzimas
+ * 
+ * Utiliza el hook useContactForm para manejar la lógica de formulario,
+ * validación y envío, eliminando la duplicación de código.
+ */
 export const ContactForm = () => {
-
-  const [isLoading, setIsLoading] = useState(false)
-
-  const form = useForm<Client>({
-    resolver: zodResolver(ClientSchema),
-    defaultValues: {
-      nombre: "",
-      correo: "",
-      mensaje: "",
-      telefono: "",
-      honeypot: "",
-    },
-  })
-
-  async function onSubmit(data: Client) {
-    setIsLoading(true)
-    try {
-      await axios.post("/api/send", data)
-      toast.success("Mensaje enviado correctamente")
-      form.reset()
-    } catch (error) {
-      // Manejo específico de errores
-      if (axios.isAxiosError(error)) {
-        const axiosError = error as AxiosError;
-        
-        if (axiosError.response) {
-          // Error de respuesta del servidor
-          if (axiosError.response.status === 500) {
-            toast.error("Problemas con el servidor de correo. Intenta más tarde o contáctanos por WhatsApp.");
-          } else if (axiosError.response.status === 400) {
-            toast.error("Datos inválidos. Verifica la información ingresada.");
-          } else {
-            toast.error("Error al enviar el mensaje. Intenta nuevamente.");
-          }
-        } else if (axiosError.request) {
-          // No se recibió respuesta del servidor
-          toast.error("No se pudo conectar con el servidor. Verifica tu conexión.");
-        } else {
-          // Error al configurar la solicitud
-          toast.error("Ocurrió un error inesperado. Intenta más tarde.");
-        }
-      } else {
-        // Error genérico 
-        toast.error("Error al enviar el mensaje")
-      }
-    } finally {
-      setIsLoading(false)
-    }
-  }
+  /**
+   * PASO 1: Usar el hook personalizado useContactForm
+   * 
+   * - Configuramos un mensaje predeterminado para este formulario específico
+   * - El hook nos devuelve:
+   *   - form: El formulario configurado con React Hook Form
+   *   - isLoading: Estado de carga para mostrar feedback visual
+   *   - onSubmit: Función para manejar el envío
+   */
+  const { form, isLoading, onSubmit } = useContactForm();
 
   return (
     <Form {...form}>
@@ -120,8 +81,6 @@ export const ContactForm = () => {
               />
           </div>
           
-
-          
           <FormField
             control={form.control}
             name="mensaje"
@@ -132,7 +91,7 @@ export const ContactForm = () => {
                     {...field}
                     placeholder="Zona a tratar"
                     rows={4}
-                    className="resize-none border-mo-brown-base placeholder:text-mo-brown-base    "
+                    className="resize-none border-mo-brown-base placeholder:text-mo-brown-base"
                   />
                 </FormControl>
                 <FormMessage />

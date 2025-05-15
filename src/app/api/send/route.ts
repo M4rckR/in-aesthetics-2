@@ -79,7 +79,7 @@ export async function POST(req: NextRequest) {
                   </tbody>
                 </table>
                 <footer style="margin-top: 30px; font-size: 12px; color: #666;">
-                  Este mensaje fue enviado desde el sitio web de <strong>Inaesthetics</strong>.
+                  Este mensaje fue enviado desde el sitio web de <strong>App Inaesthetics</strong>.
                 </footer>
               </main>
             `
@@ -91,4 +91,4 @@ export async function POST(req: NextRequest) {
         console.error('Error al enviar el correo:', error)
         return NextResponse.json({ error: 'Error al enviar el correo' }, { status: 500 })
     }
-}
+} 

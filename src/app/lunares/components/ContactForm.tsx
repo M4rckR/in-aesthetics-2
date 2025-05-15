@@ -16,88 +16,31 @@ import {
 } from "@/components/ui/form"
 import { useInhaesteticsData } from "@/store/InhaesteticsData"
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden"
-import { useForm } from "react-hook-form"
-import { zodResolver } from "@hookform/resolvers/zod"
-import { useEffect, useRef, useState } from "react"
-import { Client } from "@/types"
-import { ClientSchema } from "@/schemas"
+import { useEffect, useRef } from "react"
 import { Textarea } from "@/components/ui/textarea"
-import axios, { AxiosError } from "axios"
-import { toast } from "sonner"
-
+import { useContactForm } from "@/hooks/useContactForm"
 
 export const ContactForm = () => {
-    const [isLoading, setIsLoading] = useState(false);
     const { isOpen, closeDialog } = useInhaesteticsData();
     const formRef = useRef<HTMLFormElement>(null);
     const dialogRef = useRef<HTMLDivElement>(null);
     
-    const form = useForm<Client>({
-        resolver: zodResolver(ClientSchema),
-        defaultValues: {
-            nombre: "",
-            correo: "",
-            telefono: "",
-            mensaje: "",
-            honeypot: "",
-        },
+    // Usar el hook centralizado con callback para cerrar el diálogo
+    const { form, isLoading, onSubmit } = useContactForm({
+        onSuccess: () => {
+            // Cerrar el diálogo después de mostrar el mensaje de éxito
+            setTimeout(() => {
+                closeDialog();
+            }, 1500);
+        }
     });
     
-
     // Reset form when dialog closes
     useEffect(() => {
         if (!isOpen) {
             form.reset();
         }
     }, [isOpen, form]);
-
-    const onSubmit = async (data: Client) => {
-        setIsLoading(true);
-        try {
-            await axios.post("/api/send", data);
-            
-            // Show success notification with Sonner
-            toast.success("¡Mensaje enviado con éxito!");
-            
-            // Reset form
-            form.reset();
-            
-            // Close dialog after showing success message
-            setTimeout(() => {
-                closeDialog();
-            }, 1500);
-            
-        } catch (error) {
-            console.error("Error al enviar formulario:", error);
-            
-            // Manejo específico de errores
-            if (axios.isAxiosError(error)) {
-                const axiosError = error as AxiosError;
-                
-                if (axiosError.response) {
-                    // Error de respuesta del servidor
-                    if (axiosError.response.status === 500) {
-                        toast.error("Error de conexión. Inténtalo más tarde.");
-                    } else if (axiosError.response.status === 400) {
-                        toast.error("Datos inválidos. Verifica la información.");
-                    } else {
-                        toast.error("Error al enviar. Inténtalo nuevamente.");
-                    }
-                } else if (axiosError.request) {
-                    // No se recibió respuesta del servidor
-                    toast.error("Sin conexión al servidor.");
-                } else {
-                    // Error al configurar la solicitud
-                    toast.error("Error inesperado. Inténtalo más tarde.");
-                }
-            } else {
-                // Error genérico 
-                toast.error("No se pudo enviar el mensaje.");
-            }
-        } finally {
-            setIsLoading(false);
-        }
-    };
 
     return (
         <Dialog open={isOpen} onOpenChange={closeDialog}>

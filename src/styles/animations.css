@@ -1,0 +1,68 @@
+/* Animaciones */
+
+@keyframes suave-latido {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.animate-suave-latido {
+  animation: suave-latido 2.5s ease-in-out infinite;
+}
+
+/* Animaciones para el acordeón */
+.accordion-content {
+  overflow: hidden;
+}
+
+.accordion-content[data-state="open"] {
+  animation: accordionSlideDown 300ms ease-out forwards;
+}
+
+.accordion-content[data-state="closed"] {
+  animation: accordionSlideUp 300ms ease-out forwards;
+}
+
+@keyframes accordionSlideDown {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+  }
+}
+
+@keyframes accordionSlideUp {
+  from {
+    height: var(--radix-accordion-content-height);
+  }
+  to {
+    height: 0;
+  }
+}
+
+/* Animaciones para el modal - solo entrada */
+.ReactModal__Overlay {
+  opacity: 0;
+  transition: opacity 400ms ease-in-out;
+}
+
+.ReactModal__Overlay--after-open {
+  opacity: 1;
+}
+
+.ReactModal__Content {
+  transform: scale(0.8);
+  opacity: 0;
+  transition: transform 400ms ease-in-out, opacity 400ms ease-in-out;
+}
+
+.ReactModal__Content--after-open {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* Quitamos las clases before-close para que no haya animación de salida */ 

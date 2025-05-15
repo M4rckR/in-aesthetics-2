@@ -1,0 +1,9 @@
+/* Importación de módulos CSS */
+
+@import "./base.css";
+@import "./variables.css";
+@import "./animations.css";
+@import "./components.css";
+@import "./swiper.css";
+
+/* Importaciones adicionales pueden ser agregadas aquí */ 

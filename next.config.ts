@@ -1,7 +1,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  // Optimización de imágenes
+  images: {
+    // Habilitar AVIF (formato ultra-optimizado) - WebP ya está habilitado por defecto
+    formats: ['image/avif'],
+  },
 };
 
 export default nextConfig;
