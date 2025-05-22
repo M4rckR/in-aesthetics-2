@@ -9,6 +9,8 @@ import { AOSInit } from "@/components/aosInit/aosInit";
 import { Toaster } from "sonner";
 import { GoogleTagManager } from '@next/third-parties/google';
 import { GoogleAnalytics } from '@next/third-parties/google';
+import { VWOScript } from 'vwo-smartcode-nextjs';
+
 
 
 const playfair = Playfair_Display({
@@ -41,6 +43,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" suppressHydrationWarning  className="h-full scroll-smooth">
+      <head>
+        <VWOScript accountId="1090188" />
+      </head>
       <GoogleTagManager gtmId="GTM-P5VN8HXJ" />
       <AOSInit />
       <body
