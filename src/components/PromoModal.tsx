@@ -17,6 +17,7 @@ interface PromoModalProps {
   storageKey?: string; // Clave única para localStorage
   width?: string | number;
   height?: string | number;
+  id: string;
 }
 
 const customStyles = {
@@ -55,7 +56,7 @@ export function PromoModal({
   showOnce = true,
   storageKey = 'promo-modal-shown',
   width = 'auto',
-  height = 'auto',
+  height = 'auto', id
 }: PromoModalProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [visible, setVisible] = useState(false);
@@ -142,6 +143,18 @@ export function PromoModal({
     }
   }, [isOpen, visible]);
 
+  // 👇 Este es tu GTM push 👇
+  useEffect(() => {
+    if (visible) {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: 'promoModalVisible',
+        modalId: id,
+      });
+    }
+  }, [visible, id]);
+
+
   return (
     <Modal
       isOpen={isOpen}
@@ -152,7 +165,7 @@ export function PromoModal({
       shouldCloseOnOverlayClick={true}
       shouldCloseOnEsc={true}
     >
-      <div className="flex flex-col max-w-full overflow-hidden">
+      <div id={id} className="flex flex-col max-w-full overflow-hidden">
         {/* Botón de cierre (X) */}
         <button
           onClick={handleClose}

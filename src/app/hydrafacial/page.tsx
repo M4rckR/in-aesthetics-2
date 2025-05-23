@@ -68,6 +68,7 @@ export default function Hydrafacial() {
          showOnce={true}
          storageKey="hydrafacial-promo-shown"
          width="550px"
+         id="pop-up-hydrafacial"
       />
       <Header />
       <HeroContact />

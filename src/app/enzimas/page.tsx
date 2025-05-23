@@ -70,6 +70,7 @@ export const metadata:Metadata = {
 export default function Enzimas() {
   return (
     <div>
+
       <PromoModal
          imageUrl="/images/popups/promo_enzimas.png"
          title="¡Oferta Especial en Tratamiento de Enzimas!"
@@ -78,6 +79,7 @@ export default function Enzimas() {
          showOnce={true}
          storageKey="enzimas-promo-shown"
          width="550px"
+         id="pop-up-enzimas"
       />
       <Header />
       <PromoBanner /> 

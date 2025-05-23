@@ -68,6 +68,7 @@ export default function LunaresPage() {
          showOnce={true}
          storageKey="lunares-promo-shown"
          width="550px"
+         id="pop-up-lunares"
       />
       <ContactForm />
       <HeaderLunares />
