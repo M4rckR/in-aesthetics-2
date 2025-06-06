@@ -8,7 +8,7 @@ import { CtaTreatmentWsp } from "./components/CtaTreatmentWsp";
 import { Benefits } from "./components/benefits/Benefits";
 import { Metadata } from "next";
 import { ButtonWsp } from "@/components/ButtonWsp";
-import { PromoModal } from "@/components/PromoModal";
+// import { PromoModal } from "@/components/PromoModal";
 
 export const metadata: Metadata = {
   title: 'Inaesthetics | Hydrafacial - Limpieza facial profunda y rejuvenecimiento',
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
 export default function Hydrafacial() {
   return (
     <div>
-      <PromoModal
+      {/* <PromoModal
          imageUrl="/images/popups/promo_hydrafacial.png"
          title="¡Oferta Especial en HydraFacial!"
          actionUrl="https://wa.me/+51974309260?text=InAesthetics%20-%20Hydrafacial%0AHola%20%F0%9F%91%8B%20Vi%20su%20p%C3%A1gina%20sobre%20el%20tratamiento%20hydrafacial%20para%20limpieza%20profunda%20y%20estoy%20interesado.%20%C2%BFMe%20pueden%20dar%20m%C3%A1s%20informaci%C3%B3n%3F"
@@ -69,7 +69,7 @@ export default function Hydrafacial() {
          storageKey="hydrafacial-promo-shown"
          width="550px"
          id="pop-up-hydrafacial"
-      />
+      /> */}
       <Header />
       <HeroContact />
       <Benefits />

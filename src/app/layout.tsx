@@ -9,6 +9,8 @@ import { AOSInit } from "@/components/aosInit/aosInit";
 import { Toaster } from "sonner";
 import { GoogleTagManager } from '@next/third-parties/google';
 import { GoogleAnalytics } from '@next/third-parties/google';
+import { Analytics } from "@vercel/analytics/next"
+
 
 
 
@@ -64,6 +66,7 @@ export default function RootLayout({
 
         <Footer />
         <GoogleAnalytics gaId="G-6YF0S48H61" />
+        <Analytics />
       </body>
     </html>
   );

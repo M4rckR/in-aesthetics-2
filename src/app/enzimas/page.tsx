@@ -9,7 +9,7 @@ import { CtaWhatsApp } from "./components/CtaWhatsApp";
 import { PromoBanner } from "./components/PromoBanner";
 import { Metadata } from "next";
 import { ButtonWsp } from "@/components/ButtonWsp";
-import { PromoModal } from "@/components/PromoModal";
+// import { PromoModal } from "@/components/PromoModal";
 
 
 export const metadata:Metadata = {
@@ -70,7 +70,7 @@ export const metadata:Metadata = {
 export default function Enzimas() {
   return (
     <div>
-
+{/* 
       <PromoModal
          imageUrl="/images/popups/promo_enzimas.png"
          title="¡Oferta Especial en Tratamiento de Enzimas!"
@@ -80,7 +80,7 @@ export default function Enzimas() {
          storageKey="enzimas-promo-shown"
          width="550px"
          id="pop-up-enzimas"
-      />
+      /> */}
       <Header />
       <PromoBanner /> 
       <HeroContact />

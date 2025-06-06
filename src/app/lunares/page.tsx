@@ -1,14 +1,14 @@
 import { HeroOfferts } from "./components/HeroOfferts";
 import { HeroLaserTreatment } from "./components/HeroLaserTreatment";
 import { Benefits } from "./components/Benefits";
-import { Testimonials } from "./components/Testimonials";
 import { CtaTreatmentWsp } from "./components/CtaTreatmentWsp";
 import { Questions } from "./components/Questions";
 import { ButtonWsp } from "@/components/ButtonWsp";
 import { HeaderLunares } from "./components/HeaderLunares";
 import { ContactForm } from "./components/ContactForm";
 import { Metadata } from "next";
-import { PromoModal } from "@/components/PromoModal";
+import { Testimonials } from "./components/testimonials/Testimonials";
+// import { PromoModal } from "@/components/PromoModal";
 export const metadata: Metadata = {
   title: 'Inaesthetics | Eliminación de lunares, verrugas y acrocordones con láser CO2',
   description: 'Eliminación de lunares, verrugas y acrocordones con láser CO2 DEKA sin dolor ni marcas. Procedimiento rápido, seguro y eficaz realizado por especialistas en estética avanzada.',
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
 export default function LunaresPage() {
   return (
     <>  
-      <PromoModal
+      {/* <PromoModal
          imageUrl="/images/popups/promo_lunares.png"
          title="¡Oferta Especial en Eliminación de Lunares!"
          actionUrl="https://wa.me/+51974309260?text=InAesthetics%20-%20Lunares%0AHola%20%F0%9F%91%8B%20Vi%20su%20p%C3%A1gina%20sobre%20el%20tratamiento%20con%20l%C3%A1ser%20para%20eliminar%20verrugas%20y%20lunares%20y%20estoy%20interesado.%20%C2%BFMe%20pueden%20dar%20m%C3%A1s%20informaci%C3%B3n%3F"
@@ -69,13 +69,13 @@ export default function LunaresPage() {
          storageKey="lunares-promo-shown"
          width="550px"
          id="pop-up-lunares"
-      />
+      /> */}
       <ContactForm />
       <HeaderLunares />
       <HeroOfferts />
       <HeroLaserTreatment />
       <Benefits />
-      <Testimonials />
+      <Testimonials /> 
       <Questions />
       <CtaTreatmentWsp />
       <ButtonWsp id="wsp-lunares" message="Hola 👋 Vi su página sobre el tratamiento con láser para eliminar verrugas y lunares y estoy interesado. ¿Me pueden dar más información?"/>

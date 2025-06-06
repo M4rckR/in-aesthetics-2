@@ -104,7 +104,7 @@ export const Benefits = () => {
               alt="Beneficios y Características"
               width={300}
               height={300}
-              className="object-cover w-56 lg:w-full hover:scale-105 transition-all duration-300"
+              className="object-cover w-56 lg:w-full"
             />
             <p className="text-center w-full text-in-brown font-medium mt-1">
               Sin cicatrices ni dolor
@@ -118,7 +118,7 @@ export const Benefits = () => {
               alt="Beneficios y Características"
               width={300}
               height={300}
-              className="object-cover w-56 md:w-full hover:scale-105 transition-all duration-300"
+              className="object-cover w-56 md:w-full"
             />
             <p className="text-center w-full text-in-brown font-medium mt-1">
               Eliminación definitiva
@@ -132,7 +132,7 @@ export const Benefits = () => {
               alt="Beneficios y Características"
               width={300}
               height={300}
-              className="object-cover w-56 md:w-full hover:scale-105 transition-all duration-300"
+              className="object-cover w-56 md:w-full"
             />
             <p className="text-center w-full text-in-brown font-medium mt-1">
               Procedimiento seguro y preciso
@@ -146,7 +146,7 @@ export const Benefits = () => {
               alt="Beneficios y Características"
               width={300}
               height={300}
-              className="object-cover w-56 lg:w-full hover:scale-105 transition-all duration-300"
+              className="object-cover w-56 lg:w-full"
             />
             <p className="text-center w-full text-in-brown font-medium mt-1">
               Resultados inmediatos
