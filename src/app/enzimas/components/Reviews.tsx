@@ -27,6 +27,7 @@ export const Reviews = () => {
           <div className="flex items-center gap-2">
             <Avatar className="w-16 h-16">
               <AvatarFallback>Lg</AvatarFallback>
+              <AvatarImage src="/images/testimonials/avatars/enzimas/avatar-7.jpeg" />
             </Avatar>
             <div>
               <p className="font-medium">Lorena Guzmán</p>
@@ -51,6 +52,7 @@ export const Reviews = () => {
           <div className="flex items-center gap-2">
             <Avatar className="w-16 h-16">
               <AvatarFallback>Ag</AvatarFallback>
+              <AvatarImage src="/images/testimonials/avatars/enzimas/avatar-5.jpeg" />
             </Avatar>
             <div>
               <p className="font-medium">Aczell Gamarra</p>
@@ -74,8 +76,9 @@ export const Reviews = () => {
 
           <div className="flex items-center gap-2">
             <Avatar className="w-16 h-16">
-              <AvatarImage alt="Marcos Romero" src="/avatars/reviews/user-3.jpg" />
+              <AvatarImage alt="Marcos Romero" src="/images/testimonials/avatars/enzimas/avatar-6.jpeg" />
               <AvatarFallback>Mr</AvatarFallback>
+
             </Avatar>
             <div>
               <p className="font-medium">Marcos Romero</p>

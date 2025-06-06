@@ -1,5 +1,5 @@
 "use client";
-import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
@@ -47,6 +47,7 @@ export const TestimonialCarousel = () => {
                 <AvatarFallback>
                   <p>{item.fallback}</p>
                 </AvatarFallback>
+                <AvatarImage src={item.image} />
               </Avatar>
               <div>
                 <p className="font-semibold m-0">{item.name}</p>
