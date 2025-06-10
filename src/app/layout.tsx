@@ -46,7 +46,7 @@ export default function RootLayout({
     <html lang="es" suppressHydrationWarning  className="h-full scroll-smooth">
       <GoogleTagManager gtmId="GTM-P5VN8HXJ" />
       <AOSInit />
-      <body
+      <body suppressHydrationWarning
         className={`${poppins.variable} ${playfair.variable} antialiased flex flex-col min-h-screen`}
       >
         {/* <!-- Google Tag Manager (noscript) --> */}

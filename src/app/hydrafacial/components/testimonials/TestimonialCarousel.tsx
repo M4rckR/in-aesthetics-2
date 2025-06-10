@@ -1,5 +1,5 @@
 "use client";
-import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { TestimonialsData } from "../../data/Testimonials.data";
@@ -44,6 +44,7 @@ export const TestimonialCarousel = () => {
           <div className="flex flex-col h-full p-6 md:p-8">
             <div className="flex items-center gap-4 pb-4 border-b border-[#FFECE3] rounded-3xl">
               <Avatar className="w-14 h-14 md:w-16 md:h-16">
+                <AvatarImage src={item.image} />
                 <AvatarFallback>
                   <p>{item.fallback}</p>
                 </AvatarFallback>

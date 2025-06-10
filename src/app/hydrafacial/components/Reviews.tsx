@@ -24,7 +24,7 @@ export const Reviews = () => {
           
           <div className="flex items-center gap-2">
             <Avatar className="w-16 h-16">
-              
+              <AvatarImage src="/images/testimonials/avatars/hydrafacial/avatar-5.jpeg" />
               <AvatarFallback>Lg</AvatarFallback>
             </Avatar>
             <div>
@@ -35,9 +35,9 @@ export const Reviews = () => {
         </div>
         <div className="flex flex-col justify-between border border-in-[#FFECE3] p-6 rounded-3xl w-full">
           <div className="space-y-2 pb-16">
-          <Image
+            <Image
               src="/svg/stars.svg"
-              alt="Review 1"
+              alt="Review 2"
               width={24}
               height={24}
               className="w-40"
@@ -48,8 +48,8 @@ export const Reviews = () => {
           </div>
           
           <div className="flex items-center gap-2">
-            
             <Avatar className="w-16 h-16">
+              <AvatarImage src="/images/testimonials/avatars/hydrafacial/avatar-6.jpeg" />
               <AvatarFallback>Ag</AvatarFallback>
             </Avatar>
             <div>
@@ -62,7 +62,7 @@ export const Reviews = () => {
           <div className="space-y-2 pb-16">
             <Image
               src="/svg/stars.svg"
-              alt="Review 1"
+              alt="Review 3"
               width={24}
               height={24}
               className="w-40"
@@ -74,7 +74,7 @@ export const Reviews = () => {
 
           <div className="flex items-center gap-2">
             <Avatar className="w-16 h-16">
-              <AvatarImage alt="Marcos Romero" src="/avatars/reviews/user-3.jpg" />
+              <AvatarImage alt="Marcos Romero" src="/images/testimonials/avatars/hydrafacial/avatar-7.jpeg" />
               <AvatarFallback>Mr</AvatarFallback>
             </Avatar>
             <div>

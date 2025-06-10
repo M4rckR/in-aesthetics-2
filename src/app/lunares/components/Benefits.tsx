@@ -106,9 +106,12 @@ export const Benefits = () => {
               height={300}
               className="object-cover w-56 lg:w-full"
             />
-            <p className="text-center w-full text-in-brown font-medium mt-1">
-              Sin cicatrices ni dolor
-            </p>
+            <div className="absolute bottom-2  w-full px-4">
+              <p className="text-center w-full text-in-brown bg-[#FFF3ED]/70 backdrop-blur-sm font-medium mt-0 rounded-xl py-1">
+                Sin cicatrices ni dolor
+              </p>
+            </div>
+            
           </div>
 
           {/* Beneficio Superior Derecho */}
@@ -120,9 +123,12 @@ export const Benefits = () => {
               height={300}
               className="object-cover w-56 md:w-full"
             />
-            <p className="text-center w-full text-in-brown font-medium mt-1">
-              Eliminación definitiva
-            </p>
+            <div className="absolute bottom-2  w-full px-4">
+              <p className="text-center w-full text-in-brown bg-[#FFF3ED]/70 backdrop-blur-sm font-medium mt-0 rounded-xl py-1">
+                Eliminación definitiva
+              </p>
+            </div>
+            
           </div>
 
           {/* Beneficio Inferior */}
@@ -134,9 +140,12 @@ export const Benefits = () => {
               height={300}
               className="object-cover w-56 md:w-full"
             />
-            <p className="text-center w-full text-in-brown font-medium mt-1">
-              Procedimiento seguro y preciso
-            </p>
+            <div className="absolute bottom-2  w-full px-4">
+              <p className="text-center w-full text-in-brown bg-[#FFF3ED]/70 backdrop-blur-sm font-medium mt-0 rounded-xl py-1">
+                Procedimiento seguro y preciso
+              </p>
+            </div>
+            
           </div>
 
           {/* Beneficio Inferior derecho*/}
@@ -148,9 +157,12 @@ export const Benefits = () => {
               height={300}
               className="object-cover w-56 lg:w-full"
             />
-            <p className="text-center w-full text-in-brown font-medium mt-1">
-              Resultados inmediatos
-            </p>
+            <div className="absolute bottom-2  w-full px-4">
+              <p className="text-center w-full text-in-brown bg-[#FFF3ED]/70 backdrop-blur-sm font-medium mt-0 rounded-xl py-1">
+                Resultados inmediatos
+              </p>
+            </div>
+            
           </div>
         </section>  
 

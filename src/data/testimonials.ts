@@ -11,6 +11,6 @@ export const testimonials = [
         text: "Me encanto mucho la atención, por la paciencia y el profesionalismo de todos los que pertenecen al centro. El siguiente mes vuelvo para poder realizarme otro procedimiento :)",
         name: "Wesli Benavides",
         text2: "Buena experiencia, Lo que más me impresionó fue la atención personalizada que recibí. El profesional que realizó mi HydraFacial se tomó el tiempo para entender mis preocupaciones específicas y adaptar el tratamiento para satisfacer mis necesidades individuales",
-        name2: "Rodrigo Camacho",
+        name2: "Rosario Camacho",
     },
 ]
