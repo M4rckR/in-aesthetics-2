@@ -13,6 +13,7 @@ export const HeroContact = () => {
                 priority
                 fill
                 className=" object-contain"
+                unoptimized
             />
           </div>
 
