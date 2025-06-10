@@ -11,7 +11,7 @@ import { Ofert1 } from './oferts/Ofert1';
 
 export const HeroOfferts = () => {
   return (
-    <section data-aos="fade-up" data-aos-delay="0"   className="relative w-full md:bg-linear-to-b md:from-[#FFECE3]/0 md:to-[#FFECE3]">
+    <section data-aos="fade-up" data-aos-delay="0"   className="w-full md:bg-linear-to-b md:from-[#FFECE3]/0 md:to-[#FFECE3]">
       {/* Botones de navegación */}
       {/* <div className="hidden hero-prev absolute left-3 top-1/2 -translate-y-1/2 z-10 cursor-pointer bg-in-pink/80 hover:bg-in-pink hover:shadow-md transition-all w-10 h-10 rounded-full lg:flex items-center justify-center">
         <FaChevronLeft className="text-in-brown w-5 h-5" />

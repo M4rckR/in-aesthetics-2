@@ -25,7 +25,7 @@ export async function POST(req: NextRequest) {
             }, { status: 400 })
         }
 
-        const { nombre, correo, telefono, mensaje, honeypot } = parsed.data
+        const { nombre, telefono, honeypot } = parsed.data
         
         if(honeypot) {
             return NextResponse.json({ error: 'Spam detected' }, { status: 400 })
@@ -50,10 +50,8 @@ export async function POST(req: NextRequest) {
             subject: `📥 Nuevo mensaje de ${nombre}`,
             text: `
           Nombre: ${nombre}
-          Correo: ${correo}
           Teléfono: ${telefono}
-          Mensaje:
-          ${mensaje}
+
             `,
             html: `
               <main style="font-family: Arial, sans-serif; color: #1a1a1a; background-color: #ffffff; padding: 24px;">
@@ -65,17 +63,10 @@ export async function POST(req: NextRequest) {
                       <td style="padding: 8px;">${nombre}</td>
                     </tr>
                     <tr>
-                      <th scope="row" style="text-align: left; padding: 8px; background-color: #f0f0f0;">📧 Correo</th>
-                      <td style="padding: 8px;"><a href="mailto:${correo}" style="color: #0066cc;">${correo}</a></td>
-                    </tr>
-                    <tr>
                       <th scope="row" style="text-align: left; padding: 8px; background-color: #f0f0f0;">📱 Teléfono</th>
                       <td style="padding: 8px;"><a href="tel:${telefono}" style="color: #0066cc;">${telefono}</a></td>
                     </tr>
-                    <tr>
-                      <th scope="row" style="text-align: left; padding: 8px; background-color: #f0f0f0; vertical-align: top;">💬 Mensaje</th>
-                      <td style="padding: 8px; white-space: pre-line;">${mensaje}</td>
-                    </tr>
+
                   </tbody>
                 </table>
                 <footer style="margin-top: 30px; font-size: 12px; color: #666;">

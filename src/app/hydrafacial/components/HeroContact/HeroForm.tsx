@@ -2,7 +2,7 @@
 import { Form, FormControl, FormField, FormItem, FormMessage } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
-import { Textarea } from "@/components/ui/textarea"
+// import { Textarea } from "@/components/ui/textarea"
 import { useContactForm } from "@/hooks/useContactForm"
 
 export const HeroForm = () => {
@@ -27,7 +27,7 @@ export const HeroForm = () => {
             )}
           />
         <div className="flex flex-col sm:flex-row gap-4">
-            <FormField
+            {/* <FormField
                 control={form.control}    
                 name="correo"
                 render={({ field }) => (
@@ -38,13 +38,13 @@ export const HeroForm = () => {
                     <FormMessage />
                 </FormItem>
                 )}
-            />    
+            />     */}
 
             <FormField
                 control={form.control}    
                 name="telefono"
                 render={({ field }) => (
-                <FormItem className="sm:w-1/2">
+                <FormItem className="sm:w-2/2">
                     <FormControl>
                     <Input placeholder="Teléfono" className="placeholder:text-in-brown py-6 border-in-brown" {...field} />
                     </FormControl>
@@ -53,7 +53,7 @@ export const HeroForm = () => {
                 )}
             />
         </div>
-          
+{/*           
           <FormField
             control={form.control}    
             name="mensaje"
@@ -65,7 +65,7 @@ export const HeroForm = () => {
                 <FormMessage />
               </FormItem>
             )}
-          />
+          /> */}
           
           <Button type="submit" className={`w-full text-white text-base bg-in-brown py-6 rounded-4xl cursor-pointer ${isLoading ? "opacity-50 cursor-not-allowed" : ""}`}>
             {isLoading ? "Enviando..." : "¡Agenda tu consulta ahora!"}

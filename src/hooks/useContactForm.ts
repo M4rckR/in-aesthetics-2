@@ -37,9 +37,9 @@ export const useContactForm = (options?: {
     // Valores iniciales de los campos
     defaultValues: {
       nombre: "",
-      correo: "",
+      // correo: "",
       telefono: "",
-      mensaje: options?.defaultMessage || "", // Usa el mensaje predeterminado si existe
+      // mensaje: options?.defaultMessage || "", // Usa el mensaje predeterminado si existe
       honeypot: "", // Campo honeypot para evitar spam
     },
   });

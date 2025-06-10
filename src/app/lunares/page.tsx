@@ -1,13 +1,12 @@
-import { HeroOfferts } from "./components/HeroOfferts";
+
 import { HeroLaserTreatment } from "./components/HeroLaserTreatment";
 import { Benefits } from "./components/Benefits";
 import { CtaTreatmentWsp } from "./components/CtaTreatmentWsp";
 import { Questions } from "./components/Questions";
 import { ButtonWsp } from "@/components/ButtonWsp";
-import { HeaderLunares } from "./components/HeaderLunares";
-import { ContactForm } from "./components/ContactForm";
 import { Metadata } from "next";
 import { Testimonials } from "./components/testimonials/Testimonials";
+import { HeaderLunaresAndOfferts } from "./components/HeaderLunaresAndOfferts";
 // import { PromoModal } from "@/components/PromoModal";
 export const metadata: Metadata = {
   title: 'Inaesthetics | Eliminación de lunares, verrugas y acrocordones con láser CO2',
@@ -70,9 +69,8 @@ export default function LunaresPage() {
          width="550px"
          id="pop-up-lunares"
       /> */}
-      <ContactForm />
-      <HeaderLunares />
-      <HeroOfferts />
+      <HeaderLunaresAndOfferts />
+
       <HeroLaserTreatment />
       <Benefits />
       <Testimonials /> 
