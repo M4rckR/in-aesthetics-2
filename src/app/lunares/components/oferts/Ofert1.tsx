@@ -3,7 +3,7 @@ import { ContactForm } from "../ContactForm";
 
 export const Ofert1 = () => {
   return (
-    <article className="w-full min-h-[400px] md:min-h-[500px]  xl:h-[88vh] flex items-center pb-8">
+    <article className="w-full min-h-[400px] md:min-h-[500px]  xl:h-[89vh] flex items-center pb-8">
       <div className="max-w-[1200px] container mx-auto px-4 w-full">
         <div className="lg:grid grid-cols-12 gap-4 items-center">
           {/* Texto */}
