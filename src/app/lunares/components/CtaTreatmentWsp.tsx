@@ -14,7 +14,7 @@ export const CtaTreatmentWsp = () => {
                 </a>
             </div>
             <Image 
-                src={'/images/moldea/imageTreatment.png'} 
+                src='/images/moldea/imageTreatment.png'
                 alt='cta-treatment-wsp' 
                 width={100} 
                 height={100}
