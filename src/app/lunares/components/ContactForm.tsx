@@ -10,10 +10,10 @@ export const ContactForm = () => {
   
 
     return (
-      <div className="pl-6">
+      <div className="md:pl-6">
         <h2 className="font-bold mb-6 text-in-brown text-lg md:text-2xl text-center">¡Reserva tu cita ahora!</h2>
         <Form {...form}>
-          <form id="contact-form-hydrafacial" onSubmit={form.handleSubmit(onSubmit)} className="contact-form-hydrafacial space-y-4">
+          <form id="contact-form-hydrafacial" onSubmit={form.handleSubmit(onSubmit)} className="contact-form-hydrafacial space-y-4 max-w-[600px] mx-auto">
             <FormField
               control={form.control}    
               name="nombre"
@@ -70,7 +70,7 @@ export const ContactForm = () => {
             <Button type="submit" className={`w-full text-white text-base bg-in-brown py-6 rounded-4xl cursor-pointer ${isLoading ? "opacity-50 cursor-not-allowed" : ""}`}>
               {isLoading ? "Enviando..." : "¡Agenda tu consulta ahora!"}
             </Button>
-            <p className="text-sm text-mo-brown-base">Al llenar el formulario, Ud. acepta los <span>
+            <p className="text-sm text-mo-brown-base text-center md:text-left">Al llenar el formulario, Ud. acepta los <span>
             <a href="/pdf/tratamiento-de-datos-personales.pdf" target="_blank" className="underline">Términos y Condiciones / Política de Privacidad.</a>
             </span> </p>
           </form>
