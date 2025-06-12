@@ -3,12 +3,12 @@ import { ContactForm } from "../ContactForm";
 
 export const Ofert1 = () => {
   return (
-    <article className="w-full min-h-[400px] md:min-h-[500px] flex items-center py-8">
+    <article className="w-full min-h-[400px] md:min-h-[500px]  xl:h-[88vh] flex items-center">
       <div className="max-w-[1200px] container mx-auto px-4 w-full">
         <div className="lg:grid grid-cols-12 gap-4 items-center">
           {/* Texto */}
           <div className="col-span-5 flex items-center mb-8 lg:mb-0">
-            <h2 className="font-in-playfair text-2xl sm:text-3xl lg:text-4xl xl:text-5xl text-in-title-base pb-4 md:pb-8 ">
+            <h2 className="font-in-playfair text-2xl sm:text-3xl lg:text-4xl xl:text-5xl text-in-title-base pb-4 md:pb-8 xl:pr-10">
               Despídete de{" "}
               <span className="text-in-brown font-semibold">
                 lunares, verrugas y acrocordones{" "}
