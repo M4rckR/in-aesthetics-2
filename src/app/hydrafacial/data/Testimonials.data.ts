@@ -25,9 +25,9 @@ export const TestimonialsData: Testimonial[] = [
   },
   {
     id: "4",
-    name: "Rodrigo Camacho",
+    name: "Olivia Camacho",
     image: "/images/testimonials/avatars/hydrafacial/avatar-4.jpeg",
-    fallback: "Rc",
+    fallback: "Oc",
     testimonial: "Buena experiencia, Lo que más me impresionó fue la placentera atención personalizada que recibí por su parte.",
   },
 

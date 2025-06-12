@@ -51,11 +51,11 @@ export const Reviews = () => {
           
           <div className="flex items-center gap-2">
             <Avatar className="w-16 h-16">
-              <AvatarFallback>Ag</AvatarFallback>
+              <AvatarFallback>Pg</AvatarFallback>
               <AvatarImage src="/images/testimonials/avatars/enzimas/avatar-5.jpeg" />
             </Avatar>
             <div>
-              <p className="font-medium">Aczell Gamarra</p>
+              <p className="font-medium">Patricia Gamarra</p>
               <p>Hace 1 semana</p>
             </div>
           </div>
@@ -77,11 +77,11 @@ export const Reviews = () => {
           <div className="flex items-center gap-2">
             <Avatar className="w-16 h-16">
               <AvatarImage alt="Marcos Romero" src="/images/testimonials/avatars/enzimas/avatar-6.jpeg" />
-              <AvatarFallback>Mr</AvatarFallback>
+              <AvatarFallback>Dr</AvatarFallback>
 
             </Avatar>
             <div>
-              <p className="font-medium">Marcos Romero</p>
+              <p className="font-medium">Daniela Romero</p>
               <p>Hace 1 semana</p>
             </div>
           </div>
