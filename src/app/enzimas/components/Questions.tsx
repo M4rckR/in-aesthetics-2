@@ -25,7 +25,10 @@ export const Questions = () => {
                   </AccordionTrigger>
                   <AccordionContent>
                     <p className="text-mo-brown-base">
-                    Sí, nuestro tratamiento con Láser CO2 es mínimamente invasivo y aprobado por dermatólogos.
+                    Sí, las enzimas que utilizamos son seguras y compatibles con todo tipo
+de piel. Se aplican de manera controlada y personalizada, minimizando
+riesgos de reacciones adversas.
+
                     </p>
                   </AccordionContent>
                 </AccordionItem>
@@ -37,7 +40,9 @@ export const Questions = () => {
                   </AccordionTrigger>
                   <AccordionContent>
                     <p className="text-mo-brown-base">
-                    Aproximadamente 30 minutos.
+                    El procedimiento es rápido, dura aproximadamente 30 a 45 minutos.
+Incluye una evaluación médica previa y puede combinarse con aparatología
+para potenciar resultados.
                     </p>
                   </AccordionContent>
                 </AccordionItem>
@@ -49,7 +54,9 @@ export const Questions = () => {
                   </AccordionTrigger>
                   <AccordionContent>
                     <p className="text-mo-brown-base">
-                    Desde la primera sesión notarás reducción en la zona tratada.
+                    Los resultados comienzan a notarse desde la primera semana. Sin embargo,
+el efecto completo suele observarse después de 2 a 3 semanas,
+dependiendo del metabolismo de cada paciente y la zona tratada.
                     </p>
                   </AccordionContent>
                 </AccordionItem>

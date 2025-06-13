@@ -31,7 +31,10 @@ export const Questions = () => {
                     <Accordion.Content className="accordion-content">
                         <div className="px-4 pb-4">
                             <p className="text-sm pr-4">
-                            Sí, nuestro tratamiento con Láser CO2 es mínimamente invasivo y aprobado por dermatólogos.
+                            Sí, el procedimiento es seguro. Utilizamos tecnología especializada y
+personal médico capacitado para garantizar una eliminación precisa y con
+mínimos riesgos. Antes del tratamiento, realizamos una evaluación médica
+para asegurar que la lesión sea benigna.
                             </p>
                         </div>
                     </Accordion.Content>
@@ -44,7 +47,10 @@ export const Questions = () => {
                     <Accordion.Content className="accordion-content">
                         <div className="px-4 pb-4">
                             <p className="text-sm pr-4">
-                            En pocos días tu piel estará completamente regenerada.
+                            La recuperación suele ser rápida. En la mayoría de los casos, podrás
+retomar tus actividades el mismo día. Es normal que la zona tratada
+forme una pequeña costra temporal y recomendamos cuidados específicos
+que te indicaremos tras el procedimiento.
                             </p>
                         </div>
                     </Accordion.Content>
@@ -59,7 +65,9 @@ export const Questions = () => {
                     <Accordion.Content className="accordion-content">
                         <div className="px-4 pb-4">
                             <p className="text-sm pr-4">
-                            Sí, podemos tratar varias áreas en la misma cita.
+                            Sí, es posible tratar varias lesiones en una misma sesión, siempre que
+estén indicadas clínicamente para su remoción. Esto se determinará
+durante tu consulta médica previa.
                             </p>
                         </div>
                     </Accordion.Content>

@@ -24,7 +24,9 @@ export const Questions = () => {
                 </AccordionTrigger>
                 <AccordionContent>
                   <p className="text-mo-brown-base">
-                  Sí, es ideal incluso para pieles sensibles.
+                  Sí, Hydrafacial es un tratamiento no invasivo y apto para todo tipo de
+piel, incluso las más sensibles. Sus principios activos y tecnología de
+succión controlada no generan irritación ni enrojecimiento severo.
                   </p>
                 </AccordionContent>
               </AccordionItem>
@@ -36,7 +38,9 @@ export const Questions = () => {
                 </AccordionTrigger>
                 <AccordionContent>
                   <p className="text-mo-brown-base">
-                  Solo 30 minutos.
+                  La sesión de Hydrafacial dura entre 30 a 45 minutos, dependiendo del
+protocolo elegido. Es ideal para realizarlo incluso en horarios
+laborales, ya que no necesita tiempo de recuperación.
                   </p>
                 </AccordionContent>
               </AccordionItem>
@@ -48,7 +52,9 @@ export const Questions = () => {
                 </AccordionTrigger>
                 <AccordionContent>
                   <p className="text-mo-brown-base">
-                  Se recomienda una sesión al mes para mejores resultados.
+                  Se recomienda realizarlo una vez al mes para mantener una piel
+saludable, luminosa y bien hidratada. En pieles con necesidades
+específicas, tu médico podrá indicarte una frecuencia personalizada.
                   </p>
                 </AccordionContent>
               </AccordionItem>
