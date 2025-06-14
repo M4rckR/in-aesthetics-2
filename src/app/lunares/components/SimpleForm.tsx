@@ -23,12 +23,12 @@ export const SimpleForm = () => {
           onSubmit={form.handleSubmit(onSubmit)}
           className="contact-form-hydrafacial space-y-4 max-w-[500px] mx-auto md:mx-0"
         >
-          <div className="flex flex-col md:flex-row gap-3 md:gap-8 mb-4">
+          <div className="flex flex-col lg:flex-row gap-3 lg:gap-4 mb-4">
             <FormField
               control={form.control}
               name="nombre"
               render={({ field }) => (
-                <FormItem className="w-full md:w-1/2">
+                <FormItem className="w-full lg:w-1/2">
                   <FormControl>
                     <Input
                       placeholder="Nombres y Apellidos"
@@ -44,7 +44,7 @@ export const SimpleForm = () => {
               control={form.control}
               name="telefono"
               render={({ field }) => (
-                <FormItem className="w-full md:w-1/2">
+                <FormItem className="w-full lg:w-1/2  ">
                   <FormControl>
                     <Input
                       placeholder="Teléfono"
