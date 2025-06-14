@@ -6,9 +6,9 @@ import { Questions } from "./components/Questions";
 import { ButtonWsp } from "@/components/ButtonWsp";
 import { Metadata } from "next";
 import { Testimonials } from "./components/testimonials/Testimonials";
-import { HeaderLunaresAndOfferts } from "./components/HeaderLunaresAndOfferts";
-// import { Comparator } from "./Comparator";
-// import { PromoModal } from "@/components/PromoModal";
+import { HeaderLunares } from "./components/HeaderLunares";
+import { Hero } from "./components/Hero";
+
 export const metadata: Metadata = {
   title: 'Inaesthetics | Eliminación de lunares, verrugas y acrocordones con láser CO2',
   description: 'Eliminación de lunares, verrugas y acrocordones con láser CO2 DEKA sin dolor ni marcas. Procedimiento rápido, seguro y eficaz realizado por especialistas en estética avanzada.',
@@ -70,8 +70,8 @@ export default function LunaresPage() {
          width="550px"
          id="pop-up-lunares"
       /> */}
-      <HeaderLunaresAndOfferts />
-
+      <HeaderLunares />
+      <Hero />
       <HeroLaserTreatment />
       <Benefits />
       <Testimonials /> 
