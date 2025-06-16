@@ -12,7 +12,16 @@ export const HeroLaserTreatment = () => {
         fill
         sizes="100vw"
         quality={75}
-        className="object-cover"
+        className="hidden md:block object-cover"
+      />
+      <Image
+        priority
+        alt="Tratamiento laser co2"
+        src="/images/hero_image_mobile.png"
+        fill
+        sizes="100vw"
+        quality={75}
+        className="block md:hidden object-cover"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-[#571E03] to-transparent opacity-80" />
       <div className="bottom-8 md:top-auto md:translate-y-0 absolute text-center max-w-[1200px] lg:left-1/2 lg:-translate-x-1/2 flex flex-col items-center md:bottom-16 md:space-y-0 text-white px-6 lg:px-0">
