@@ -8,7 +8,7 @@ import Image from "next/image";
 
 export const Questions = () => {
   return (
-    <div id="preguntas-frecuentes" className="bg-white -mt-8 rounded-[54px] lg:px-48">
+    <div id="preguntas-frecuentes" className="bg-white rounded-[54px] lg:px-48">
       <section className="container mx-auto max-w-7xl px-4 py-16 md:py-32">
         <div className="flex flex-col md:flex-row md: gap-4">
           <div data-aos="fade-up-right" data-aos-delay="0" className="mb-6 md:w-8/12">

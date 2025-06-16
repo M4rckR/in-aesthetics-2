@@ -1,9 +1,11 @@
-import Image from "next/image";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { FaStar } from "react-icons/fa6";
+import { FaRegStarHalfStroke } from "react-icons/fa6";
+
 
 export const Reviews = () => {
   return (
-    <div className="bg-in-pink pb-16 md:pb-32 xl:px-36">
+    <div className="bg-in-pink pb-16  pt-16 md:pb-24 xl:px-36 mt-16">
       <section className="container mx-auto max-w-7xl px-4 pt-4 ">
         <h2 className="text-3xl md:text-5xl text-center text-mo-brown-base mb-12">
         Reseñas y Calificaciones
@@ -11,13 +13,13 @@ export const Reviews = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-in-blue-base justify-items-center">
         <div className="flex flex-col justify-between border border-in-[#FFECE3] bg-white p-6 rounded-3xl w-full">
           <div className="space-y-2 pb-16">
-            <Image
-              src="/svg/stars.svg"
-              alt="Review 1"
-              width={24}
-              height={24}
-              className="w-40"
-            />
+            <div className="flex items-center gap-2 text-[#FFDE22] text-3xl">
+              <FaStar/>
+              <FaStar/>
+              <FaStar/>
+              <FaStar/>
+              <FaStar/>
+            </div>
             <p className="font-medium">
             Me encantó el tratamiento y la atención
             Muy lindo todo. Volveré.
@@ -37,13 +39,13 @@ export const Reviews = () => {
         </div>
         <div className="flex flex-col justify-between border border-in-[#FFECE3] bg-white p-6 rounded-3xl w-full">
           <div className="space-y-2 pb-16">
-            <Image
-              src="/svg/stars.svg"
-              alt="Review 1"
-              width={24}
-              height={24}
-              className="w-40"
-            />
+          <div className="flex items-center gap-2 text-[#FFDE22] text-3xl">
+              <FaStar/>
+              <FaStar/>
+              <FaStar/>
+              <FaStar/>
+              <FaRegStarHalfStroke/>
+            </div>
             <p className="font-medium">
             Muy buena atención y profesionales de calidad..
             </p>
@@ -62,13 +64,13 @@ export const Reviews = () => {
         </div>
         <div className="flex flex-col justify-between border border-in-[#FFECE3] bg-white p-6 rounded-3xl w-full">
           <div className="space-y-2 pb-16">
-            <Image
-              src="/svg/stars.svg"
-              alt="Review 1"
-              width={24}
-              height={24}
-              className="w-40"
-            />
+          <div className="flex items-center gap-2 text-[#FFDE22] text-3xl">
+              <FaStar/>
+              <FaStar/>
+              <FaStar/>
+              <FaStar/>
+              <FaStar/>
+            </div>
             <p className="font-medium">
               Desde que tuve mi primera sesión de Hydrafacial he sentido cambios significativos en mi piel.
             </p>
