@@ -38,8 +38,8 @@ export const Benefits = () => {
                 className="w-14 pb-8"
               />
               <div className="flex flex-col text-mo-brown-base">
-                <p className="font-semibold text-lg">No invasivo</p>
-                <p>sin agujas ni tiempos de recuperación prolongados.</p>
+                <p className="font-semibold text-lg">Mínimamente invasivo</p>
+                <p>sin tiempo de recuperación prolongado.</p>
               </div>
             </article>
             <article className="w-full md:w-1/2 bg-ve-pink-bg p-6 rounded-2xl">

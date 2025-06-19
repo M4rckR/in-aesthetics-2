@@ -1,7 +1,6 @@
 'use client'
 import Image from "next/image"
 
-
 export const HeroLaserTreatment = () => {
   return (
     <div className="relative min-h-[480px] md:min-h-screen">
