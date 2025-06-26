@@ -5,6 +5,12 @@ const nextConfig: NextConfig = {
   images: {
     // Habilitar AVIF (formato ultra-optimizado) - WebP ya está habilitado por defecto
     formats: ['image/avif'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'cdn.inaesthetics.pe',
+      },
+    ],
   },
 };
 

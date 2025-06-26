@@ -48,3 +48,9 @@
 * {
   scrollbar-width: none;     /* Firefox */
 } 
+
+
+/* Degradado inluxuri hero */
+.degradado-inluxuri-hero {
+  background: linear-gradient(180deg, rgba(204, 108, 97, 0.34) 0%, rgba(159, 61, 50, 0.34) 60%);
+}
