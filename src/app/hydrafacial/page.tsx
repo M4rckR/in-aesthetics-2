@@ -8,6 +8,7 @@ import { CtaTreatmentWsp } from "./components/CtaTreatmentWsp";
 import { Benefits } from "./components/benefits/Benefits";
 import { Metadata } from "next";
 import { ButtonWsp } from "@/components/ButtonWsp";
+import { Footer } from "@/components/Footer";
 // import { PromoModal } from "@/components/PromoModal";
 
 export const metadata: Metadata = {
@@ -79,6 +80,7 @@ export default function Hydrafacial() {
       <Questions />
       <CtaTreatmentWsp />
       <ButtonWsp id="wsp-hydrafacial" message="Hola 👋 Vi su página sobre el tratamiento hydrafacial para limpieza profunda y estoy interesado. ¿Me pueden dar más información?"/>
+      <Footer />
     </div>
   );
 }

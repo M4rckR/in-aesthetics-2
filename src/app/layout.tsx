@@ -4,15 +4,19 @@ import 'swiper/css';
 import "swiper/css/effect-fade";
 import "@/styles/index.css"; 
 import 'aos/dist/aos.css'
-import { Footer } from "@/components/Footer";
 import { AOSInit } from "@/components/aosInit/aosInit";
 import { Toaster } from "sonner";
 import { GoogleTagManager } from '@next/third-parties/google';
 import { GoogleAnalytics } from '@next/third-parties/google';
 import { Analytics } from "@vercel/analytics/next"
+import localFont from 'next/font/local'
 
-
-
+const ProximaNova = localFont({
+  src: '../../public/fonts/ele.otf',
+  variable: "--font-in-crisfont",
+  display: "swap",
+  weight: "800",
+})
 
 const playfair = Playfair_Display({
   variable: "--font-in-playfair",
@@ -47,7 +51,7 @@ export default function RootLayout({
       <GoogleTagManager gtmId="GTM-P5VN8HXJ" />
       <AOSInit />
       <body suppressHydrationWarning
-        className={`${poppins.variable} ${playfair.variable} antialiased flex flex-col min-h-screen`}
+        className={`${poppins.variable} ${playfair.variable} ${ProximaNova.variable} antialiased flex flex-col min-h-screen`}
       >
         {/* <!-- Google Tag Manager (noscript) --> */}
         <noscript>
@@ -64,7 +68,6 @@ export default function RootLayout({
           {children}
         </main>
 
-        <Footer />
         <GoogleAnalytics gaId="G-6YF0S48H61" />
         <Analytics />
       </body>

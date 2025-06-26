@@ -8,6 +8,7 @@ import { Metadata } from "next";
 import { Testimonials } from "./components/testimonials/Testimonials";
 import { HeaderLunares } from "./components/HeaderLunares";
 import { Hero } from "./components/Hero";
+import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: 'Inaesthetics | Eliminación de lunares, verrugas y acrocordones con láser CO2',
@@ -79,6 +80,7 @@ export default function LunaresPage() {
       <Questions />
       <CtaTreatmentWsp />
       <ButtonWsp id="wsp-lunares" message="Hola 👋 Vi su página sobre el tratamiento con láser para eliminar verrugas y lunares y estoy interesado. ¿Me pueden dar más información?"/>
+      <Footer />
     </>
   );
 }

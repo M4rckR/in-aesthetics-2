@@ -8,6 +8,7 @@ import { CtaWhatsApp } from "./components/CtaWhatsApp";
 import { PromoBanner } from "./components/PromoBanner";
 import { Metadata } from "next";
 import { ButtonWsp } from "@/components/ButtonWsp";
+import { Footer } from "@/components/Footer";
 // import { PromoModal } from "@/components/PromoModal";
 
 
@@ -89,6 +90,7 @@ export default function Enzimas() {
       <Questions />
       <CtaWhatsApp />
       <ButtonWsp id="wsp-enzimas" message="Hola 👋 Vi su página sobre el tratamiento con enzimas para eliminar grasa localizada y estoy interesado. ¿Me pueden dar más información?" />
+      <Footer />
     </div>
   );
 }

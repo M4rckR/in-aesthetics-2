@@ -5,7 +5,7 @@ import { cdn } from "@/utils/cdn"
 export const HeroSection = () => {
   return (
     <>
-        <div className="">
+        <div>
             <section className="container max-w-7xl mx-auto px-4 lg:py-16">
               <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
                 <div className="md:col-span-7 space-y-8">
@@ -39,11 +39,18 @@ export const HeroSection = () => {
 
                 {/* Imagen de estrellas */}
                 <Image
-                  src={cdn("images/estrellas.png")}
+                  src={cdn("inluxury/assets/images/sections/header/big-star.svg")}
                   alt="Estrellas"
-                  width={480}
-                  height={1000}
-                  className="hidden w-[300px] lg:w-[480px] md:block object-cover md:absolute bottom-0 right-0 -z-10"
+                  width={80}
+                  height={80}
+                  className="hidden xl:block absolute w-28 top-2/12 -translate-y-2/12 left-8"
+                />  
+                <Image
+                  src={cdn("inluxury/assets/images/sections/header/medium-star.svg")}
+                  alt="Estrellas"
+                  width={80}
+                  height={80}
+                  className="hidden xl:block absolute w-20 top-3/6 -translate-y-1/5 left-6/12 -translate-x-4/12"
                 />  
 
               </div>
