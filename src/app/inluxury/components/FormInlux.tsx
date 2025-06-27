@@ -52,6 +52,7 @@ export const FormInlux = () => {
                       type="tel"
                       inputMode="numeric"
                       pattern="[0-9]*"
+                      maxLength={9}
                       onInput={(e) => {
                         e.currentTarget.value = e.currentTarget.value.replace(/[^0-9]/g, '');
                       }}
