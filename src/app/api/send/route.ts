@@ -60,7 +60,7 @@ export async function POST(req: NextRequest) {
         await transporter.sendMail({
             from: `"Landing Web" <${process.env.EMAIL_USER}>`,
             to: emailFinal,
-            subject: `📥 Nuevo lead desde ${origenInfo} - ${nombre}`,
+            subject: `🎯 LEAD RECIBIDO: ${nombre} desde ${origenInfo}`,
             text: `
           Nombre: ${nombre}
           Teléfono: ${telefono}

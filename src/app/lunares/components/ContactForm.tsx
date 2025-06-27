@@ -4,16 +4,37 @@ import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 // import { Textarea } from "@/components/ui/textarea"
 import { useContactForm } from "@/hooks/useContactForm"
+import { Client } from "@/types"
+import { EMAIL_DESTINATIONS, PAGINA_ORIGEN } from "@/data/emails"
 
-export const ContactForm = () => {
+interface ContactFormProps {
+  emailDestino?: string;
+  paginaOrigen?: string;
+}
+
+export const ContactForm = ({ 
+  emailDestino = EMAIL_DESTINATIONS.lunares, 
+  paginaOrigen = PAGINA_ORIGEN.lunares 
+}: ContactFormProps) => {
     const { form, isLoading, onSubmit } = useContactForm();
+
+    // Función personalizada para manejar el envío con emailDestino y paginaOrigen
+    const handleSubmit = (data: Client) => {
+      const dataCompleta = {
+        ...data,
+        emailDestino,
+        paginaOrigen
+      };
+      
+      onSubmit(dataCompleta);
+    };
   
 
     return (
       <div className="md:pl-6">
         <h2 className="font-bold mb-6 text-in-brown text-lg md:text-2xl text-center">¡Reserva tu cita ahora!</h2>
         <Form {...form}>
-          <form id="contact-form-hydrafacial" onSubmit={form.handleSubmit(onSubmit)} className="contact-form-hydrafacial space-y-4 max-w-[600px] mx-auto">
+          <form id="contact-form-hydrafacial" onSubmit={form.handleSubmit(handleSubmit)} className="contact-form-hydrafacial space-y-4 max-w-[600px] mx-auto">
             <FormField
               control={form.control}    
               name="nombre"

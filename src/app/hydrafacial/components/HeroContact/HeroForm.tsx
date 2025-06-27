@@ -4,16 +4,37 @@ import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 // import { Textarea } from "@/components/ui/textarea"
 import { useContactForm } from "@/hooks/useContactForm"
+import { Client } from "@/types"
+import { EMAIL_DESTINATIONS, PAGINA_ORIGEN } from "@/data/emails"
 
-export const HeroForm = () => {
+interface HeroFormProps {
+  emailDestino?: string;
+  paginaOrigen?: string;
+}
+
+export const HeroForm = ({ 
+  emailDestino = EMAIL_DESTINATIONS.hydrafacial, 
+  paginaOrigen = PAGINA_ORIGEN.hydrafacial 
+}: HeroFormProps) => {
   // Usar el hook centralizado con mensaje predeterminado para este formulario
   const { form, isLoading, onSubmit } = useContactForm();
+
+  // Función personalizada para manejar el envío con emailDestino y paginaOrigen
+  const handleSubmit = (data: Client) => {
+    const dataCompleta = {
+      ...data,
+      emailDestino,
+      paginaOrigen
+    };
+    
+    onSubmit(dataCompleta);
+  };
 
   return (
     <div className="p-0 md:p-6 bg-white">
       <h2 className="font-bold mb-6 text-left text-in-brown text-lg md:text-2xl">Reserva tu evaluación gratuita</h2>
       <Form {...form}>
-        <form id="contact-form-hydrafacial" onSubmit={form.handleSubmit(onSubmit)} className="contact-form-hydrafacial space-y-4">
+        <form id="contact-form-hydrafacial" onSubmit={form.handleSubmit(handleSubmit)} className="contact-form-hydrafacial space-y-4">
           <FormField
             control={form.control}    
             name="nombre"

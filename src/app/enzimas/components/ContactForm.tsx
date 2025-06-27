@@ -4,6 +4,13 @@ import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 // import { Textarea } from "@/components/ui/textarea"
 import { useContactForm } from "@/hooks/useContactForm"
+import { Client } from "@/types"
+import { EMAIL_DESTINATIONS, PAGINA_ORIGEN } from "@/data/emails"
+
+interface ContactFormProps {
+  emailDestino?: string;
+  paginaOrigen?: string;
+}
 
 /**
  * Componente de formulario de contacto para la página de Enzimas
@@ -11,7 +18,10 @@ import { useContactForm } from "@/hooks/useContactForm"
  * Utiliza el hook useContactForm para manejar la lógica de formulario,
  * validación y envío, eliminando la duplicación de código.
  */
-export const ContactForm = () => {
+export const ContactForm = ({ 
+  emailDestino = EMAIL_DESTINATIONS.enzimas, 
+  paginaOrigen = PAGINA_ORIGEN.enzimas 
+}: ContactFormProps) => {
   /**
    * PASO 1: Usar el hook personalizado useContactForm
    * 
@@ -23,9 +33,20 @@ export const ContactForm = () => {
    */
   const { form, isLoading, onSubmit } = useContactForm();
 
+  // Función personalizada para manejar el envío con emailDestino y paginaOrigen
+  const handleSubmit = (data: Client) => {
+    const dataCompleta = {
+      ...data,
+      emailDestino,
+      paginaOrigen
+    };
+    
+    onSubmit(dataCompleta);
+  };
+
   return (
     <Form {...form}>
-      <form id="contact-form-enzimas" onSubmit={form.handleSubmit(onSubmit)} className="contact-form-enzimas w-full">
+      <form id="contact-form-enzimas" onSubmit={form.handleSubmit(handleSubmit)} className="contact-form-enzimas w-full">
         <div className="w-full space-y-4">
           <FormField
             control={form.control}

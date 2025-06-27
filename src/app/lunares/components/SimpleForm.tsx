@@ -9,9 +9,31 @@ import {
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useContactForm } from "@/hooks/useContactForm";
+import { Client } from "@/types";
+import { EMAIL_DESTINATIONS, PAGINA_ORIGEN } from "@/data/emails";
 
-export const SimpleForm = () => {
+interface SimpleFormProps {
+  emailDestino?: string;
+  paginaOrigen?: string;
+}
+
+export const SimpleForm = ({ 
+  emailDestino = EMAIL_DESTINATIONS.lunares, 
+  paginaOrigen = PAGINA_ORIGEN.lunares 
+}: SimpleFormProps) => {
   const { form, isLoading, onSubmit } = useContactForm();
+
+  // Función personalizada para manejar el envío con emailDestino y paginaOrigen
+  const handleSubmit = (data: Client) => {
+    const dataCompleta = {
+      ...data,
+      emailDestino,
+      paginaOrigen
+    };
+    
+    onSubmit(dataCompleta);
+  };
+
   return (
     <div>
       <h2 className="mb-3 text-center md:text-left font-semibold md:font-normal text-in-brown text-2xl md:text-base lg:text-xl">
@@ -20,7 +42,7 @@ export const SimpleForm = () => {
       <Form {...form}>
         <form
           id="contact-form-hydrafacial"
-          onSubmit={form.handleSubmit(onSubmit)}
+          onSubmit={form.handleSubmit(handleSubmit)}
           className="contact-form-hydrafacial space-y-4 max-w-[500px] mx-auto md:mx-0"
         >
           <div className="flex flex-col lg:flex-row gap-3 lg:gap-4 mb-4">
