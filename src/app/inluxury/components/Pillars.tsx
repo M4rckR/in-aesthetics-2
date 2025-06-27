@@ -3,7 +3,7 @@ import Image from "next/image"
 
 export const Pillars = () => {
   return (
-    <div className="container max-w-6xl mx-auto px-4">
+    <div id="nosotros-inlux" className="container max-w-6xl mx-auto px-4">
         <section className="flex flex-col md:flex-row items-center gap-8 lg:gap-20">
             <div className="w-full md:w-7/12">
                 <h2 className="text-4xl text-center md:text-left text-mo-brown-base font-in-playfair mb-6">Los 7 Pilares Inluxury </h2>

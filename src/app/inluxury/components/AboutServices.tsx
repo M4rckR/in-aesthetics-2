@@ -1,7 +1,7 @@
 export const AboutServices = () => {
   return (
     <div className="container max-w-6xl mx-auto px-4">
-      <section>
+      <section id="servicios-inlux">
         <h2 className="text-4xl text-mo-brown-base font-in-playfair text-center mb-16">Sobre nuestros servicios</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-1 text-lg text-in-brown">
             <p><span className="font-semibold">+</span> Medicina Estética Avanzada</p>

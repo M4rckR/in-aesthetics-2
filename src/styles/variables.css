@@ -16,10 +16,13 @@
 
   /* <Colores Moldea*/
   --color-mo-brown-base: #AC4800;
+  --color-mo-brown-hover: #8B3A00;
 
   /* <Colores Verruga*/
   --color-ve-pink-bg: #F5E7D3;
 
+  /* Colores InLuxury */
+  --color-inluxury-brown-base: #1E1814;
 }
 
 @theme inline {

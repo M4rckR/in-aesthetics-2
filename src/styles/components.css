@@ -52,5 +52,18 @@
 
 /* Degradado inluxuri hero */
 .degradado-inluxuri-hero {
-  background: linear-gradient(180deg, rgba(204, 108, 97, 0.34) 0%, rgba(159, 61, 50, 0.34) 60%);
+  position: relative;
+}
+
+.degradado-inluxuri-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, rgba(204, 108, 97, 0.00) 0%, #9F3D32 60%);
+  opacity: 0.35;
+  z-index: -10;
+  pointer-events: none;
 }

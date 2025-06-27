@@ -64,7 +64,7 @@ export const FormInlux = () => {
             />
             <Button
               type="submit"
-                className={`w-full text-white text-base bg-mo-brown-base py-6 rounded-4xl cursor-pointer md:col-span-2 lg:col-span-1 ${
+                className={`w-full text-white text-base bg-mo-brown-base hover:bg-mo-brown-hover py-6 rounded-4xl cursor-pointer md:col-span-2 lg:col-span-1 ${
                 isLoading ? "opacity-50 cursor-not-allowed" : ""
               }`}
             >
