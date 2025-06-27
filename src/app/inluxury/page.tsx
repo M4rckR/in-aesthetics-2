@@ -7,6 +7,7 @@ import { Benefits } from "./components/Benefits";
 import { Pillars } from "./components/Pillars";
 import { CtaWhatsApp } from "./components/CtaWhatsApp";
 import { FooterInlux } from "./components/FooterInlux";
+import { ButtonWsp } from "@/components/ButtonWsp";
 
 export const metadata: Metadata = {
   title: "InLuxury - Medicina Estética Avanzada y Longevidad | Inaesthetics",
@@ -160,7 +161,8 @@ export default function InLuxuryPage() {
           buttonText="¡Agendar una cita!"
         />
       </div>
-
+      
+      <ButtonWsp id="wsp-inlux" message="Hola 👋 Vi su página de medicina estética InLuxury. Quiero más información sobre sus tratamientos." phoneNumber="51997621747" />
       <FooterInlux />
     </>
   );
