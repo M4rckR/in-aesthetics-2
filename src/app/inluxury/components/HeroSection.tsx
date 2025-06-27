@@ -2,7 +2,11 @@ import Image from "next/image"
 import { FormInlux } from "./FormInlux"
 import { cdn } from "@/utils/cdn"
 
-export const HeroSection = () => {
+interface HeroSectionProps {
+  emailDestino?: string;
+}
+
+export const HeroSection = ({ emailDestino }: HeroSectionProps) => {
   return (
     <>
         <div>
@@ -18,7 +22,7 @@ export const HeroSection = () => {
                       </p>
                   </div>
                     
-                  <FormInlux />
+                  <FormInlux emailDestino={emailDestino} />
                 </div>
 
                 {/* Imagen de fondo */}

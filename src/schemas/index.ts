@@ -8,6 +8,9 @@ export const ClientSchema = z.object({
         .min(9, "Teléfono muy corto")
         .max(9, "Teléfono muy largo")
         .regex(/^9\d{8}$/, "Teléfono inválido"),
+    emailDestino: z.string()
+        .email("Email de destino inválido")
+        .optional(),
     honeypot: z.string().max(0).optional(),
 })
 

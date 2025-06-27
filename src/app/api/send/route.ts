@@ -25,12 +25,14 @@ export async function POST(req: NextRequest) {
             }, { status: 400 })
         }
 
-        const { nombre, telefono, honeypot } = parsed.data
+        const { nombre, telefono, emailDestino, honeypot } = parsed.data
         
         if(honeypot) {
             return NextResponse.json({ error: 'Spam detected' }, { status: 400 })
         }
 
+        // Determinar el email de destino - si no se especifica, usar el por defecto
+        const emailFinal = emailDestino || process.env.EMAIL_USER
 
         // 📬 Configuración del transporte SMTP
         const transporter = nodemailer.createTransport({
@@ -46,11 +48,12 @@ export async function POST(req: NextRequest) {
         // Enviar el correo
         await transporter.sendMail({
             from: `"Landing Web" <${process.env.EMAIL_USER}>`,
-            to: process.env.EMAIL_USER,
+            to: emailFinal,
             subject: `📥 Nuevo mensaje de ${nombre}`,
             text: `
           Nombre: ${nombre}
           Teléfono: ${telefono}
+          Enviado a: ${emailFinal}
 
             `,
             html: `
@@ -66,7 +69,10 @@ export async function POST(req: NextRequest) {
                       <th scope="row" style="text-align: left; padding: 8px; background-color: #f0f0f0;">📱 Teléfono</th>
                       <td style="padding: 8px;"><a href="tel:${telefono}" style="color: #0066cc;">${telefono}</a></td>
                     </tr>
-
+                    <tr>
+                      <th scope="row" style="text-align: left; padding: 8px; background-color: #f0f0f0;">📧 Enviado a</th>
+                      <td style="padding: 8px;">${emailFinal}</td>
+                    </tr>
                   </tbody>
                 </table>
                 <footer style="margin-top: 30px; font-size: 12px; color: #666;">
@@ -77,7 +83,10 @@ export async function POST(req: NextRequest) {
           });
           
 
-        return NextResponse.json({ success: true })
+        return NextResponse.json({ 
+            success: true,
+            message: `Email enviado correctamente a ${emailFinal}`
+        })
     } catch (error) {
         console.error('Error al enviar el correo:', error)
         return NextResponse.json({ error: 'Error al enviar el correo' }, { status: 500 })

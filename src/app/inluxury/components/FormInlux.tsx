@@ -10,9 +10,24 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 // import { Textarea } from "@/components/ui/textarea"
 import { useContactForm } from "@/hooks/useContactForm";
+import { Client } from "@/types";
 
-export const FormInlux = () => {
+interface FormInluxProps {
+  emailDestino?: string;
+}
+
+export const FormInlux = ({ emailDestino }: FormInluxProps) => {
   const { form, isLoading, onSubmit } = useContactForm();
+
+  // Función personalizada para manejar el envío con emailDestino
+  const handleSubmit = (data: Client) => {
+    // Si se proporciona emailDestino, lo agregamos a los datos
+    const dataConEmail = emailDestino 
+      ? { ...data, emailDestino }
+      : data;
+    
+    onSubmit(dataConEmail);
+  };
 
   return (
     <div className="pb-6">
@@ -20,7 +35,7 @@ export const FormInlux = () => {
         <p className="text-mo-brown-base text-center md:text-left font-in-poppins pb-3 text-xl">¡Reserva tu cita ahora!</p>
         <form
           id="contact-form-hydrafacial"
-          onSubmit={form.handleSubmit(onSubmit)}
+          onSubmit={form.handleSubmit(handleSubmit)}
           className="contact-form-hydrafacial"
         >
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -52,7 +67,6 @@ export const FormInlux = () => {
                       type="tel"
                       inputMode="numeric"
                       pattern="[0-9]*"
-                      maxLength={9}
                       onInput={(e) => {
                         e.currentTarget.value = e.currentTarget.value.replace(/[^0-9]/g, '');
                       }}
