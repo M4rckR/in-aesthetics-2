@@ -14,19 +14,22 @@ import { Client } from "@/types";
 
 interface FormInluxProps {
   emailDestino?: string;
+  paginaOrigen?: string;
 }
 
-export const FormInlux = ({ emailDestino }: FormInluxProps) => {
+export const FormInlux = ({ emailDestino, paginaOrigen = "InLuxury - Medicina Estética Avanzada" }: FormInluxProps) => {
   const { form, isLoading, onSubmit } = useContactForm();
 
-  // Función personalizada para manejar el envío con emailDestino
+  // Función personalizada para manejar el envío con emailDestino y paginaOrigen
   const handleSubmit = (data: Client) => {
-    // Si se proporciona emailDestino, lo agregamos a los datos
-    const dataConEmail = emailDestino 
-      ? { ...data, emailDestino }
-      : data;
+    // Agregamos emailDestino y paginaOrigen a los datos
+    const dataCompleta = {
+      ...data,
+      ...(emailDestino && { emailDestino }),
+      paginaOrigen
+    };
     
-    onSubmit(dataConEmail);
+    onSubmit(dataCompleta);
   };
 
   return (

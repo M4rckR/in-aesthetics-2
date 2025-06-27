@@ -15,5 +15,20 @@ export const EMAIL_DESTINATIONS = {
   default: process.env.EMAIL_USER || "Info@inaesthetics.pe"
 } as const;
 
-// Tipo para autocompletado
-export type EmailDestination = keyof typeof EMAIL_DESTINATIONS; 
+// Configuración centralizada de páginas origen
+export const PAGINA_ORIGEN = {
+  inluxury: "InLuxury - Medicina Estética Avanzada (/inluxury)",
+  enzimas: "Enzimas - Reducción de Grasa Localizada (/enzimas)",
+  hydrafacial: "HydraFacial - Tratamiento Facial (/hydrafacial)",
+  lunares: "Eliminación de Lunares - Láser CO2 (/lunares)",
+  home: "Página Principal - Inaesthetics (/)",
+  
+  // Páginas especiales
+  promo: "Página de Promoción",
+  landing: "Landing Page Externa",
+  whatsapp: "Botón WhatsApp Flotante",
+} as const;
+
+// Tipos para autocompletado
+export type EmailDestination = keyof typeof EMAIL_DESTINATIONS;
+export type PaginaOrigen = keyof typeof PAGINA_ORIGEN; 

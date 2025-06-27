@@ -4,9 +4,10 @@ import { cdn } from "@/utils/cdn"
 
 interface HeroSectionProps {
   emailDestino?: string;
+  paginaOrigen?: string;
 }
 
-export const HeroSection = ({ emailDestino }: HeroSectionProps) => {
+export const HeroSection = ({ emailDestino, paginaOrigen }: HeroSectionProps) => {
   return (
     <>
         <div>
@@ -22,7 +23,7 @@ export const HeroSection = ({ emailDestino }: HeroSectionProps) => {
                       </p>
                   </div>
                     
-                  <FormInlux emailDestino={emailDestino} />
+                  <FormInlux emailDestino={emailDestino} paginaOrigen={paginaOrigen} />
                 </div>
 
                 {/* Imagen de fondo */}

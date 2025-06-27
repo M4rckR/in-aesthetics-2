@@ -11,6 +11,9 @@ export const ClientSchema = z.object({
     emailDestino: z.string()
         .email("Email de destino inválido")
         .optional(),
+    paginaOrigen: z.string()
+        .max(100, "Página origen muy larga")
+        .optional(),
     honeypot: z.string().max(0).optional(),
 })
 

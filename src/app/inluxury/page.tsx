@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { HeroSection } from "./components/HeroSection";
-import { EMAIL_DESTINATIONS } from "@/data/emails";
+import { EMAIL_DESTINATIONS, PAGINA_ORIGEN } from "@/data/emails";
 import { NavInluxury } from "./components/NavInluxury";
 import { AboutServices } from "./components/AboutServices";
 import { Benefits } from "./components/Benefits";
@@ -139,7 +139,10 @@ export default function InLuxuryPage() {
       
       <div className="degradado-inluxuri-hero lg:min-h-screen relative mb-12 lg:mb-16 xl:mb-20">
         <NavInluxury />
-        <HeroSection emailDestino={EMAIL_DESTINATIONS.inluxury} />
+        <HeroSection 
+          emailDestino={EMAIL_DESTINATIONS.inluxury} 
+          paginaOrigen={PAGINA_ORIGEN.inluxury}
+        />
       </div>
 
       <div className="mb-16 lg:mb-20 xl:mb-24">
