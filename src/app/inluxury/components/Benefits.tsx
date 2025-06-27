@@ -11,19 +11,27 @@ export const Benefits = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <video src="/video/inluxury-pillars.mp4" autoPlay muted loop className="w-full h-full object-cover rounded-3xl"  />
+            <video 
+              src="/video/inluxury-pillars.mp4" 
+              autoPlay 
+              muted 
+              loop 
+              className="w-full h-full object-cover rounded-3xl"
+              title="Video de tratamientos InLuxury - Medicina estética avanzada"
+              aria-label="Video mostrando los pilares y tratamientos de InLuxury"
+            />
             <div className="space-y-4">
                 <article className="space-y-2">
                     <div className="flex items-center gap-2">
                         <Image 
                             src={cdn("/inluxury/assets/images/sections/main/brown-start.svg")}
-                            alt="Beneficios"
+                            alt="Icono de estrella para experiencia exclusiva"
                             width={8}
                             height={8}
                             quality={100}
                             className="w-10 h-10 object-cover"
                         />
-                        <p className="text-lg text-mo-brown-base font-medium">Experiencia exclusiva</p>
+                        <h3 className="text-lg text-mo-brown-base font-medium">Experiencia exclusiva</h3>
                     </div>
                     <p className="pl-12 text-in-brown">Espacios minimalistas y elegantes creados para tu comodidad y privacidad.</p>
                 </article>
@@ -31,13 +39,13 @@ export const Benefits = () => {
                     <div className="flex items-center gap-2">
                         <Image 
                             src={cdn("/inluxury/assets/images/sections/main/brown-start.svg")}
-                            alt="Beneficios"
+                            alt="Icono de estrella para profesionales certificados"
                             width={8}
                             height={8}
                             quality={100}
                             className="w-10 h-10 object-cover"
                         />
-                        <p className="text-lg text-mo-brown-base font-medium">Profesionales certificados</p>
+                        <h3 className="text-lg text-mo-brown-base font-medium">Profesionales certificados</h3>
                     </div>
                     <p className="pl-12 text-in-brown">Expertos en salud, estética y belleza comprometidos con tu bienestar.</p>
                 </article>
@@ -45,13 +53,13 @@ export const Benefits = () => {
                     <div className="flex items-center gap-2">
                         <Image 
                             src={cdn("/inluxury/assets/images/sections/main/brown-start.svg")}
-                            alt="Beneficios"
+                            alt="Icono de estrella para resultados naturales"
                             width={8}
                             height={8}
                             quality={100}
                             className="w-10 h-10 object-cover"
                         />
-                        <p className="text-lg text-mo-brown-base font-medium">Resultados visibles y naturales</p>
+                        <h3 className="text-lg text-mo-brown-base font-medium">Resultados visibles y naturales</h3>
                     </div>
                     <p className="pl-12 text-in-brown">Enfoque en realzar tu belleza auténtica, sin exageraciones.</p>
                 </article>

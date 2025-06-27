@@ -24,14 +24,14 @@ export const HeroSection = () => {
                 {/* Imagen de fondo */}
                 <Image
                   src="/images/banner-temporal.png"
-                  alt="Banner temporal"
+                  alt="InLuxury - Medicina estética avanzada y experiencias de lujo para una vida más saludable"
                   width={480}
                   height={1000}
                   className="hidden w-[300px] lg:w-[480px] md:block object-cover md:absolute bottom-0 right-0 -z-20"
                 />  
                 <Image
                   src="/images/banner-temporal-mobile.png"
-                  alt="Banner temporal"
+                  alt="InLuxury - Medicina estética avanzada y experiencias de lujo para una vida más saludable"
                   width={480}
                   height={1000}
                   className="md:hidden mx-auto"
@@ -40,14 +40,14 @@ export const HeroSection = () => {
                 {/* Imagen de estrellas */}
                 <Image
                   src={cdn("inluxury/assets/images/sections/header/big-star.svg")}
-                  alt="Estrellas"
+                  alt="Elemento decorativo estrella - InLuxury"
                   width={80}
                   height={80}
                   className="hidden xl:block absolute w-28 top-2/12 -translate-y-2/12 left-8"
                 />  
                 <Image
                   src={cdn("inluxury/assets/images/sections/header/medium-star.svg")}
-                  alt="Estrellas"
+                  alt="Elemento decorativo estrella - InLuxury"
                   width={80}
                   height={80}
                   className="hidden xl:block absolute w-20 top-3/6 -translate-y-1/5 left-6/12 -translate-x-4/12"
