@@ -101,15 +101,6 @@ export async function POST(req: NextRequest) {
                   </tbody>
                 </table>
                 
-                <div style="background-color: #ecf0f1; padding: 15px; border-radius: 8px; margin-top: 20px;">
-                  <h3 style="color: #2c3e50; margin-top: 0;">🚀 Próximos pasos:</h3>
-                  <ul style="color: #34495e; line-height: 1.6;">
-                    <li>Contactar al cliente en las próximas 2 horas</li>
-                    <li>Registrar el lead en el CRM</li>
-                    <li>Hacer seguimiento personalizado según el servicio</li>
-                  </ul>
-                </div>
-                
                 <footer style="margin-top: 30px; font-size: 12px; color: #7f8c8d; text-align: center; border-top: 1px solid #e0e0e0; padding-top: 15px;">
                   Este mensaje fue enviado automáticamente desde <strong>App Inaesthetics</strong> • ${fechaEnvio}
                 </footer>
