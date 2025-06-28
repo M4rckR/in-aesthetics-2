@@ -137,7 +137,7 @@ export default function InLuxuryPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       
-      <div className="degradado-inluxuri-hero lg:min-h-screen relative mb-12 lg:mb-16 xl:mb-20">
+      <div className="degradado-inluxuri-hero lg:min-h-screen relative mb-12 lg:mb-16 xl:mb-20 overflow-hidden">
         <NavInluxury />
         <HeroSection 
           emailDestino={EMAIL_DESTINATIONS.inluxury} 

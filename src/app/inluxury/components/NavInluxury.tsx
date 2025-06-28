@@ -32,7 +32,7 @@ export const NavInluxury = () => {
   };
 
   return (
-    <div id="form-inlux" className="relative z-10 mb-8 lg:mb-10 xl:mb-12">
+    <div data-aos="fade-up" data-aos-delay="0" id="form-inlux" className="relative z-10 mb-8 lg:mb-10 xl:mb-12">
         <nav className="container max-w-7xl mx-auto px-4">
             <div className="flex items-center justify-center font-in-poppins">
                 <section className="flex items-center gap-12 pt-8 text-inluxury-brown-base">

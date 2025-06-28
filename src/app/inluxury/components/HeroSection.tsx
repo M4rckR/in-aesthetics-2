@@ -11,9 +11,9 @@ export const HeroSection = ({ emailDestino, paginaOrigen }: HeroSectionProps) =>
   return (
     <>
         <div>
-            <section className="container max-w-7xl mx-auto px-4 md:pt-12">
-              <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
-                <div className="md:col-span-8 space-y-8">
+            <section className="container max-w-7xl mx-auto px-4 lg:pt-12">
+              <div  className="grid grid-cols-1 md:grid-cols-12 gap-4">
+                <div data-aos="fade-up" data-aos-delay="0" className="md:col-span-10 lg:col-span-8 space-y-8">
                   <div className="space-y-4">
                     <h1 className="text-center md:text-left text-3xl md:text-5xl lg:text-5xl xl:text-[60px] md:font-medium font-in-poppins font-bold text-mo-brown-base md:text-white">Hoy el lujo no se  
                           <span className="block">lleva, se siente.</span>
@@ -28,12 +28,15 @@ export const HeroSection = ({ emailDestino, paginaOrigen }: HeroSectionProps) =>
 
                 {/* Imagen de fondo */}
                 <Image
-                  src="/images/banner-temporal.png"
+                  src={cdn("inluxury/assets/images/sections/header/banner-hero-main.png")}
                   alt="InLuxury - Medicina estética avanzada y experiencias de lujo para una vida más saludable"
                   width={480}
                   height={1000}
-                  className="hidden w-[300px] lg:w-[480px] md:block object-cover md:absolute bottom-0 right-0 -z-20"
+                  className="hidden w-full h-full lg:h-auto md:block object-cover md:absolute left-0  top-0 bottom-0 right-0 -z-20"
+                  priority
+                  unoptimized
                 />  
+
                 <Image
                   src="/images/banner-temporal-mobile.png"
                   alt="InLuxury - Medicina estética avanzada y experiencias de lujo para una vida más saludable"
