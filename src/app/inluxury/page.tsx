@@ -130,6 +130,12 @@ const jsonLd = {
 };
 
 export default function InLuxuryPage() {
+  // Debug temporal - verificar valores de configuración
+  // console.log('📋 InLuxury Page - Configuración:', {
+  //   emailDestino: EMAIL_DESTINATIONS.inluxury,
+  //   paginaOrigen: PAGINA_ORIGEN.inluxury
+  // });
+
   return (
     <>
       <script
