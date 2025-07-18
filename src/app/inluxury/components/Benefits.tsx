@@ -4,7 +4,7 @@ import Image from "next/image"
 export const Benefits = () => {
   return (
     <div className="container max-w-6xl mx-auto px-4">
-      <section className="shadow-xl rounded-3xl py-8 px-4 md:px-12 md:py-12 lg:py-16 lg:px-16 space-y-8 md:space-y-12">
+      <section  data-aos="fade-up" data-aos-delay="0" className="shadow-xl rounded-3xl py-8 px-4 md:px-12 md:py-12 lg:py-16 lg:px-16 space-y-8 md:space-y-12">
         <div>
             <h2 className="text-4xl text-center text-mo-brown-base font-in-playfair mb-4">¿Por qué elegir In Luxury?</h2>
             <p className="text-center text-in-brown text-lg">En In Luxury, diseñamos experiencias de salud que no se repiten, porque están hechas solo para ti.</p>
