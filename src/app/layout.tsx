@@ -8,6 +8,7 @@ import { AOSInit } from "@/components/aosInit/aosInit";
 import { Toaster } from "sonner";
 import localFont from 'next/font/local'
 import { ReactNode } from "react";
+import {GoogleTagManager} from "@next/third-parties/google";
 
 const ProximaNova = localFont({
   src: '../../public/fonts/ele.otf',
@@ -54,6 +55,7 @@ export default function RootLayout({
         <main className="flex-grow">
           {children}
         </main>
+        <GoogleTagManager gtmId="GTM-P5VN8HXJ" />
       </body>
     </html>
   );

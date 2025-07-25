@@ -49,7 +49,6 @@ export const NavInluxury = () => {
                         className="w-48"
                         quality={95}
                         priority={true}
-                        
                         />
                     <div className="gap-8 hidden md:flex">
                         <Link href="#footer-inlux">Contacto</Link>
@@ -61,8 +60,6 @@ export const NavInluxury = () => {
                         </button>
                     </div>
                 </section>
-
-
             </div>
         </nav>
     </div>
