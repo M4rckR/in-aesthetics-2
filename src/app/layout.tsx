@@ -51,6 +51,7 @@ export default function RootLayout({
       <body suppressHydrationWarning
         className={`${poppins.variable} ${playfair.variable} ${ProximaNova.variable} antialiased flex flex-col min-h-screen`}
       >
+
         <Toaster/>
         <main className="flex-grow">
           {children}
