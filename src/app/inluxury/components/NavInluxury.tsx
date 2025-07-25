@@ -2,9 +2,10 @@
 import { cdn } from "@/utils/cdn"
 import Image from "next/image"
 import Link from "next/link"
+import { MouseEvent } from "react";
 
 export const NavInluxury = () => {
-  const handleAgendarClick = (e: React.MouseEvent) => {
+  const handleAgendarClick = (e: MouseEvent) => {
     e.preventDefault();
     
     // Hacer scroll suave al formulario

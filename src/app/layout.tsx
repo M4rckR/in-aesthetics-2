@@ -7,6 +7,7 @@ import 'aos/dist/aos.css'
 import { AOSInit } from "@/components/aosInit/aosInit";
 import { Toaster } from "sonner";
 import localFont from 'next/font/local'
+import { ReactNode } from "react";
 
 const ProximaNova = localFont({
   src: '../../public/fonts/ele.otf',
@@ -41,7 +42,7 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: ReactNode;
 }>) {
   return (
     <html lang="es" suppressHydrationWarning  className="h-full scroll-smooth">

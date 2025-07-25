@@ -98,14 +98,6 @@ export function PromoModal({
   }, [externalIsOpen, showAfter, showOnce, storageKey]);
 
   const handleClose = () => {
-    // Enviar evento de cierre a GTM
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({
-      event: 'promoModalClose',
-      modalId: id,
-      interaction: 'close'
-    });
-
     setVisible(false);
     setTimeout(() => {
       setIsOpen(false);
@@ -114,14 +106,6 @@ export function PromoModal({
 
   const handleAction = () => {
     if (actionUrl) {
-      // Enviar evento de click en la imagen a GTM
-      window.dataLayer = window.dataLayer || [];
-      window.dataLayer.push({
-        event: 'promoModalClick',
-        modalId: id,
-        actionUrl: actionUrl,
-        interaction: 'image_click'
-      });
 
       window.open(actionUrl, '_blank');
       handleClose();
@@ -158,17 +142,6 @@ export function PromoModal({
       }
     }
   }, [isOpen, visible]);
-
-  // 👇 Este es tu GTM push 👇
-  useEffect(() => {
-    if (visible) {
-      window.dataLayer = window.dataLayer || [];
-      window.dataLayer.push({
-        event: 'promoModalVisible',
-        modalId: id,
-      });
-    }
-  }, [visible, id]);
 
 
   return (

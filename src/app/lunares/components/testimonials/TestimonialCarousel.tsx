@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
-import { TestimonialsData } from "../../../enzimas/data/Testimonials.data";
+import { TestimonialsData } from "@/app/enzimas/data/Testimonials.data";
 
 export const TestimonialCarousel = () => {
   return (

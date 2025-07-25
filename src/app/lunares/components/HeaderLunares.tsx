@@ -1,5 +1,6 @@
 import Image from "next/image"
-import { Socialbar } from "../../../components/Socialbar"
+import { Socialbar } from "@/components/Socialbar"
+
 
 export const HeaderLunares = () => {
   return (
