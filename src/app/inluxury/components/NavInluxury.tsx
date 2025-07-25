@@ -41,10 +41,9 @@ export const NavInluxury = () => {
                         <Link href="#nosotros-inlux">Nosotros</Link>
                         <Link href="#servicios-inlux">Servicios</Link>
                     </div>
-                    
                         <Image 
                         src={cdn("/shared/logos/logo-inluxury.png")} 
-                        alt="logo InLuxury" 
+                        alt="logo InLuxury"
                         width={240} 
                         height={149} 
                         className="w-48"
