@@ -58,7 +58,11 @@ export const useContactForm = (options?: {
       
       // Mostramos notificación de éxito
       toast.success("Mensaje enviado correctamente");
-      
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: 'formSubmission',
+      })
+
       // Limpiamos el formulario
       form.reset();
       
