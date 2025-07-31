@@ -11,7 +11,6 @@ import { ButtonWsp } from "@/components/ButtonWsp";
 import { Footer } from "@/components/Footer";
 // import { PromoModal } from "@/components/PromoModal";
 
-
 export const metadata:Metadata = {
   title: 'Inaesthetics | Reducción de celulitis y grasa localizada',
   description: 'Moldea tu cuerpo sin cirugía con nuestro tratamiento de enzimas Pb Serum. Elimina grasa localizada de forma rápida y efectiva en abdomen, brazos, piernas y papada.',
@@ -89,7 +88,7 @@ export default function Enzimas() {
       <Reviews />
       <Questions />
       <CtaWhatsApp />
-      <ButtonWsp id="wsp-enzimas" message="Hola 👋 Vi su página sobre el tratamiento con enzimas para eliminar grasa localizada y estoy interesado. ¿Me pueden dar más información?" />
+      <ButtonWsp message="Hola 👋 Vi su página sobre el tratamiento con enzimas para eliminar grasa localizada y estoy interesado. ¿Me pueden dar más información?" />
       <Footer />
     </div>
   );
