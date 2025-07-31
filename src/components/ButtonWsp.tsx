@@ -1,18 +1,17 @@
 import Image from "next/image"
 
 type ButtonWspProps = {
-   id: string
    message: string
    phoneNumber?: string
 }
 
-export const ButtonWsp = ({id, message, phoneNumber = "51974309260"}:ButtonWspProps) => {
+export const ButtonWsp = ({message, phoneNumber = "51974309260"}:ButtonWspProps) => {
 
    const encodedMessage = encodeURIComponent(message)
 
     return (
-      <div className="container max-w-[1200] mx-auto relative">
-          <a id={id}  className="fixed bottom-1/12 w-12 h-12 right-6 z-50  rounded-full shadow-lg transition-transform duration-300 hover:scale-105 bg-in-brown flex justify-center items-center" href={`https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`} target="_blank" rel="noopener noreferrer"> 
+      <div id={"floating-wsp-custom"} className="container max-w-[1200] mx-auto relative">
+          <a className="fixed bottom-1/12 w-12 h-12 right-6 z-50  rounded-full shadow-lg transition-transform duration-300 hover:scale-105 bg-in-brown flex justify-center items-center" href={`https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`} target="_blank" rel="noopener noreferrer">
              <Image
                 alt="icono whatsapp"
                 src="/icons/button_wsp.svg"

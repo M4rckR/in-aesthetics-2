@@ -79,7 +79,7 @@ export default function Hydrafacial() {
       <Reviews />
       <Questions />
       <CtaTreatmentWsp />
-      <ButtonWsp id="wsp-hydrafacial" message="Hola 👋 Vi su página sobre el tratamiento hydrafacial para limpieza profunda y estoy interesado. ¿Me pueden dar más información?"/>
+      <ButtonWsp message="Hola 👋 Vi su página sobre el tratamiento hydrafacial para limpieza profunda y estoy interesado. ¿Me pueden dar más información?"/>
       <Footer />
     </div>
   );

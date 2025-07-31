@@ -171,7 +171,7 @@ export default function InLuxuryPage() {
         />
       </div>
       
-      <ButtonWsp id="wsp-inlux" message="Hola 👋 Vi su página de medicina estética InLuxury. Quiero más información sobre sus tratamientos." phoneNumber="51997621747" />
+      <ButtonWsp message="Hola 👋 Vi su página de medicina estética InLuxury. Quiero más información sobre sus tratamientos." phoneNumber="51997621747" />
       <FooterInlux />
     </>
   );

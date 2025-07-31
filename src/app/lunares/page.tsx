@@ -79,7 +79,7 @@ export default function LunaresPage() {
       {/* <Comparator /> */}
       <Questions />
       <CtaTreatmentWsp />
-      <ButtonWsp id="wsp-lunares" message="Hola 👋 Vi su página sobre el tratamiento con láser para eliminar verrugas y lunares y estoy interesado. ¿Me pueden dar más información?"/>
+      <ButtonWsp message="Hola 👋 Vi su página sobre el tratamiento con láser para eliminar verrugas y lunares y estoy interesado. ¿Me pueden dar más información?"/>
       <Footer />
     </>
   );
