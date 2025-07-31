@@ -26,7 +26,7 @@ export const CtaWhatsApp = ({ message, phoneNumber, buttonText = "¡Agendar una 
                         <p className="text-xl md:text-2xl lg:text-3xl text-center md:text-left md:pl-16 text-white font-light lg:w-2/3 lg:pl-4">Donde la verdadera belleza se vive con lujo y sofisticación.</p>
                         <a className="cta-custom-wsp flex items-center justify-center gap-4 bg-in-pink py-2 px-4 lg:p-3 rounded-4xl lg:w-1/3" href={whatsappUrl} target="_blank" rel="noopener noreferrer">
                             <Image 
-                            src="/icons/button_wsp_style_2.svg" 
+                            src="/icons/button_wsp_style_2.svg"
                             alt="WhatsApp" 
                             width={34}
                             height={34} 
