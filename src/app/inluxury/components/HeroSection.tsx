@@ -47,14 +47,14 @@ export const HeroSection = ({ emailDestino, paginaOrigen }: HeroSectionProps) =>
 
                 {/* Imagen de estrellas */}
                 <Image
-                  src={cdn("inluxury/assets/images/sections/header/big-star.svg")}
+                  src={cdn("inluxury/assets/images/sections/header/u-big-star.svg")}
                   alt="Elemento decorativo estrella - InLuxury"
                   width={80}
                   height={80}
                   className="hidden xl:block absolute w-28 top-2/12 -translate-y-2/12 left-8"
                 />  
                 <Image
-                  src={cdn("inluxury/assets/images/sections/header/medium-star.svg")}
+                  src={cdn("inluxury/assets/images/sections/header/u-medium-star.svg")}
                   alt="Elemento decorativo estrella - InLuxury"
                   width={80}
                   height={80}

@@ -41,7 +41,7 @@ export const FooterInlux = () => {
                 <div className="gap-4 hidden lg:flex">
                     <Link href="https://www.facebook.com/profile.php?id=61567398632399" target="_blank" rel="noopener noreferrer">
                         <Image
-                            src={cdn("/shared/logos/facebook.svg")}
+                            src={cdn("/shared/logos/u-facebook.svg")}
                             alt="Facebook"
                             width={24}
                             height={24}
@@ -49,7 +49,7 @@ export const FooterInlux = () => {
                     </Link>
                     <Link href="https://www.instagram.com/inluxury.experience/" target="_blank" rel="noopener noreferrer">
                         <Image
-                            src={cdn("/shared/logos/instagram.svg")}
+                            src={cdn("/shared/logos/u-instagram.svg")}
                             alt="Instagram"
                             width={24}
                             height={24}
@@ -57,7 +57,7 @@ export const FooterInlux = () => {
                     </Link>
                     <Link href="https://www.tiktok.com/@inluxury.experience?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer">
                         <Image
-                            src={cdn("/shared/logos/tiktok.svg")}
+                            src={cdn("/shared/logos/u-tiktok.svg")}
                             alt="Tiktok"
                             width={24}
                             height={24}
