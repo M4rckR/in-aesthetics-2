@@ -28,7 +28,7 @@ export const HeroSection = ({ emailDestino, paginaOrigen }: HeroSectionProps) =>
 
                 {/* Imagen de fondo */}
                 <Image
-                  src={cdn("inluxury/assets/images/sections/header/banner-hero-main.png")}
+                  src={cdn("inluxury/assets/images/sections/header/u-banner-hero-main.png")}
                   alt="InLuxury - Medicina estética avanzada y experiencias de lujo para una vida más saludable"
                   width={480}
                   height={1000}

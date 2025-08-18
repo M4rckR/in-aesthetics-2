@@ -24,7 +24,7 @@ export const Benefits = () => {
                 <article className="space-y-2">
                     <div className="flex items-center gap-2">
                         <Image 
-                            src={cdn("/inluxury/assets/images/sections/main/brown-start.svg")}
+                            src={cdn("/inluxury/assets/images/sections/main/u-brown-start.svg")}
                             alt="Icono de estrella para experiencia exclusiva"
                             width={8}
                             height={8}
@@ -38,7 +38,7 @@ export const Benefits = () => {
                 <article className="space-y-2">
                     <div className="flex items-center gap-2">
                         <Image 
-                            src={cdn("/inluxury/assets/images/sections/main/brown-start.svg")}
+                            src={cdn("/inluxury/assets/images/sections/main/u-brown-start.svg")}
                             alt="Icono de estrella para profesionales certificados"
                             width={8}
                             height={8}
@@ -52,7 +52,7 @@ export const Benefits = () => {
                 <article className="space-y-2">
                     <div className="flex items-center gap-2">
                         <Image 
-                            src={cdn("/inluxury/assets/images/sections/main/brown-start.svg")}
+                            src={cdn("/inluxury/assets/images/sections/main/u-brown-start.svg")}
                             alt="Icono de estrella para resultados naturales"
                             width={8}
                             height={8}
